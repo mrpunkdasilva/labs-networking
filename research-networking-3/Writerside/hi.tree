@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                 start-page="Tipos-de-Entrega.md">
+
+    <toc-element topic="Tipos-de-Entrega.md"/>
+    <toc-element topic="Protocolos-de-Transporte.md"/>
+    <toc-element topic="Modelo-OSI.md"/>
+    <toc-element topic="ARPANET.md"/>
+    <toc-element topic="Conclusao.md"/>
+    <toc-element topic="Referencias.md"/>
+</instance-profile>

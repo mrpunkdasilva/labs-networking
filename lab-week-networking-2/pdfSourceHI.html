@@ -1,0 +1,354 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-none.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-powershell.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .tip {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-688385099">Atividade #2.1: Configurando um NFS Share</a></div><div class="page">2</div></div><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#1224365644">Atividade #2.2: Instalando o Packet Tracer e Conhecendo a Interface</a></div><div class="page">16</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-688385099">Atividade #2.1: Configurando um NFS Share</h1><section class="detached"><h2 id="-688385099#objetivo" data-toc="objetivo#Atividade-NFS.md-objetivo">Objetivo</h2><p id="-688385099#-j53ssh_6">Meu objetivo nesta atividade foi configurar um compartilhamento de arquivos em rede utilizando o Network File System (NFS). Com o NFS, eu esperava poder acessar e manipular arquivos em um computador remoto (minha VM2) como se estivessem na minha pr&oacute;pria m&aacute;quina local (minha VM1), facilitando o gerenciamento centralizado de dados.</p></section><section class="detached"><h2 id="-688385099#descri-o-da-atividade-minha-jornada-de-configura-o-e-depura-o" data-toc="descri-o-da-atividade-minha-jornada-de-configura-o-e-depura-o#Atividade-NFS.md-descri-o-da-atividade-minha-jornada-de-configura-o-e-depura-o">Descri&ccedil;&atilde;o da Atividade: Minha Jornada de Configura&ccedil;&atilde;o e Depura&ccedil;&atilde;o</h2><p id="-688385099#-j53ssh_8">Segui os passos para configurar um servidor NFS na minha <span class="control" id="-688385099#-j53ssh_13">VM2 (Ubuntu Desktop)</span> e um cliente NFS na minha <span class="control" id="-688385099#-j53ssh_14">VM1 (Windows 10)</span>. Enfrentei alguns desafios, mas consegui depurar e resolver os problemas.</p><section class="detached"><h3 id="-688385099#a-configurando-o-nfs-server-vm2" data-toc="a-configurando-o-nfs-server-vm2#Atividade-NFS.md-a-configurando-o-nfs-server-vm2">A. Configurando o NFS Server (VM2)</h3><p id="-688385099#-j53ssh_15">Primeiro, instalei e configurei o servidor NFS na minha segunda m&aacute;quina virtual (<span class="control" id="-688385099#-j53ssh_39">VM2 - Ubuntu</span>).</p><p id="-688385099#-j53ssh_16"><span class="control" id="-688385099#-j53ssh_40">1. Instalei o pacote do servidor NFS:</span></p><p id="-688385099#-j53ssh_17">Para come&ccedil;ar, precisei instalar o software do servidor NFS na minha VM2. Executei o comando abaixo no terminal da <span class="control" id="-688385099#-j53ssh_41">VM2</span> para instalar os pacotes necess&aacute;rios:</p><div class="detached code-block" id="-688385099#-j53ssh_18"><pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt install nfs-kernel-server -y</code></pre></div><ul class="list" id="-688385099#-j53ssh_19" start="1"><li class="list-item" id="-688385099#-j53ssh_42"><p id="-688385099#-j53ssh_44"><span class="inline-code" id="-688385099#-j53ssh_45">sudo apt update</span>: Atualiza a lista de pacotes dispon&iacute;veis nos reposit&oacute;rios.</p></li><li class="list-item" id="-688385099#-j53ssh_43"><p id="-688385099#-j53ssh_46"><span class="inline-code" id="-688385099#-j53ssh_47">sudo apt install nfs-kernel-server -y</span>: Instala o pacote <span class="inline-code" id="-688385099#-j53ssh_48">nfs-kernel-server</span>, que &eacute; o servidor NFS. O <span class="inline-code" id="-688385099#-j53ssh_49">-y</span> aceita automaticamente as perguntas de confirma&ccedil;&atilde;o.</p></li></ul><p id="-688385099#-j53ssh_20"><span class="control" id="-688385099#-j53ssh_50">1.1. Configurei o Firewall (VM2): A Grande Batalha Contra o Erro 53</span></p><p id="-688385099#-j53ssh_21">Esta foi a parte mais desafiadora da configura&ccedil;&atilde;o. Inicialmente, ao tentar montar o compartilhamento no Windows, eu recebia o temido &quot;Erro 53: Caminho de rede n&atilde;o encontrado&quot;. Minha investiga&ccedil;&atilde;o me levou ao firewall.</p><p id="-688385099#-j53ssh_22"><span class="control" id="-688385099#-j53ssh_51">Minha Investiga&ccedil;&atilde;o:</span></p><ol class="list list-decimal" id="-688385099#-j53ssh_23" type="1" start="1"><li class="list-item" id="-688385099#-j53ssh_52"><p id="-688385099#-j53ssh_55"><span class="control" id="-688385099#-j53ssh_56">Verifica&ccedil;&atilde;o Inicial do Servi&ccedil;o NFS:</span> Primeiro, confirmei se o servi&ccedil;o NFS estava rodando na VM2 com <span class="inline-code" id="-688385099#-j53ssh_57">sudo systemctl status nfs-kernel-server</span>. Ele estava ativo, ent&atilde;o o problema n&atilde;o era o servi&ccedil;o em si.</p></li><li class="list-item" id="-688385099#-j53ssh_53"><p id="-688385099#-j53ssh_58"><span class="control" id="-688385099#-j53ssh_59">Suspeita do Firewall:</span> Minha pr&oacute;xima suspeita foi o firewall (UFW). Verifiquei o status com <span class="inline-code" id="-688385099#-j53ssh_60">sudo ufw status</span>.</p></li><li class="list-item" id="-688385099#-j53ssh_54"><p id="-688385099#-j53ssh_61"><span class="control" id="-688385099#-j53ssh_62">An&aacute;lise dos Logs:</span> Para entender o que estava sendo bloqueado, tentei montar o compartilhamento no Windows e, imediatamente depois, verifiquei os logs do sistema na VM2 com <span class="inline-code" id="-688385099#-j53ssh_63">tail -n 50 /var/log/syslog</span>. Foi a&iacute; que encontrei as mensagens <span class="inline-code" id="-688385099#-j53ssh_64">[UFW BLOCK]</span> indicando que o tr&aacute;fego da minha VM1 (<span class="inline-code" id="-688385099#-j53ssh_65">192.168.1.33</span>) para a VM2 (<span class="inline-code" id="-688385099#-j53ssh_66">192.168.1.23</span>) estava sendo bloqueado nas portas 111 (TCP e UDP) e 2049 (UDP).</p></li></ol><p id="-688385099#-j53ssh_24"><span class="control" id="-688385099#-j53ssh_67">Minhas A&ccedil;&otilde;es para Liberar o Firewall:</span></p><p id="-688385099#-j53ssh_25">Para permitir que o NFS se comunicasse atrav&eacute;s da rede, precisei configurar o firewall da VM2 para liberar as portas apropriadas.</p><ul class="list" id="-688385099#-j53ssh_26" start="1"><li class="list-item" id="-688385099#-j53ssh_68"><p id="-688385099#-j53ssh_69"><span class="control" id="-688385099#-j53ssh_70">Verifiquei o status do firewall:</span></p></li></ul><div class="detached code-block" id="-688385099#-j53ssh_27"><pre><code class="language-csharp">sudo ufw status</code></pre></div><ul class="list" id="-688385099#-j53ssh_28" start="1"><li class="list-item" id="-688385099#-j53ssh_71"><p id="-688385099#-j53ssh_72"><span class="control" id="-688385099#-j53ssh_73">Adicionei a regra geral para NFS:</span> Como o firewall estava ativo e bloqueando as portas NFS, adicionei uma regra para permitir o tr&aacute;fego NFS.</p></li></ul><div class="detached code-block" id="-688385099#-j53ssh_29"><pre><code class="language-bash">sudo ufw allow nfs</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_30" alt="Sa&amp;iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&amp;oacute;s permitir o tr&amp;aacute;fego NFS." title="Sa&amp;iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&amp;oacute;s permitir o tr&amp;aacute;fego NFS." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2017-01-29.png" width="1308" height="941"><figcaption class="center-text">Sa&iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&oacute;s permitir o tr&aacute;fego NFS.</figcaption></figure></div><ul class="list" id="-688385099#-j53ssh_31" start="1"><li class="list-item" id="-688385099#-j53ssh_74"><p id="-688385099#-j53ssh_75"><span class="control" id="-688385099#-j53ssh_76">Liberei a porta do <span class="inline-code" id="-688385099#-j53ssh_79">rpcbind</span> (Portmapper):</span> Descobri que o NFS depende do servi&ccedil;o <span class="inline-code" id="-688385099#-j53ssh_77">rpcbind</span> (tamb&eacute;m conhecido como portmapper), que usa a porta 111. O <span class="inline-code" id="-688385099#-j53ssh_78">syslog</span> mostrou que essa porta estava sendo bloqueada tanto para TCP quanto para UDP. Ent&atilde;o, liberei ambas:</p></li></ul><div class="detached code-block" id="-688385099#-j53ssh_32"><pre><code class="language-bash">sudo ufw allow 111/tcp
+sudo ufw allow 111/udp</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_33" alt="Sa&amp;iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&amp;oacute;s permitir o tr&amp;aacute;fego na porta 111 (rpcbind)." title="Sa&amp;iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&amp;oacute;s permitir o tr&amp;aacute;fego na porta 111 (rpcbind)." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2018-29-42.png" width="981" height="804"><figcaption class="center-text">Sa&iacute;da do comando 'sudo ufw status' mostrando as regras de firewall ap&oacute;s permitir o tr&aacute;fego na porta 111 (rpcbind).</figcaption></figure></div><ul class="list" id="-688385099#-j53ssh_34" start="1"><li class="list-item" id="-688385099#-j53ssh_80"><p id="-688385099#-j53ssh_81"><span class="control" id="-688385099#-j53ssh_82">Liberei a porta principal do NFS:</span> A porta principal do NFS &eacute; a 2049. Embora <span class="inline-code" id="-688385099#-j53ssh_83">ufw allow nfs</span> devesse cobrir isso, o log indicou que o UDP ainda estava sendo bloqueado. Ent&atilde;o, liberei explicitamente para TCP e UDP:</p></li></ul><div class="detached code-block" id="-688385099#-j53ssh_35"><pre><code class="language-bash">sudo ufw allow 2049/tcp
+sudo ufw allow 2049/udp</code></pre></div><ul class="list" id="-688385099#-j53ssh_36" start="1"><li class="list-item" id="-688385099#-j53ssh_84"><p id="-688385099#-j53ssh_85"><span class="control" id="-688385099#-j53ssh_86">Verifiquei novamente o status para confirmar que as regras foram adicionadas:</span></p></li></ul><div class="detached code-block" id="-688385099#-j53ssh_37"><pre><code class="language-bash">sudo ufw status</code></pre></div><p id="-688385099#-j53ssh_38">Ap&oacute;s essas libera&ccedil;&otilde;es, o firewall parou de ser um problema.</p></section><section class="detached"><h3 id="-688385099#b-criei-e-preparei-o-diret-rio-de-compartilhamento-vm2" data-toc="b-criei-e-preparei-o-diret-rio-de-compartilhamento-vm2#Atividade-NFS.md-b-criei-e-preparei-o-diret-rio-de-compartilhamento-vm2">B. Criei e Preparei o Diret&oacute;rio de Compartilhamento (VM2)</h3><p id="-688385099#-j53ssh_87">Em seguida, criei a pasta que seria compartilhada pela rede.</p><p id="-688385099#-j53ssh_88"><span class="control" id="-688385099#-j53ssh_114">2. Criei o diret&oacute;rio compartilhado:</span></p><p id="-688385099#-j53ssh_89">Este diret&oacute;rio conteria os arquivos que a VM1 poderia acessar. Executei o comando para criar a pasta:</p><div class="detached code-block" id="-688385099#-j53ssh_90"><pre><code class="language-bash">sudo mkdir -p /srv/nfs/shared_directory</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_91" alt="Comando 'sudo mkdir -p /srv/nfs/shared_directory' sendo executado no terminal para criar o diret&amp;oacute;rio compartilhado." title="Comando 'sudo mkdir -p /srv/nfs/shared_directory' sendo executado no terminal para criar o diret&amp;oacute;rio compartilhado." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/%22sudo%20mkdir%20-p%20%20srv%20nfs%20shared_directory%22.png" width="1280" height="800"><figcaption class="center-text">Comando 'sudo mkdir -p /srv/nfs/shared_directory' sendo executado no terminal para criar o diret&oacute;rio compartilhado.</figcaption></figure></div><ul class="list" id="-688385099#-j53ssh_92" start="1"><li class="list-item" id="-688385099#-j53ssh_115"><p id="-688385099#-j53ssh_116"><span class="inline-code" id="-688385099#-j53ssh_117">sudo mkdir -p</span>: Cria o diret&oacute;rio <span class="inline-code" id="-688385099#-j53ssh_118">/srv/nfs/shared_directory</span>. O <span class="inline-code" id="-688385099#-j53ssh_119">-p</span> garante que os diret&oacute;rios pai (<span class="inline-code" id="-688385099#-j53ssh_120">/srv</span> e <span class="inline-code" id="-688385099#-j53ssh_121">/srv/nfs</span>) sejam criados se n&atilde;o existirem.</p></li></ul><p id="-688385099#-j53ssh_93"><span class="control" id="-688385099#-j53ssh_122">3. Atribu&iacute; as permiss&otilde;es corretas:</span></p><p id="-688385099#-j53ssh_94">Foi crucial ajustar as permiss&otilde;es do diret&oacute;rio para que ele pudesse ser acessado pela rede de forma segura e an&ocirc;nima, como o Windows esperava.</p><div class="detached code-block" id="-688385099#-j53ssh_95"><pre><code class="language-bash">sudo chown nobody:nogroup /srv/nfs/shared_directory
+sudo chmod 777 /srv/nfs/shared_directory</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_96" alt="Comandos 'sudo chown nobody:nogroup' e 'sudo chmod 777' sendo executados para atribuir as permiss&amp;otilde;es corretas ao diret&amp;oacute;rio compartilhado." title="Comandos 'sudo chown nobody:nogroup' e 'sudo chmod 777' sendo executados para atribuir as permiss&amp;otilde;es corretas ao diret&amp;oacute;rio compartilhado." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/3.%20Atribua%20as%20permiss%C3%B5es%20corretas:.png" width="1280" height="800"><figcaption class="center-text">Comandos 'sudo chown nobody:nogroup' e 'sudo chmod 777' sendo executados para atribuir as permiss&otilde;es corretas ao diret&oacute;rio compartilhado.</figcaption></figure></div><ul class="list" id="-688385099#-j53ssh_97" start="1"><li class="list-item" id="-688385099#-j53ssh_123"><p id="-688385099#-j53ssh_125"><span class="inline-code" id="-688385099#-j53ssh_126">sudo chown nobody:nogroup</span>: Altera o propriet&aacute;rio do diret&oacute;rio para <span class="inline-code" id="-688385099#-j53ssh_127">nobody</span> e o grupo para <span class="inline-code" id="-688385099#-j53ssh_128">nogroup</span>. Isso &eacute; importante para montagens an&ocirc;nimas, onde o cliente NFS se conecta como um usu&aacute;rio sem privil&eacute;gios.</p></li><li class="list-item" id="-688385099#-j53ssh_124"><p id="-688385099#-j53ssh_129"><span class="inline-code" id="-688385099#-j53ssh_130">sudo chmod 777</span>: Concede permiss&otilde;es totais (leitura, escrita e execu&ccedil;&atilde;o) para o propriet&aacute;rio, grupo e outros. Isso garante que o Windows possa ler e escrever no diret&oacute;rio.</p></li></ul><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="-688385099#-j53ssh_131">Fiz o SSH para me conectar do meu host (fedora) para a VM2 (ubuntu). <div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_132" alt="Terminal mostrando a conex&amp;atilde;o SSH do host Fedora para a VM2 Ubuntu." title="Terminal mostrando a conex&amp;atilde;o SSH do host Fedora para a VM2 Ubuntu." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-09%2017-20-22.png" width="960" height="780"><figcaption class="center-text">Terminal mostrando a conex&atilde;o SSH do host Fedora para a VM2 Ubuntu.</figcaption></figure></div></p></div>
+</blockquote>
+<p id="-688385099#-j53ssh_99"><span class="control" id="-688385099#-j53ssh_133">4. Configurei o arquivo de &quot;exporta&ccedil;&otilde;es&quot; do NFS: O Erro do IP</span></p><p id="-688385099#-j53ssh_100">Este foi outro ponto cr&iacute;tico. O arquivo <span class="inline-code" id="-688385099#-j53ssh_134">/etc/exports</span> define quais diret&oacute;rios ser&atilde;o compartilhados e para quem.</p><p id="-688385099#-j53ssh_101"><span class="control" id="-688385099#-j53ssh_135">Minha Investiga&ccedil;&atilde;o:</span></p><ol class="list list-decimal" id="-688385099#-j53ssh_102" type="1" start="1"><li class="list-item" id="-688385099#-j53ssh_136"><p id="-688385099#-j53ssh_139"><span class="control" id="-688385099#-j53ssh_140">Erro 53 Persistente:</span> Mesmo com o firewall ajustado, o erro 53 persistia.</p></li><li class="list-item" id="-688385099#-j53ssh_137"><p id="-688385099#-j53ssh_141"><span class="control" id="-688385099#-j53ssh_142">Verifica&ccedil;&atilde;o do <span class="inline-code" id="-688385099#-j53ssh_144">/etc/exports</span>:</span> Suspeitei que o problema poderia estar na configura&ccedil;&atilde;o de exporta&ccedil;&atilde;o. Verifiquei o conte&uacute;do do arquivo com <span class="inline-code" id="-688385099#-j53ssh_143">cat /etc/exports</span>.</p></li><li class="list-item" id="-688385099#-j53ssh_138"><p id="-688385099#-j53ssh_145"><span class="control" id="-688385099#-j53ssh_146">Descoberta do IP Incorreto:</span> Percebi que o IP da minha VM1 (Windows) estava incorreto no arquivo <span class="inline-code" id="-688385099#-j53ssh_147">/etc/exports</span>. Eu havia colocado <span class="inline-code" id="-688385099#-j53ssh_148">192.168.1.31</span>, mas o IP real da minha VM1 era <span class="inline-code" id="-688385099#-j53ssh_149">192.168.1.33</span>. O servidor NFS s&oacute; permitia acesso do IP especificado, causando o erro.</p></li></ol><p id="-688385099#-j53ssh_103"><span class="control" id="-688385099#-j53ssh_150">Minhas A&ccedil;&otilde;es para Corrigir o <span class="inline-code" id="-688385099#-j53ssh_151">/etc/exports</span>:</span></p><p id="-688385099#-j53ssh_104">Abri o arquivo <span class="inline-code" id="-688385099#-j53ssh_152">/etc/exports</span> para edi&ccedil;&atilde;o:</p><div class="detached code-block" id="-688385099#-j53ssh_105"><pre><code class="language-bash">sudo vi /etc/exports</code></pre></div><p id="-688385099#-j53ssh_106">Adicionei a seguinte linha no final do arquivo (substituindo <span class="inline-code" id="-688385099#-j53ssh_153">IP_DA_VM1</span> pelo endere&ccedil;o IP real da minha VM1, que no meu caso era <span class="inline-code" id="-688385099#-j53ssh_154">192.168.1.33</span>):</p><div class="detached code-block" id="-688385099#-j53ssh_107"><pre><code class="language-none">/srv/nfs/shared_directory 192.168.1.33(rw,sync,no_subtree_check)</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_108" alt="Conte&amp;uacute;do do arquivo '/etc/exports' mostrando a linha de configura&amp;ccedil;&amp;atilde;o para o compartilhamento NFS, incluindo o IP do cliente e as op&amp;ccedil;&amp;otilde;es de exporta&amp;ccedil;&amp;atilde;o." title="Conte&amp;uacute;do do arquivo '/etc/exports' mostrando a linha de configura&amp;ccedil;&amp;atilde;o para o compartilhamento NFS, incluindo o IP do cliente e as op&amp;ccedil;&amp;otilde;es de exporta&amp;ccedil;&amp;atilde;o." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2017-32-50.png" width="981" height="804"><figcaption class="center-text">Conte&uacute;do do arquivo '/etc/exports' mostrando a linha de configura&ccedil;&atilde;o para o compartilhamento NFS, incluindo o IP do cliente e as op&ccedil;&otilde;es de exporta&ccedil;&atilde;o.</figcaption></figure></div><ul class="list" id="-688385099#-j53ssh_109" start="1"><li class="list-item" id="-688385099#-j53ssh_155"><p id="-688385099#-j53ssh_158"><span class="inline-code" id="-688385099#-j53ssh_159">/srv/nfs/shared_directory</span>: O caminho absoluto do diret&oacute;rio a ser compartilhado na VM2.</p></li><li class="list-item" id="-688385099#-j53ssh_156"><p id="-688385099#-j53ssh_160"><span class="inline-code" id="-688385099#-j53ssh_161">192.168.1.33</span>: O endere&ccedil;o IP da VM1 (cliente) que ter&aacute; permiss&atilde;o para acessar o compartilhamento.</p></li><li class="list-item" id="-688385099#-j53ssh_157"><p id="-688385099#-j53ssh_162"><span class="inline-code" id="-688385099#-j53ssh_164">(rw,sync,no_subtree_check)</span>: Op&ccedil;&otilde;es de exporta&ccedil;&atilde;o:</p><ul class="list" id="-688385099#-j53ssh_163" start="1"><li class="list-item" id="-688385099#-j53ssh_165"><p id="-688385099#-j53ssh_168"><span class="inline-code" id="-688385099#-j53ssh_169">rw</span>: Permite acesso de leitura e escrita.</p></li><li class="list-item" id="-688385099#-j53ssh_166"><p id="-688385099#-j53ssh_170"><span class="inline-code" id="-688385099#-j53ssh_171">sync</span>: Garante que as altera&ccedil;&otilde;es sejam gravadas no disco antes que a opera&ccedil;&atilde;o seja confirmada.</p></li><li class="list-item" id="-688385099#-j53ssh_167"><p id="-688385099#-j53ssh_172"><span class="inline-code" id="-688385099#-j53ssh_173">no_subtree_check</span>: Desabilita a verifica&ccedil;&atilde;o de sub&aacute;rvore, o que pode melhorar o desempenho e evitar problemas com clientes NFS mais antigos.</p></li></ul></li></ul><p id="-688385099#-j53ssh_110"><span class="control" id="-688385099#-j53ssh_174">5. Exporte o diret&oacute;rio compartilhado:</span></p><p id="-688385099#-j53ssh_111">Ap&oacute;s salvar as altera&ccedil;&otilde;es no <span class="inline-code" id="-688385099#-j53ssh_175">/etc/exports</span>, precisei aplicar as configura&ccedil;&otilde;es e reiniciar o servi&ccedil;o NFS para que as mudan&ccedil;as tivessem efeito.</p><div class="detached code-block" id="-688385099#-j53ssh_112"><pre><code class="language-bash">sudo exportfs -a
+sudo systemctl restart nfs-kernel-server</code></pre></div><ul class="list" id="-688385099#-j53ssh_113" start="1"><li class="list-item" id="-688385099#-j53ssh_176"><p id="-688385099#-j53ssh_179"><span class="inline-code" id="-688385099#-j53ssh_180">sudo exportfs -a</span>: Exporta todos os diret&oacute;rios listados em <span class="inline-code" id="-688385099#-j53ssh_181">/etc/exports</span>.</p></li><li class="list-item" id="-688385099#-j53ssh_177"><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_182" alt="Comando 'sudo exportfs -a' sendo executado para aplicar as configura&amp;ccedil;&amp;otilde;es de compartilhamento do arquivo /etc/exports." title="Comando 'sudo exportfs -a' sendo executado para aplicar as configura&amp;ccedil;&amp;otilde;es de compartilhamento do arquivo /etc/exports." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-09%2018-28-19.png" width="981" height="804"><figcaption class="center-text">Comando 'sudo exportfs -a' sendo executado para aplicar as configura&ccedil;&otilde;es de compartilhamento do arquivo /etc/exports.</figcaption></figure></div></li><li class="list-item" id="-688385099#-j53ssh_178"><p id="-688385099#-j53ssh_183"><span class="inline-code" id="-688385099#-j53ssh_184">sudo systemctl restart nfs-kernel-server</span>: Reinicia o servi&ccedil;o do servidor NFS para que ele leia as novas configura&ccedil;&otilde;es.</p></li></ul></section><section class="detached"><h3 id="-688385099#c-configurei-o-nfs-client-vm1-windows-10" data-toc="c-configurei-o-nfs-client-vm1-windows-10#Atividade-NFS.md-c-configurei-o-nfs-client-vm1-windows-10">C. Configurei o NFS Client (VM1 - Windows 10)</h3><p id="-688385099#-j53ssh_185">Depois de configurar o servidor, fui para a <span class="control" id="-688385099#-j53ssh_199">VM1 (Windows 10)</span> para configurar o cliente NFS e acessar o diret&oacute;rio remoto.</p><p id="-688385099#-j53ssh_186"><span class="control" id="-688385099#-j53ssh_200">6. Habilitei o Cliente para NFS (Apenas Windows Pro/Enterprise):</span></p><p id="-688385099#-j53ssh_187">O cliente NFS n&atilde;o vem inclu&iacute;do em todas as edi&ccedil;&otilde;es do Windows. Primeiro, verifiquei se o recurso estava dispon&iacute;vel e, se estivesse, ativei-o.</p><ol class="list list-decimal" id="-688385099#-j53ssh_188" type="1" start="1"><li class="list-item" id="-688385099#-j53ssh_201"><p id="-688385099#-j53ssh_205">Pressionei a tecla <span class="inline-code" id="-688385099#-j53ssh_206">Windows + R</span>, digitei <span class="inline-code" id="-688385099#-j53ssh_207">optionalfeatures</span> e teclei Enter.</p></li><li class="list-item" id="-688385099#-j53ssh_202"><p id="-688385099#-j53ssh_208">Na janela &quot;Recursos do Windows&quot; que abriu, rolei a lista e procurei por <span class="control" id="-688385099#-j53ssh_209">&quot;Servi&ccedil;os para NFS&quot;</span>.</p></li><li class="list-item" id="-688385099#-j53ssh_203"><p id="-688385099#-j53ssh_210">Encontrei, expandi o item e marquei a caixa <span class="control" id="-688385099#-j53ssh_211">&quot;Cliente para NFS&quot;</span>.</p></li><li class="list-item" id="-688385099#-j53ssh_204"><p id="-688385099#-j53ssh_212">Cliquei em <span class="control" id="-688385099#-j53ssh_213">OK</span> e aguardei a conclus&atilde;o da instala&ccedil;&atilde;o.</p></li></ol><p id="-688385099#-j53ssh_189"><span class="control" id="-688385099#-j53ssh_214">7. Montei o diret&oacute;rio compartilhado:</span></p><p id="-688385099#-j53ssh_190">Com o cliente NFS ativo, conectei o diret&oacute;rio remoto da VM2 a uma letra de unidade na VM1.</p><p id="-688385099#-j53ssh_191">Recomendo usar o <span class="control" id="-688385099#-j53ssh_215">Prompt de Comando (cmd)</span> ou <span class="control" id="-688385099#-j53ssh_216">PowerShell</span> para este passo.</p><p id="-688385099#-j53ssh_192"><span class="control" id="-688385099#-j53ssh_217">No Prompt de Comando (cmd):</span></p><div class="detached code-block" id="-688385099#-j53ssh_193"><pre><code class="language-bash">mount -o anon IP_DA_VM2:/srv/nfs/shared_directory Z:</code></pre></div><p id="-688385099#-j53ssh_194"><span class="control" id="-688385099#-j53ssh_218">Alternativa para PowerShell:</span> Se preferir usar o PowerShell, o par&acirc;metro <span class="inline-code" id="-688385099#-j53ssh_219">-o</span> pode causar um erro. Para evitar isso, usei o operador de parada de an&aacute;lise (<span class="inline-code" id="-688385099#-j53ssh_220">--%</span>) que for&ccedil;a o PowerShell a passar os argumentos corretamente:</p><div class="detached code-block" id="-688385099#-j53ssh_195"><pre><code class="language-powershell">mount.exe --% -o anon IP_DA_VM2:/srv/nfs/shared_directory Z:</code></pre></div><ul class="list" id="-688385099#-j53ssh_196" start="1"><li class="list-item" id="-688385099#-j53ssh_221"><p id="-688385099#-j53ssh_226"><span class="inline-code" id="-688385099#-j53ssh_227">mount.exe</span>: O comando para montar compartilhamentos NFS no Windows.</p></li><li class="list-item" id="-688385099#-j53ssh_222"><p id="-688385099#-j53ssh_228"><span class="inline-code" id="-688385099#-j53ssh_229">--%</span>: Operador de parada de an&aacute;lise do PowerShell, necess&aacute;rio para passar argumentos literais para execut&aacute;veis externos.</p></li><li class="list-item" id="-688385099#-j53ssh_223"><p id="-688385099#-j53ssh_230"><span class="inline-code" id="-688385099#-j53ssh_231">-o anon</span>: Op&ccedil;&atilde;o para montar o compartilhamento como um usu&aacute;rio an&ocirc;nimo, correspondendo &agrave; configura&ccedil;&atilde;o <span class="inline-code" id="-688385099#-j53ssh_232">nobody:nogroup</span> no servidor.</p></li><li class="list-item" id="-688385099#-j53ssh_224"><p id="-688385099#-j53ssh_233"><span class="inline-code" id="-688385099#-j53ssh_234">IP_DA_VM2:/srv/nfs/shared_directory</span>: O caminho do compartilhamento NFS na VM2 (substitua <span class="inline-code" id="-688385099#-j53ssh_235">IP_DA_VM2</span> pelo IP real da sua VM2, que no meu caso era <span class="inline-code" id="-688385099#-j53ssh_236">192.168.1.23</span>).</p></li><li class="list-item" id="-688385099#-j53ssh_225"><p id="-688385099#-j53ssh_237"><span class="inline-code" id="-688385099#-j53ssh_238">Z:</span>: A letra da unidade que ser&aacute; atribu&iacute;da ao compartilhamento no Windows.</p></li></ul><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_197" alt="Prompt de Comando do Windows executando o comando 'mount' para mapear o compartilhamento NFS da VM2 para a unidade Z:." title="Prompt de Comando do Windows executando o comando 'mount' para mapear o compartilhamento NFS da VM2 para a unidade Z:." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2018-46-05.png" width="1052" height="880"><figcaption class="center-text">Prompt de Comando do Windows executando o comando 'mount' para mapear o compartilhamento NFS da VM2 para a unidade Z:.</figcaption></figure></div><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="-688385099#-j53ssh_239">Tive problemas com o erro 53, que foram resolvidos ap&oacute;s corrigir o IP no <span class="inline-code" id="-688385099#-j53ssh_240">/etc/exports</span> e liberar as portas corretas no firewall da VM2. A depura&ccedil;&atilde;o dos logs do <span class="inline-code" id="-688385099#-j53ssh_241">syslog</span> foi crucial para identificar os bloqueios do firewall.</p></div>
+</blockquote>
+</section><section class="detached"><h3 id="-688385099#d-testei-o-acesso-e-a-edi-o-vm1-windows" data-toc="d-testei-o-acesso-e-a-edi-o-vm1-windows#Atividade-NFS.md-d-testei-o-acesso-e-a-edi-o-vm1-windows">D. Testei o Acesso e a Edi&ccedil;&atilde;o (VM1 - Windows)</h3><p id="-688385099#-j53ssh_242">Finalmente, verifiquei se tudo estava funcionando como esperado a partir do Windows.</p><p id="-688385099#-j53ssh_243"><span class="control" id="-688385099#-j53ssh_254">8. Acessei o compartilhamento e listei os arquivos:</span></p><p id="-688385099#-j53ssh_244">Abri o <span class="control" id="-688385099#-j53ssh_255">Prompt de Comando</span> ou <span class="control" id="-688385099#-j53ssh_256">PowerShell</span> e mudei para a unidade que acabei de mapear.</p><div class="detached code-block" id="-688385099#-j53ssh_245"><pre><code class="language-powershell">Z:\
+dir</code></pre></div><p id="-688385099#-j53ssh_246">O diret&oacute;rio estava vazio, como esperado.</p><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_247" alt="Imagem do terminal listando os diret&amp;oacute;rios da VM2 a partir da VM1." title="Imagem do terminal listando os diret&amp;oacute;rios da VM2 a partir da VM1." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2018-47-33.png" width="1052" height="880"><figcaption class="center-text">Imagem do terminal listando os diret&oacute;rios da VM2 a partir da VM1.</figcaption></figure></div><p id="-688385099#-j53ssh_248"><span class="control" id="-688385099#-j53ssh_257">9. Criei e verifiquei um arquivo:</span></p><p id="-688385099#-j53ssh_249">Agora, criei um arquivo de teste para confirmar que a escrita no diret&oacute;rio compartilhado estava funcionando.</p><div class="detached code-block" id="-688385099#-j53ssh_250"><pre><code class="language-powershell">echo &quot;Teste de escrita a partir da VM1 (Windows)!&quot; &gt; teste.txt
+type teste.txt</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-688385099#-j53ssh_251" alt="Prompt de Comando do Windows criando um arquivo 'teste.txt' no diret&amp;oacute;rio compartilhado para verificar a permiss&amp;atilde;o de escrita." title="Prompt de Comando do Windows criando um arquivo 'teste.txt' no diret&amp;oacute;rio compartilhado para verificar a permiss&amp;atilde;o de escrita." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2018-48-30.png" width="1052" height="880"><figcaption class="center-text">Prompt de Comando do Windows criando um arquivo 'teste.txt' no diret&oacute;rio compartilhado para verificar a permiss&atilde;o de escrita.</figcaption></figure></div><p id="-688385099#-j53ssh_252">Para confirmar que o arquivo foi realmente criado na VM2 (Ubuntu), fui at&eacute; o terminal da <span class="control" id="-688385099#-j53ssh_258">VM2</span> e verifiquei o conte&uacute;do do arquivo:</p><div class="detached code-block" id="-688385099#-j53ssh_253"><pre><code class="language-bash">cat /srv/nfs/shared_directory/teste.txt</code></pre></div></section></section><section class="detached"><h2 id="-688385099#refer-ncias" data-toc="refer-ncias#Atividade-NFS.md-refer-ncias">Refer&ecirc;ncias</h2><ul class="list" id="-688385099#-j53ssh_259" start="1"><li class="list-item" id="-688385099#-j53ssh_260"><p id="-688385099#-j53ssh_262">Ubuntu Documentation: NFS Howto (<a href="https://ubuntu.com/server/docs/service-nfs">https://ubuntu.com/server/docs/service-nfs</a>)</p></li><li class="list-item" id="-688385099#-j53ssh_261"><p id="-688385099#-j53ssh_264">Microsoft Learn: Network File System (NFS) in Windows Server (<a href="https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview">https://learn.microsoft.com/en-us/windows-server/storage/nfs/nfs-overview</a>)</p></li></ul></section></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="1224365644">Atividade #2.2: Instalando o Packet Tracer e Conhecendo a Interface</h1><section class="detached"><h2 id="1224365644#objetivo" data-toc="objetivo#Atividade-Packet-Tracer.md-objetivo">Objetivo</h2><p id="1224365644#t6wmvc_6">Meu objetivo nesta atividade foi instalar o Cisco Packet Tracer e familiarizar-me com suas principais ferramentas, focando nas barras de ferramentas superior e inferior. Al&eacute;m disso, criei redes locais b&aacute;sicas para praticar a segmenta&ccedil;&atilde;o de IPs.</p></section><section class="detached"><h2 id="1224365644#descri-o-da-atividade-explorando-o-packet-tracer-e-criando-redes" data-toc="descri-o-da-atividade-explorando-o-packet-tracer-e-criando-redes#Atividade-Packet-Tracer.md-descri-o-da-atividade-explorando-o-packet-tracer-e-criando-redes">Descri&ccedil;&atilde;o da Atividade: Explorando o Packet Tracer e Criando Redes</h2><p id="1224365644#t6wmvc_8">Segui os passos para instalar o Packet Tracer e explorar sua interface, al&eacute;m de criar algumas redes b&aacute;sicas.</p><section class="detached"><h3 id="1224365644#a-instala-o-e-explora-o-do-packet-tracer" data-toc="a-instala-o-e-explora-o-do-packet-tracer#Atividade-Packet-Tracer.md-a-instala-o-e-explora-o-do-packet-tracer">A. Instala&ccedil;&atilde;o e Explora&ccedil;&atilde;o do Packet Tracer</h3><p id="1224365644#t6wmvc_11"><span class="control" id="1224365644#t6wmvc_21">1. Instalei o Cisco Packet Tracer:</span></p><p id="1224365644#t6wmvc_12">Para come&ccedil;ar, acessei o link fornecido e segui as instru&ccedil;&otilde;es para instalar o Packet Tracer em meu sistema. O processo de instala&ccedil;&atilde;o &eacute; guiado e bastante intuitivo.</p><p id="1224365644#t6wmvc_13">https://www.netacad.com/es/courses/packet-tracer (<a href="https://www.netacad.com/es/courses/packet-tracer">https://www.netacad.com/es/courses/packet-tracer</a>)</p><p id="1224365644#t6wmvc_14"><span class="control" id="1224365644#t6wmvc_23">2. Investiguei a Barra de Ferramentas Superior:</span></p><p id="1224365644#t6wmvc_15">Ap&oacute;s abrir o Packet Tracer, dediquei um tempo para explorar os &iacute;cones e funcionalidades da barra de ferramentas localizada na parte superior da interface. Esta barra cont&eacute;m ferramentas essenciais para manipula&ccedil;&atilde;o do projeto, como salvar, abrir, imprimir, copiar, colar, desfazer, refazer, e modos de simula&ccedil;&atilde;o (tempo real e simula&ccedil;&atilde;o).</p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_24" alt="Barra de ferramentas superior do Packet Tracer, mostrando op&amp;ccedil;&amp;otilde;es como salvar, abrir, copiar, colar, desfazer, refazer e modos de simula&amp;ccedil;&amp;atilde;o." title="Barra de ferramentas superior do Packet Tracer, mostrando op&amp;ccedil;&amp;otilde;es como salvar, abrir, copiar, colar, desfazer, refazer e modos de simula&amp;ccedil;&amp;atilde;o." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-31-15.png" width="1920" height="351"><figcaption class="center-text">Barra de ferramentas superior do Packet Tracer, mostrando op&ccedil;&otilde;es como salvar, abrir, copiar, colar, desfazer, refazer e modos de simula&ccedil;&atilde;o.</figcaption></figure></div></div>
+</blockquote>
+<p id="1224365644#t6wmvc_17"><span class="control" id="1224365644#t6wmvc_25">3. Investiguei a Barra de Ferramentas Inferior:</span></p><p id="1224365644#t6wmvc_18">Em seguida, explorei os &iacute;cones e categorias da barra de ferramentas localizada na parte inferior esquerda da interface. Esta &eacute; a &aacute;rea onde escolhemos os dispositivos e conex&otilde;es para montar nossas redes.</p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="1224365644#t6wmvc_26">A barra de ferramentas de &iacute;cones no canto inferior esquerdo possui v&aacute;rias categorias de componentes de rede. Revisei as categorias que correspondem a Dispositivos de rede (roteadores, switches, hubs, dispositivos wireless, seguran&ccedil;a, WAN emulation), Dispositivos finais (PCs, laptops, servidores, impressoras, telefones IP, etc.) e Componentes (placas, m&oacute;dulos). A quarta categoria (com o &iacute;cone de raio) &eacute; Conex&otilde;es e representa a m&iacute;dia de rede suportada pelo Packet Tracer (cabos de console, straight-through, crossover, fibra &oacute;ptica, telefone, coaxial, serial DCE/DTE, USB).</p></div>
+</blockquote>
+<blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_27" alt="Barra de ferramentas inferior do Packet Tracer, exibindo categorias de dispositivos de rede, dispositivos finais, componentes e tipos de conex&amp;atilde;o." title="Barra de ferramentas inferior do Packet Tracer, exibindo categorias de dispositivos de rede, dispositivos finais, componentes e tipos de conex&amp;atilde;o." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-31-23.png" width="1920" height="351"><figcaption class="center-text">Barra de ferramentas inferior do Packet Tracer, exibindo categorias de dispositivos de rede, dispositivos finais, componentes e tipos de conex&atilde;o.</figcaption></figure></div></div>
+</blockquote>
+</section><section class="detached"><h3 id="1224365644#b-cria-o-de-redes-locais-no-packet-tracer" data-toc="b-cria-o-de-redes-locais-no-packet-tracer#Atividade-Packet-Tracer.md-b-cria-o-de-redes-locais-no-packet-tracer">B. Cria&ccedil;&atilde;o de Redes Locais no Packet Tracer</h3><p id="1224365644#t6wmvc_28"><span class="control" id="1224365644#t6wmvc_46">4. Criei uma Rede Local com 8 Hosts e IPs Fixos:</span></p><p id="1224365644#t6wmvc_29">Utilizei o simulador Packet Tracer para criar uma rede local simples.</p><p id="1224365644#t6wmvc_30"><span class="control" id="1224365644#t6wmvc_47">Como fiz:</span></p><ol class="list list-decimal" id="1224365644#t6wmvc_31" type="1" start="1"><li class="list-item" id="1224365644#t6wmvc_48"><p id="1224365644#t6wmvc_52"><span class="control" id="1224365644#t6wmvc_53">Adicionei um Switch:</span> Na barra de ferramentas inferior, selecionei &quot;Network Devices&quot; (Dispositivos de Rede) e arrastei um switch (por exemplo, 2960-24TT) para a &aacute;rea de trabalho.</p></li><li class="list-item" id="1224365644#t6wmvc_49"><p id="1224365644#t6wmvc_54"><span class="control" id="1224365644#t6wmvc_55">Adicionei 8 PCs:</span> Selecionei &quot;End Devices&quot; (Dispositivos Finais) e arrastei 8 PCs para a &aacute;rea de trabalho.</p></li><li class="list-item" id="1224365644#t6wmvc_50"><p id="1224365644#t6wmvc_56"><span class="control" id="1224365644#t6wmvc_57">Conectei os PCs ao Switch:</span> Selecionei &quot;Connections&quot; (Conex&otilde;es - o &iacute;cone de raio), escolhi o cabo &quot;Copper Straight-Through&quot; (cabo reto) e conectei cada PC a uma porta FastEthernet do switch.</p></li><li class="list-item" id="1224365644#t6wmvc_51"><p id="1224365644#t6wmvc_58"><span class="control" id="1224365644#t6wmvc_60">Configurei IPs Fixos para cada PC:</span></p><ul class="list" id="1224365644#t6wmvc_59" start="1"><li class="list-item" id="1224365644#t6wmvc_61"><p id="1224365644#t6wmvc_68">Cliquei em cada PC.</p></li><li class="list-item" id="1224365644#t6wmvc_62"><p id="1224365644#t6wmvc_69">Fui na aba &quot;Desktop&quot;.</p></li><li class="list-item" id="1224365644#t6wmvc_63"><p id="1224365644#t6wmvc_70">Cliquei em &quot;IP Configuration&quot;.</p></li><li class="list-item" id="1224365644#t6wmvc_64"><p id="1224365644#t6wmvc_71">Selecionei &quot;Static&quot;.</p></li><li class="list-item" id="1224365644#t6wmvc_65"><p id="1224365644#t6wmvc_72">Atribu&iacute; um endere&ccedil;o IP fixo para cada PC (ex: <span class="inline-code" id="1224365644#t6wmvc_73">192.168.1.10</span>, <span class="inline-code" id="1224365644#t6wmvc_74">192.168.1.11</span>, ..., <span class="inline-code" id="1224365644#t6wmvc_75">192.168.1.17</span>).</p></li><li class="list-item" id="1224365644#t6wmvc_66"><p id="1224365644#t6wmvc_76">A m&aacute;scara de sub-rede (<span class="inline-code" id="1224365644#t6wmvc_77">255.255.255.0</span>) foi preenchida automaticamente.</p></li><li class="list-item" id="1224365644#t6wmvc_67"><p id="1224365644#t6wmvc_78">Deixei o Gateway Padr&atilde;o e o Servidor DNS em branco, pois &eacute; uma rede local simples sem roteador.</p></li></ul></li></ol><p id="1224365644#t6wmvc_32"><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_79" alt="Configura&amp;ccedil;&amp;atilde;o de IP de um PC no Packet Tracer, mostrando o endere&amp;ccedil;o IPv4 192.168.1.10 e a m&amp;aacute;scara de sub-rede 255.255.255.0." title="Configura&amp;ccedil;&amp;atilde;o de IP de um PC no Packet Tracer, mostrando o endere&amp;ccedil;o IPv4 192.168.1.10 e a m&amp;aacute;scara de sub-rede 255.255.255.0." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-40-15.png" width="1052" height="1004"><figcaption class="center-text">Configura&ccedil;&atilde;o de IP de um PC no Packet Tracer, mostrando o endere&ccedil;o IPv4 192.168.1.10 e a m&aacute;scara de sub-rede 255.255.255.0.</figcaption></figure></div><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_80" alt="Configura&amp;ccedil;&amp;atilde;o de IP de um PC no Packet Tracer, mostrando o endere&amp;ccedil;o IPv4 192.168.1.17 e a m&amp;aacute;scara de sub-rede 255.255.255.0." title="Configura&amp;ccedil;&amp;atilde;o de IP de um PC no Packet Tracer, mostrando o endere&amp;ccedil;o IPv4 192.168.1.17 e a m&amp;aacute;scara de sub-rede 255.255.255.0." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-43-01.png" width="1052" height="1004"><figcaption class="center-text">Configura&ccedil;&atilde;o de IP de um PC no Packet Tracer, mostrando o endere&ccedil;o IPv4 192.168.1.17 e a m&aacute;scara de sub-rede 255.255.255.0.</figcaption></figure></div></p><ol class="list list-decimal" id="1224365644#t6wmvc_33" type="1" start="5"><li class="list-item" id="1224365644#t6wmvc_81"><p id="1224365644#t6wmvc_82"><span class="control" id="1224365644#t6wmvc_83">Testei a Conectividade:</span> Usei a ferramenta &quot;PDU Simple&quot; (o &iacute;cone de envelope fechado) para enviar pacotes entre os PCs e verificar se a comunica&ccedil;&atilde;o estava funcionando.</p></li></ol><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_34" alt="Resultado de um teste de conectividade bem-sucedido no Packet Tracer, indicando que os pacotes foram enviados e recebidos com sucesso entre os dispositivos." title="Resultado de um teste de conectividade bem-sucedido no Packet Tracer, indicando que os pacotes foram enviados e recebidos com sucesso entre os dispositivos." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-44-52.png" width="1443" height="1004"><figcaption class="center-text">Resultado de um teste de conectividade bem-sucedido no Packet Tracer, indicando que os pacotes foram enviados e recebidos com sucesso entre os dispositivos.</figcaption></figure></div><p id="1224365644#t6wmvc_35"><span class="control" id="1224365644#t6wmvc_84">5. Criei Tr&ecirc;s Redes Locais Segmentadas:</span></p><p id="1224365644#t6wmvc_36">No simulador Packet Tracer, criei tr&ecirc;s redes locais distintas, cada uma com seu pr&oacute;prio switch e segmentada logicamente atrav&eacute;s da configura&ccedil;&atilde;o de seus endere&ccedil;os IP.</p><p id="1224365644#t6wmvc_37"><span class="control" id="1224365644#t6wmvc_85">Como fiz:</span></p><ol class="list list-decimal" id="1224365644#t6wmvc_38" type="1" start="1"><li class="list-item" id="1224365644#t6wmvc_86"><p id="1224365644#t6wmvc_87"><span class="control" id="1224365644#t6wmvc_89">Rede 1 (Ex: 192.168.1.0/24):</span></p><ul class="list" id="1224365644#t6wmvc_88" start="1"><li class="list-item" id="1224365644#t6wmvc_90"><p id="1224365644#t6wmvc_94">Adicionei um Switch.</p></li><li class="list-item" id="1224365644#t6wmvc_91"><p id="1224365644#t6wmvc_95">Adicionei alguns PCs (ex: 2 ou 3).</p></li><li class="list-item" id="1224365644#t6wmvc_92"><p id="1224365644#t6wmvc_96">Conectei os PCs ao Switch com cabos retos.</p></li><li class="list-item" id="1224365644#t6wmvc_93"><p id="1224365644#t6wmvc_97">Configurei os IPs dos PCs para estarem na rede <span class="inline-code" id="1224365644#t6wmvc_98">192.168.1.x</span> (ex: <span class="inline-code" id="1224365644#t6wmvc_99">192.168.1.10</span>, <span class="inline-code" id="1224365644#t6wmvc_100">192.168.1.11</span>).</p></li></ul></li></ol><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_39" alt="Topologia da Rede 1 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.1.x." title="Topologia da Rede 1 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.1.x." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2020-05-22.png" width="1219" height="1004"><figcaption class="center-text">Topologia da Rede 1 no Packet Tracer, mostrando um switch conectado a v&aacute;rios PCs com endere&ccedil;os IP na faixa 192.168.1.x.</figcaption></figure></div><ol class="list list-decimal" id="1224365644#t6wmvc_40" type="1" start="2"><li class="list-item" id="1224365644#t6wmvc_101"><p id="1224365644#t6wmvc_102"><span class="control" id="1224365644#t6wmvc_104">Rede 2 (Ex: 192.168.2.0/24):</span></p><ul class="list" id="1224365644#t6wmvc_103" start="1"><li class="list-item" id="1224365644#t6wmvc_105"><p id="1224365644#t6wmvc_109">Adicionei um segundo Switch.</p></li><li class="list-item" id="1224365644#t6wmvc_106"><p id="1224365644#t6wmvc_110">Adicionei alguns PCs.</p></li><li class="list-item" id="1224365644#t6wmvc_107"><p id="1224365644#t6wmvc_111">Conectei os PCs ao segundo Switch.</p></li><li class="list-item" id="1224365644#t6wmvc_108"><p id="1224365644#t6wmvc_112">Configurei os IPs dos PCs para estarem na rede <span class="inline-code" id="1224365644#t6wmvc_113">192.168.2.x</span> (ex: <span class="inline-code" id="1224365644#t6wmvc_114">192.168.2.10</span>, <span class="inline-code" id="1224365644#t6wmvc_115">192.168.2.11</span>).</p></li></ul></li></ol><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_41" alt="Topologia da Rede 2 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.2.x." title="Topologia da Rede 2 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.2.x." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2020-05-27.png" width="1219" height="1004"><figcaption class="center-text">Topologia da Rede 2 no Packet Tracer, mostrando um switch conectado a v&aacute;rios PCs com endere&ccedil;os IP na faixa 192.168.2.x.</figcaption></figure></div><ol class="list list-decimal" id="1224365644#t6wmvc_42" type="1" start="3"><li class="list-item" id="1224365644#t6wmvc_116"><p id="1224365644#t6wmvc_117"><span class="control" id="1224365644#t6wmvc_119">Rede 3 (Ex: 192.168.3.0/24):</span></p><ul class="list" id="1224365644#t6wmvc_118" start="1"><li class="list-item" id="1224365644#t6wmvc_120"><p id="1224365644#t6wmvc_124">Adicionei um terceiro Switch.</p></li><li class="list-item" id="1224365644#t6wmvc_121"><p id="1224365644#t6wmvc_125">Adicionei alguns PCs.</p></li><li class="list-item" id="1224365644#t6wmvc_122"><p id="1224365644#t6wmvc_126">Conectei os PCs ao terceiro Switch.</p></li><li class="list-item" id="1224365644#t6wmvc_123"><p id="1224365644#t6wmvc_127">Configurei os IPs dos PCs para estarem na rede <span class="inline-code" id="1224365644#t6wmvc_128">192.168.3.x</span> (ex: <span class="inline-code" id="1224365644#t6wmvc_129">192.168.3.10</span>, <span class="inline-code" id="1224365644#t6wmvc_130">192.168.3.11</span>).</p></li></ul></li></ol><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_43" alt="Topologia da Rede 3 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.3.x." title="Topologia da Rede 3 no Packet Tracer, mostrando um switch conectado a v&amp;aacute;rios PCs com endere&amp;ccedil;os IP na faixa 192.168.3.x." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2020-05-32.png" width="1219" height="1004"><figcaption class="center-text">Topologia da Rede 3 no Packet Tracer, mostrando um switch conectado a v&aacute;rios PCs com endere&ccedil;os IP na faixa 192.168.3.x.</figcaption></figure></div><div class="container"><figure class="image-container"><img class="center image image-size" id="1224365644#t6wmvc_44" alt="Vis&amp;atilde;o geral da topologia no Packet Tracer mostrando as tr&amp;ecirc;s redes locais segmentadas, cada uma com seu pr&amp;oacute;prio switch e faixa de IP." title="Vis&amp;atilde;o geral da topologia no Packet Tracer mostrando as tr&amp;ecirc;s redes locais segmentadas, cada uma com seu pr&amp;oacute;prio switch e faixa de IP." src="/home/mrpunkdasilva/WebstormProjects/lab-week-networking-2/Writerside/images/Screenshot%20from%202025-09-10%2019-57-04.png" width="1443" height="1004"><figcaption class="center-text">Vis&atilde;o geral da topologia no Packet Tracer mostrando as tr&ecirc;s redes locais segmentadas, cada uma com seu pr&oacute;prio switch e faixa de IP.</figcaption></figure></div><p id="1224365644#t6wmvc_45"><span class="control" id="1224365644#t6wmvc_131">Observa&ccedil;&atilde;o:</span> Para que essas tr&ecirc;s redes se comunicassem entre si, eu precisaria adicionar um roteador e configurar as interfaces do roteador com IPs em cada uma dessas redes, al&eacute;m de configurar o gateway padr&atilde;o nos PCs. No entanto, o objetivo desta atividade era apenas criar as redes segmentadas, n&atilde;o a comunica&ccedil;&atilde;o entre elas.</p></section></section><section class="detached"><h2 id="1224365644#refer-ncias" data-toc="refer-ncias#Atividade-Packet-Tracer.md-refer-ncias">Refer&ecirc;ncias</h2><ul class="list" id="1224365644#t6wmvc_132" start="1"><li class="list-item" id="1224365644#t6wmvc_133"><p id="1224365644#t6wmvc_134">Cisco Networking Academy: Packet Tracer (<a href="https://www.netacad.com/es/courses/packet-tracer">https://www.netacad.com/es/courses/packet-tracer</a>)</p></li></ul></section></article></div></section></div></body></html>

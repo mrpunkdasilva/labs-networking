@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="36731861">
+        <description>Created after removal of "Criação de Máquinas Virtuais" from Help Instance</description>
+        <accepts>Criacao-Maquinas-Virtuais.html</accepts>
+    </rule>
+    <rule id="33fadd10">
+        <description>Created after removal of "Atividade #1.1 - PREPARAÇÃO DE AMBIENTES" from Help Instance
+        </description>
+        <accepts>Atividade-1-1-Preparacao-Ambientes.html</accepts>
+    </rule>
+    <rule id="2b77574d">
+        <description>Created after removal of "Criação de Máquinas Virtuais" from Help Instance</description>
+        <accepts>Criacao-Maquinas-Virtuais.html</accepts>
+    </rule>
+</rules>

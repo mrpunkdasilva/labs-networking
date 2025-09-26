@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="Help Instance"
+                 start-page="echelon-network.md">
+
+    <toc-element topic="echelon-network.md"/>
+    <toc-element topic="internet-connections.md"/>
+    <toc-element topic="packet-switching.md"/>
+    <toc-element topic="ipv4-to-binary.md"/>
+    <toc-element topic="conclusion-and-references.md"/>
+</instance-profile>
