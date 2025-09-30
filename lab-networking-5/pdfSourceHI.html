@@ -1,0 +1,290 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .emphasis {
+            color: inherit;
+            font-weight: inherit;
+            font-style: italic;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#72188978">Laborat&oacute;rio Semana 5: Administra&ccedil;&atilde;o de Rede e Roteamento Est&aacute;tico</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="72188978">Laborat&oacute;rio Semana 5: Administra&ccedil;&atilde;o de Rede e Roteamento Est&aacute;tico</h1><p id="72188978#jed2y3_3">Neste laborat&oacute;rio, eu me concentrei em dois conceitos fundamentais da administra&ccedil;&atilde;o de redes: o c&aacute;lculo de sub-redes IP e a configura&ccedil;&atilde;o de rotas est&aacute;ticas. Realizei uma s&eacute;rie de c&aacute;lculos para determinar as m&aacute;scaras de sub-rede apropriadas para diferentes cen&aacute;rios de rede e configurei uma topologia no Cisco Packet Tracer para estabelecer a comunica&ccedil;&atilde;o entre diferentes sub-redes usando rotas est&aacute;ticas.</p><section class="detached"><h2 id="72188978#atividade-5-1-administra-o-de-rede" data-toc="atividade-5-1-administra-o-de-rede#LAB05.md-atividade-5-1-administra-o-de-rede">Atividade 5.1: Administra&ccedil;&atilde;o de Rede</h2><p id="72188978#jed2y3_7">Esta atividade testou meu entendimento sobre o c&aacute;lculo de sub-redes. Analisei quatro cen&aacute;rios diferentes e calculei a m&aacute;scara de sub-rede ou as informa&ccedil;&otilde;es de rede corretas com base nos requisitos fornecidos.</p><section class="detached"><h3 id="72188978#1-sub-rede-para-crescimento" data-toc="1-sub-rede-para-crescimento#LAB05.md-1-sub-rede-para-crescimento">1. Sub-rede para Crescimento</h3><p id="72188978#jed2y3_12"><span class="control" id="72188978#jed2y3_22">Problema:</span> Minha rede usa o endere&ccedil;o IP 172.30.0.0/16. Inicialmente, existem 25 sub-redes com um m&iacute;nimo de 1.000 hosts por sub-rede. Prev&ecirc;-se que um total de 55 sub-redes sejam necess&aacute;rias nos pr&oacute;ximos anos. Qual m&aacute;scara de sub-rede devo usar?</p><p id="72188978#jed2y3_13"><span class="control" id="72188978#jed2y3_23">Solu&ccedil;&atilde;o:</span></p><p id="72188978#jed2y3_14">Primeiro, identifiquei o n&uacute;mero de bits necess&aacute;rios para as sub-redes. Como preciso acomodar 55 sub-redes, usei a f&oacute;rmula 2^n &gt;= 55, onde 'n' &eacute; o n&uacute;mero de bits para a sub-rede.</p><ul class="list" id="72188978#jed2y3_15" start="1"><li class="list-item" id="72188978#jed2y3_24"><p id="72188978#jed2y3_26">2^5 = 32 (n&atilde;o &eacute; suficiente)</p></li><li class="list-item" id="72188978#jed2y3_25"><p id="72188978#jed2y3_27">2^6 = 64 (suficiente)</p></li></ul><p id="72188978#jed2y3_16">Ent&atilde;o, precisei de 6 bits para as sub-redes.</p><p id="72188978#jed2y3_17">Em seguida, determinei o n&uacute;mero de bits necess&aacute;rios para os hosts. Preciso de pelo menos 1.000 hosts por sub-rede, ent&atilde;o usei a f&oacute;rmula 2^m - 2 &gt;= 1000, onde 'm' &eacute; o n&uacute;mero de bits para os hosts.</p><ul class="list" id="72188978#jed2y3_18" start="1"><li class="list-item" id="72188978#jed2y3_28"><p id="72188978#jed2y3_30">2^9 = 512 (n&atilde;o &eacute; suficiente)</p></li><li class="list-item" id="72188978#jed2y3_29"><p id="72188978#jed2y3_31">2^10 = 1024 (suficiente)</p></li></ul><p id="72188978#jed2y3_19">Ent&atilde;o, precisei de 10 bits para os hosts.</p><p id="72188978#jed2y3_20">A m&aacute;scara original &eacute; /16. Utilizei 6 bits para as sub-redes, ent&atilde;o a nova m&aacute;scara ser&aacute; 16 + 6 = 22. Isso corresponde a uma m&aacute;scara de sub-rede de <span class="control" id="72188978#jed2y3_32">255.255.252.0</span>.</p><p id="72188978#jed2y3_21">Portanto, a op&ccedil;&atilde;o correta &eacute; a <span class="control" id="72188978#jed2y3_33">c) 255.255.252.0</span>.</p></section><section class="detached"><h3 id="72188978#2-sub-rede-para-uma-rede-pequena" data-toc="2-sub-rede-para-uma-rede-pequena#LAB05.md-2-sub-rede-para-uma-rede-pequena">2. Sub-rede para uma Rede Pequena</h3><p id="72188978#jed2y3_34"><span class="control" id="72188978#jed2y3_44">Problema:</span> Planejo configurar 100 computadores e fazer com que eles estabele&ccedil;am conectividade com a Internet. Meu ISP me atribuiu o endere&ccedil;o IP 192.168.16.0/24. S&atilde;o necess&aacute;rias 10 sub-redes com 10 hosts cada. Qual m&aacute;scara de sub-rede devo usar?</p><p id="72188978#jed2y3_35"><span class="control" id="72188978#jed2y3_45">Solu&ccedil;&atilde;o:</span></p><p id="72188978#jed2y3_36">Preciso de 10 sub-redes, ent&atilde;o usei a f&oacute;rmula 2^n &gt;= 10.</p><ul class="list" id="72188978#jed2y3_37" start="1"><li class="list-item" id="72188978#jed2y3_46"><p id="72188978#jed2y3_48">2^3 = 8 (n&atilde;o &eacute; suficiente)</p></li><li class="list-item" id="72188978#jed2y3_47"><p id="72188978#jed2y3_49">2^4 = 16 (suficiente)</p></li></ul><p id="72188978#jed2y3_38">Ent&atilde;o, precisei de 4 bits para as sub-redes.</p><p id="72188978#jed2y3_39">Tamb&eacute;m preciso de 10 hosts por sub-rede, ent&atilde;o usei a f&oacute;rmula 2^m - 2 &gt;= 10.</p><ul class="list" id="72188978#jed2y3_40" start="1"><li class="list-item" id="72188978#jed2y3_50"><p id="72188978#jed2y3_52">2^3 = 8 (n&atilde;o &eacute; suficiente)</p></li><li class="list-item" id="72188978#jed2y3_51"><p id="72188978#jed2y3_53">2^4 = 16 (suficiente)</p></li></ul><p id="72188978#jed2y3_41">Ent&atilde;o, precisei de 4 bits para os hosts.</p><p id="72188978#jed2y3_42">A m&aacute;scara original &eacute; /24. Utilizei 4 bits para as sub-redes, ent&atilde;o a nova m&aacute;scara ser&aacute; 24 + 4 = 28. Isso corresponde a uma m&aacute;scara de sub-rede de <span class="control" id="72188978#jed2y3_54">255.255.255.240</span>.</p><p id="72188978#jed2y3_43">Portanto, a op&ccedil;&atilde;o correta &eacute; a <span class="control" id="72188978#jed2y3_55">c) 255.255.255.240</span>.</p></section><section class="detached"><h3 id="72188978#3-calculando-sub-redes-e-hosts" data-toc="3-calculando-sub-redes-e-hosts#LAB05.md-3-calculando-sub-redes-e-hosts">3. Calculando Sub-redes e Hosts</h3><p id="72188978#jed2y3_56"><span class="control" id="72188978#jed2y3_61">Problema:</span> Se eu tiver um endere&ccedil;o IP 172.17.111.0 com uma m&aacute;scara 255.255.254.0, quantas sub-redes e quantos hosts v&aacute;lidos haver&aacute; por sub-rede?</p><p id="72188978#jed2y3_57"><span class="control" id="72188978#jed2y3_62">Solu&ccedil;&atilde;o:</span></p><p id="72188978#jed2y3_58">O endere&ccedil;o &eacute; da Classe B, ent&atilde;o a m&aacute;scara padr&atilde;o &eacute; 255.255.0.0 (/16). A m&aacute;scara fornecida &eacute; 255.255.254.0, que em bin&aacute;rio &eacute; 11111111.11111111.11111110.00000000. Esta &eacute; uma m&aacute;scara /23.</p><ul class="list" id="72188978#jed2y3_59" start="1"><li class="list-item" id="72188978#jed2y3_63"><p id="72188978#jed2y3_67">N&uacute;mero de bits de sub-rede = 23 - 16 = 7.</p></li><li class="list-item" id="72188978#jed2y3_64"><p id="72188978#jed2y3_68">N&uacute;mero de sub-redes = 2^7 = 128.</p></li><li class="list-item" id="72188978#jed2y3_65"><p id="72188978#jed2y3_69">N&uacute;mero de bits de host = 32 - 23 = 9.</p></li><li class="list-item" id="72188978#jed2y3_66"><p id="72188978#jed2y3_70">N&uacute;mero de hosts por sub-rede = 2^9 - 2 = 510.</p></li></ul><p id="72188978#jed2y3_60">Dadas as op&ccedil;&otilde;es, a resposta mais plaus&iacute;vel &eacute; a <span class="control" id="72188978#jed2y3_71">b) 128 sub-redes com 510 hosts cada</span>.</p></section><section class="detached"><h3 id="72188978#4-identificando-a-sub-rede-e-o-endere-o-de-broadcast" data-toc="4-identificando-a-sub-rede-e-o-endere-o-de-broadcast#LAB05.md-4-identificando-a-sub-rede-e-o-endere-o-de-broadcast">4. Identificando a Sub-rede e o Endere&ccedil;o de Broadcast</h3><p id="72188978#jed2y3_72"><span class="control" id="72188978#jed2y3_80">Problema:</span> A partir do endere&ccedil;o IP 192.168.85.129 com a m&aacute;scara 255.255.255.192, qual &eacute; a sub-rede e o endere&ccedil;o de broadcast aos quais o host pertence?</p><p id="72188978#jed2y3_73"><span class="control" id="72188978#jed2y3_81">Solu&ccedil;&atilde;o:</span></p><p id="72188978#jed2y3_74">A m&aacute;scara 255.255.255.192 &eacute; uma m&aacute;scara /26. Isso significa que o incremento entre as sub-redes &eacute; de 64 no &uacute;ltimo octeto (256 - 192 = 64).</p><p id="72188978#jed2y3_75">As sub-redes s&atilde;o:</p><ul class="list" id="72188978#jed2y3_76" start="1"><li class="list-item" id="72188978#jed2y3_82"><p id="72188978#jed2y3_86">192.168.85.0</p></li><li class="list-item" id="72188978#jed2y3_83"><p id="72188978#jed2y3_87">192.168.85.64</p></li><li class="list-item" id="72188978#jed2y3_84"><p id="72188978#jed2y3_88">192.168.85.128</p></li><li class="list-item" id="72188978#jed2y3_85"><p id="72188978#jed2y3_89">192.168.85.192</p></li></ul><p id="72188978#jed2y3_77">O endere&ccedil;o IP 192.168.85.129 pertence &agrave; sub-rede <span class="control" id="72188978#jed2y3_90">192.168.85.128</span>.</p><p id="72188978#jed2y3_78">O endere&ccedil;o de broadcast para esta sub-rede &eacute; o &uacute;ltimo endere&ccedil;o antes da pr&oacute;xima sub-rede, que &eacute; <span class="control" id="72188978#jed2y3_91">192.168.85.191</span>.</p><p id="72188978#jed2y3_79">Portanto, a op&ccedil;&atilde;o correta &eacute; a <span class="control" id="72188978#jed2y3_92">d) 192.168.85.128, broadcast 192.168.85.191</span>.</p></section></section><section class="detached"><h2 id="72188978#atividade-5-2-configura-o-de-rotas-est-ticas" data-toc="atividade-5-2-configura-o-de-rotas-est-ticas#LAB05.md-atividade-5-2-configura-o-de-rotas-est-ticas">Atividade 5.2: Configura&ccedil;&atilde;o de Rotas Est&aacute;ticas</h2><p id="72188978#jed2y3_93">Nesta atividade, meu objetivo foi projetar e configurar redes com roteamento est&aacute;tico, garantindo a comunica&ccedil;&atilde;o entre todos os dispositivos. A atividade foi dividida em duas partes.</p><section class="detached"><h3 id="72188978#parte-1-sub-rede-e-endere-amento" data-toc="parte-1-sub-rede-e-endere-amento#LAB05.md-parte-1-sub-rede-e-endere-amento">Parte 1: Sub-rede e Endere&ccedil;amento</h3><p id="72188978#jed2y3_96">Nesta primeira parte, o foco foi o planejamento. Recebi o espa&ccedil;o de endere&ccedil;o <span class="inline-code" id="72188978#jed2y3_107">192.168.2.0/24</span> para criar uma sub-rede que suportasse 60 hosts e, com base na topologia, preencher a tabela de endere&ccedil;amento.</p><p id="72188978#jed2y3_97"><span class="control" id="72188978#jed2y3_108">Topologia de Refer&ecirc;ncia:</span></p><div class="container"><figure class="image-container"><img class="center image image-size" id="72188978#jed2y3_98" alt="Diagrama de topologia da primeira parte da atividade." title="Diagrama de topologia da primeira parte da atividade." src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-5/Writerside/images/2%20Diagrama%20de%20topologia.png" width="975" height="447"><figcaption class="center-text">Diagrama de topologia da primeira parte da atividade.</figcaption></figure></div><p id="72188978#jed2y3_99"><span class="control" id="72188978#jed2y3_109">C&aacute;lculo da Sub-rede:</span></p><p id="72188978#jed2y3_100">Para suportar 60 hosts, usei a f&oacute;rmula <span class="inline-code" id="72188978#jed2y3_110">2^n - 2 &gt;= 60</span>, onde 'n' &eacute; o n&uacute;mero de bits para hosts.</p><ul class="list" id="72188978#jed2y3_101" start="1"><li class="list-item" id="72188978#jed2y3_111"><p id="72188978#jed2y3_113"><span class="inline-code" id="72188978#jed2y3_114">2^5 - 2 = 30</span> (n&atilde;o &eacute; suficiente)</p></li><li class="list-item" id="72188978#jed2y3_112"><p id="72188978#jed2y3_115"><span class="inline-code" id="72188978#jed2y3_116">2^6 - 2 = 62</span> (suficiente)</p></li></ul><p id="72188978#jed2y3_102">Precisei de 6 bits para os hosts. Como a rede original era /24, a nova m&aacute;scara de sub-rede se tornou /26 (32 - 6 = 26), que corresponde a <span class="inline-code" id="72188978#jed2y3_117">255.255.255.192</span>.</p><p id="72188978#jed2y3_103"><span class="control" id="72188978#jed2y3_118">Tabela de Endere&ccedil;amento Preenchida:</span></p><p id="72188978#jed2y3_104">Com base no c&aacute;lculo e na topologia, preenchi a tabela de endere&ccedil;amento.</p><div class="container"><figure class="image-container"><img class="center image image-size" id="72188978#jed2y3_105" alt="Tabela de endere&amp;ccedil;amento preenchida para a primeira parte da atividade." title="Tabela de endere&amp;ccedil;amento preenchida para a primeira parte da atividade." src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-5/Writerside/images/2%20Tabela%20de%20endere%C3%A7amento.png" width="964" height="477"><figcaption class="center-text">Tabela de endere&ccedil;amento preenchida para a primeira parte da atividade.</figcaption></figure></div><div class="table-wrapper detached"><table id="72188978#jed2y3_106"><tr class="header-row" id="72188978#jed2y3_119"><th id="72188978#jed2y3_130"><p>Dispositivo</p></th><th id="72188978#jed2y3_131"><p>Interface</p></th><th id="72188978#jed2y3_132"><p>Endere&ccedil;o IP</p></th><th id="72188978#jed2y3_133"><p>M&aacute;scara de Sub-rede</p></th><th id="72188978#jed2y3_134"><p>Gateway Padr&atilde;o</p></th></tr><tr class="" id="72188978#jed2y3_120"><td id="72188978#jed2y3_135"><p><span class="control" id="72188978#jed2y3_140">R1</span></p></td><td id="72188978#jed2y3_136"><p>Fa0/0</p></td><td id="72188978#jed2y3_137"><p>172.16.3.1</p></td><td id="72188978#jed2y3_138"><p>255.255.255.0</p></td><td id="72188978#jed2y3_139"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_121"><td id="72188978#jed2y3_141"></td><td id="72188978#jed2y3_142"><p>S0/0/0</p></td><td id="72188978#jed2y3_143"><p>172.16.2.1</p></td><td id="72188978#jed2y3_144"><p>255.255.255.0</p></td><td id="72188978#jed2y3_145"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_122"><td id="72188978#jed2y3_146"><p><span class="control" id="72188978#jed2y3_151">R2</span></p></td><td id="72188978#jed2y3_147"><p>Fa0/0</p></td><td id="72188978#jed2y3_148"><p>172.16.1.1</p></td><td id="72188978#jed2y3_149"><p>255.255.255.0</p></td><td id="72188978#jed2y3_150"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_123"><td id="72188978#jed2y3_152"></td><td id="72188978#jed2y3_153"><p>S0/0/0</p></td><td id="72188978#jed2y3_154"><p>172.16.2.2</p></td><td id="72188978#jed2y3_155"><p>255.255.255.0</p></td><td id="72188978#jed2y3_156"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_124"><td id="72188978#jed2y3_157"></td><td id="72188978#jed2y3_158"><p>S0/0/1</p></td><td id="72188978#jed2y3_159"><p>192.168.1.2</p></td><td id="72188978#jed2y3_160"><p>255.255.255.0</p></td><td id="72188978#jed2y3_161"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_125"><td id="72188978#jed2y3_162"><p><span class="control" id="72188978#jed2y3_167">R3</span></p></td><td id="72188978#jed2y3_163"><p>FA0/0</p></td><td id="72188978#jed2y3_164"><p>192.168.2.1</p></td><td id="72188978#jed2y3_165"><p>255.255.255.0</p></td><td id="72188978#jed2y3_166"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_126"><td id="72188978#jed2y3_168"></td><td id="72188978#jed2y3_169"><p>S0/0/1</p></td><td id="72188978#jed2y3_170"><p>192.168.1.1</p></td><td id="72188978#jed2y3_171"><p>255.255.255.0</p></td><td id="72188978#jed2y3_172"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_127"><td id="72188978#jed2y3_173"><p><span class="control" id="72188978#jed2y3_178">PC1</span></p></td><td id="72188978#jed2y3_174"><p>NIC</p></td><td id="72188978#jed2y3_175"><p>172.16.3.10</p></td><td id="72188978#jed2y3_176"><p>255.255.255.0</p></td><td id="72188978#jed2y3_177"><p>172.16.3.1</p></td></tr><tr class="" id="72188978#jed2y3_128"><td id="72188978#jed2y3_179"><p><span class="control" id="72188978#jed2y3_184">PC2</span></p></td><td id="72188978#jed2y3_180"><p>NIC</p></td><td id="72188978#jed2y3_181"><p>172.16.1.10</p></td><td id="72188978#jed2y3_182"><p>255.255.255.0</p></td><td id="72188978#jed2y3_183"><p>172.16.1.1</p></td></tr><tr class="" id="72188978#jed2y3_129"><td id="72188978#jed2y3_185"><p><span class="control" id="72188978#jed2y3_190">PC3</span></p></td><td id="72188978#jed2y3_186"><p>NIC</p></td><td id="72188978#jed2y3_187"><p>192.168.2.10</p></td><td id="72188978#jed2y3_188"><p>255.255.255.0</p></td><td id="72188978#jed2y3_189"><p>192.168.2.1</p></td></tr></table></div></section><section class="detached"><h3 id="72188978#parte-2-implementa-o-no-cisco-packet-tracer" data-toc="parte-2-implementa-o-no-cisco-packet-tracer#LAB05.md-parte-2-implementa-o-no-cisco-packet-tracer">Parte 2: Implementa&ccedil;&atilde;o no Cisco Packet Tracer</h3><p id="72188978#jed2y3_191">Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Packet Tracer, configurar o endere&ccedil;amento IP e implementar rotas est&aacute;ticas para permitir a comunica&ccedil;&atilde;o de ponta a ponta.</p><p id="72188978#jed2y3_192"><span class="control" id="72188978#jed2y3_199">Topologia a ser Constru&iacute;da:</span></p><div class="container"><figure class="image-container"><img class="center image image-size" id="72188978#jed2y3_193" alt="Diagrama de topologia a ser constru&amp;iacute;do na segunda parte da atividade." title="Diagrama de topologia a ser constru&amp;iacute;do na segunda parte da atividade." src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-5/Writerside/images/Diagrama%20de%20topologia.png" width="975" height="466"><figcaption class="center-text">Diagrama de topologia a ser constru&iacute;do na segunda parte da atividade.</figcaption></figure></div><p id="72188978#jed2y3_194"><span class="control" id="72188978#jed2y3_200">Tabela de Endere&ccedil;amento de Refer&ecirc;ncia:</span></p><div class="container"><figure class="image-container"><img class="center image image-size" id="72188978#jed2y3_195" alt="Tabela de endere&amp;ccedil;amento para a segunda parte da atividade." title="Tabela de endere&amp;ccedil;amento para a segunda parte da atividade." src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-5/Writerside/images/Tabela%20de%20endere%C3%A7amento.png" width="975" height="458"><figcaption class="center-text">Tabela de endere&ccedil;amento para a segunda parte da atividade.</figcaption></figure></div><div class="table-wrapper detached"><table id="72188978#jed2y3_196"><tr class="header-row" id="72188978#jed2y3_201"><th id="72188978#jed2y3_212"><p>Dispositivo</p></th><th id="72188978#jed2y3_213"><p>Interface</p></th><th id="72188978#jed2y3_214"><p>Endere&ccedil;o IP</p></th><th id="72188978#jed2y3_215"><p>M&aacute;scara de Sub-rede</p></th><th id="72188978#jed2y3_216"><p>Gateway Padr&atilde;o</p></th></tr><tr class="" id="72188978#jed2y3_202"><td id="72188978#jed2y3_217"><p><span class="control" id="72188978#jed2y3_222">Branch</span></p></td><td id="72188978#jed2y3_218"><p>Fa0/0</p></td><td id="72188978#jed2y3_219"><p>192.168.1.1</p></td><td id="72188978#jed2y3_220"><p>255.255.255.0</p></td><td id="72188978#jed2y3_221"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_203"><td id="72188978#jed2y3_223"></td><td id="72188978#jed2y3_224"><p>S0/0/0</p></td><td id="72188978#jed2y3_225"><p>172.16.1.1</p></td><td id="72188978#jed2y3_226"><p>255.255.255.0</p></td><td id="72188978#jed2y3_227"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_204"><td id="72188978#jed2y3_228"><p><span class="control" id="72188978#jed2y3_233">HQ</span></p></td><td id="72188978#jed2y3_229"><p>Fa0/0</p></td><td id="72188978#jed2y3_230"><p>192.168.2.1</p></td><td id="72188978#jed2y3_231"><p>255.255.255.0</p></td><td id="72188978#jed2y3_232"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_205"><td id="72188978#jed2y3_234"></td><td id="72188978#jed2y3_235"><p>S0/0/0</p></td><td id="72188978#jed2y3_236"><p>172.16.1.2</p></td><td id="72188978#jed2y3_237"><p>255.255.255.0</p></td><td id="72188978#jed2y3_238"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_206"><td id="72188978#jed2y3_239"></td><td id="72188978#jed2y3_240"><p>S0/0/1</p></td><td id="72188978#jed2y3_241"><p>209.165.201.2</p></td><td id="72188978#jed2y3_242"><p>255.255.255.252</p></td><td id="72188978#jed2y3_243"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_207"><td id="72188978#jed2y3_244"><p><span class="control" id="72188978#jed2y3_249">ISP</span></p></td><td id="72188978#jed2y3_245"><p>Fa0/0</p></td><td id="72188978#jed2y3_246"><p>209.165.200.225</p></td><td id="72188978#jed2y3_247"><p>255.255.255.224</p></td><td id="72188978#jed2y3_248"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_208"><td id="72188978#jed2y3_250"></td><td id="72188978#jed2y3_251"><p>S/0/0/1</p></td><td id="72188978#jed2y3_252"><p>209.165.201.1</p></td><td id="72188978#jed2y3_253"><p>255.255.255.252</p></td><td id="72188978#jed2y3_254"><p>N/C</p></td></tr><tr class="" id="72188978#jed2y3_209"><td id="72188978#jed2y3_255"><p><span class="control" id="72188978#jed2y3_260">PC1</span></p></td><td id="72188978#jed2y3_256"><p>NIC</p></td><td id="72188978#jed2y3_257"><p>192.168.1.10</p></td><td id="72188978#jed2y3_258"><p>255.255.255.0</p></td><td id="72188978#jed2y3_259"><p>192.168.1.1</p></td></tr><tr class="" id="72188978#jed2y3_210"><td id="72188978#jed2y3_261"><p><span class="control" id="72188978#jed2y3_266">PC2</span></p></td><td id="72188978#jed2y3_262"><p>NIC</p></td><td id="72188978#jed2y3_263"><p>192.168.2.10</p></td><td id="72188978#jed2y3_264"><p>255.255.255.0</p></td><td id="72188978#jed2y3_265"><p>192.168.2.1</p></td></tr><tr class="" id="72188978#jed2y3_211"><td id="72188978#jed2y3_267"><p><span class="control" id="72188978#jed2y3_272">Servidor Web</span></p></td><td id="72188978#jed2y3_268"><p>NIC</p></td><td id="72188978#jed2y3_269"><p>209.165.200.253</p></td><td id="72188978#jed2y3_270"><p>255.255.255.224</p></td><td id="72188978#jed2y3_271"><p>209.165.200.225</p></td></tr></table></div><p id="72188978#jed2y3_197"><span class="control" id="72188978#jed2y3_273">Passo a Passo da Implementa&ccedil;&atilde;o:</span></p><ol class="list list-decimal" id="72188978#jed2y3_198" type="1" start="1"><li class="list-item" id="72188978#jed2y3_274"><p id="72188978#jed2y3_279"><span class="control" id="72188978#jed2y3_281">Montagem da Topologia:</span></p><ul class="list" id="72188978#jed2y3_280" start="1"><li class="list-item" id="72188978#jed2y3_282"><p id="72188978#jed2y3_284">Abri o Cisco Packet Tracer e adicionei os seguintes dispositivos &agrave; &aacute;rea de trabalho:</p><ul class="list" id="72188978#jed2y3_285" start="1"><li class="list-item" id="72188978#jed2y3_286"><p id="72188978#jed2y3_290">3 Roteadores (usei o modelo 1941).</p></li><li class="list-item" id="72188978#jed2y3_287"><p id="72188978#jed2y3_291">2 Switches (usei o modelo 2960).</p></li><li class="list-item" id="72188978#jed2y3_288"><p id="72188978#jed2y3_292">2 PCs.</p></li><li class="list-item" id="72188978#jed2y3_289"><p id="72188978#jed2y3_293">1 Servidor.</p></li></ul></li><li class="list-item" id="72188978#jed2y3_283"><p id="72188978#jed2y3_294">Renomeei os roteadores para <span class="inline-code" id="72188978#jed2y3_295">Branch</span>, <span class="inline-code" id="72188978#jed2y3_296">HQ</span> e <span class="inline-code" id="72188978#jed2y3_297">ISP</span> para corresponder ao diagrama.</p></li></ul></li><li class="list-item" id="72188978#jed2y3_275"><p id="72188978#jed2y3_298"><span class="control" id="72188978#jed2y3_300">Conex&atilde;o dos Dispositivos:</span></p><ul class="list" id="72188978#jed2y3_299" start="1"><li class="list-item" id="72188978#jed2y3_301"><p id="72188978#jed2y3_304">Utilizei o cabo <span class="control" id="72188978#jed2y3_306">Copper Straight-Through</span> (cabo direto) para conectar:</p><ul class="list" id="72188978#jed2y3_305" start="1"><li class="list-item" id="72188978#jed2y3_307"><p id="72188978#jed2y3_312"><span class="inline-code" id="72188978#jed2y3_313">PC1</span> &agrave; porta <span class="inline-code" id="72188978#jed2y3_314">FastEthernet0/1</span> do Switch da <span class="inline-code" id="72188978#jed2y3_315">Branch</span>.</p></li><li class="list-item" id="72188978#jed2y3_308"><p id="72188978#jed2y3_316">O Switch da <span class="inline-code" id="72188978#jed2y3_317">Branch</span> (porta <span class="inline-code" id="72188978#jed2y3_318">FastEthernet0/2</span>) &agrave; porta <span class="inline-code" id="72188978#jed2y3_319">GigabitEthernet0/0</span> do roteador <span class="inline-code" id="72188978#jed2y3_320">Branch</span>.</p></li><li class="list-item" id="72188978#jed2y3_309"><p id="72188978#jed2y3_321"><span class="inline-code" id="72188978#jed2y3_322">PC2</span> &agrave; porta <span class="inline-code" id="72188978#jed2y3_323">FastEthernet0/1</span> do Switch da <span class="inline-code" id="72188978#jed2y3_324">HQ</span>.</p></li><li class="list-item" id="72188978#jed2y3_310"><p id="72188978#jed2y3_325">O Switch da <span class="inline-code" id="72188978#jed2y3_326">HQ</span> (porta <span class="inline-code" id="72188978#jed2y3_327">FastEthernet0/2</span>) &agrave; porta <span class="inline-code" id="72188978#jed2y3_328">GigabitEthernet0/0</span> do roteador <span class="inline-code" id="72188978#jed2y3_329">HQ</span>.</p></li><li class="list-item" id="72188978#jed2y3_311"><p id="72188978#jed2y3_330">O roteador <span class="inline-code" id="72188978#jed2y3_331">ISP</span> (porta <span class="inline-code" id="72188978#jed2y3_332">GigabitEthernet0/0</span>) ao <span class="inline-code" id="72188978#jed2y3_333">Servidor Web</span>.</p></li></ul></li><li class="list-item" id="72188978#jed2y3_302"><p id="72188978#jed2y3_334">Para as conex&otilde;es WAN entre os roteadores, primeiro adicionei os m&oacute;dulos <span class="inline-code" id="72188978#jed2y3_336">HWIC-2T</span> em cada roteador. Depois, usei o cabo <span class="control" id="72188978#jed2y3_337">Serial DCE</span> para conectar:</p><ul class="list" id="72188978#jed2y3_335" start="1"><li class="list-item" id="72188978#jed2y3_338"><p id="72188978#jed2y3_340"><span class="inline-code" id="72188978#jed2y3_341">Branch</span> (porta <span class="inline-code" id="72188978#jed2y3_342">Serial0/0/0</span>) a <span class="inline-code" id="72188978#jed2y3_343">HQ</span> (porta <span class="inline-code" id="72188978#jed2y3_344">Serial0/0/0</span>).</p></li><li class="list-item" id="72188978#jed2y3_339"><p id="72188978#jed2y3_345"><span class="inline-code" id="72188978#jed2y3_346">HQ</span> (porta <span class="inline-code" id="72188978#jed2y3_347">Serial0/0/1</span>) a <span class="inline-code" id="72188978#jed2y3_348">ISP</span> (porta <span class="inline-code" id="72188978#jed2y3_349">Serial0/0/1</span>).</p></li></ul></li><li class="list-item" id="72188978#jed2y3_303"><p id="72188978#jed2y3_350"><span class="emphasis" id="72188978#jed2y3_351">Nota: Configurei o <span class="inline-code" id="72188978#jed2y3_352">clock rate 64000</span> nas interfaces seriais que funcionaram como DCE (<span class="inline-code" id="72188978#jed2y3_353">Branch</span> e <span class="inline-code" id="72188978#jed2y3_354">HQ</span>).</span></p></li></ul></li><li class="list-item" id="72188978#jed2y3_276"><p id="72188978#jed2y3_355"><span class="control" id="72188978#jed2y3_357">Configura&ccedil;&atilde;o do Endere&ccedil;amento IP:</span></p><ul class="list" id="72188978#jed2y3_356" start="1"><li class="list-item" id="72188978#jed2y3_358"><p id="72188978#jed2y3_361">Acessei a aba <span class="inline-code" id="72188978#jed2y3_362">CLI</span> de cada roteador e as configura&ccedil;&otilde;es de <span class="inline-code" id="72188978#jed2y3_363">Desktop &gt; IP Configuration</span> dos PCs e do Servidor para atribuir os IPs, m&aacute;scaras e gateways conforme a tabela de endere&ccedil;amento.</p></li><li class="list-item" id="72188978#jed2y3_359"><p id="72188978#jed2y3_364"><span class="control" id="72188978#jed2y3_366">Exemplo de configura&ccedil;&atilde;o de uma interface no roteador <span class="inline-code" id="72188978#jed2y3_367">Branch</span>:</span></p><div class="detached code-block" id="72188978#jed2y3_365"><pre><code class="language-csharp">enable
+configure terminal
+interface GigabitEthernet0/0
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit</code></pre></div></li><li class="list-item" id="72188978#jed2y3_360"><p id="72188978#jed2y3_368">Repeti esse processo para todas as interfaces de todos os dispositivos.</p></li></ul></li><li class="list-item" id="72188978#jed2y3_277"><p id="72188978#jed2y3_369"><span class="control" id="72188978#jed2y3_371">Configura&ccedil;&atilde;o das Rotas Est&aacute;ticas:</span></p><ul class="list" id="72188978#jed2y3_370" start="1"><li class="list-item" id="72188978#jed2y3_372"><p id="72188978#jed2y3_376">Para que as redes pudessem &quot;se enxergar&quot;, configurei as rotas est&aacute;ticas.</p></li><li class="list-item" id="72188978#jed2y3_373"><p id="72188978#jed2y3_377"><span class="control" id="72188978#jed2y3_379">No roteador <span class="inline-code" id="72188978#jed2y3_381">Branch</span>:</span> Apontei uma rota padr&atilde;o para o pr&oacute;ximo salto, que &eacute; o roteador <span class="inline-code" id="72188978#jed2y3_380">HQ</span>.</p><div class="detached code-block" id="72188978#jed2y3_378"><pre><code class="language-csharp">configure terminal
+ip route 0.0.0.0 0.0.0.0 172.16.1.2</code></pre></div></li><li class="list-item" id="72188978#jed2y3_374"><p id="72188978#jed2y3_382"><span class="control" id="72188978#jed2y3_384">No roteador <span class="inline-code" id="72188978#jed2y3_387">HQ</span>:</span> Adicionei uma rota para a rede da <span class="inline-code" id="72188978#jed2y3_385">Branch</span> e uma rota padr&atilde;o para o <span class="inline-code" id="72188978#jed2y3_386">ISP</span>.</p><div class="detached code-block" id="72188978#jed2y3_383"><pre><code class="language-csharp">configure terminal
+ip route 192.168.1.0 255.255.255.0 172.16.1.1
+ip route 0.0.0.0 0.0.0.0 209.165.201.2</code></pre></div></li><li class="list-item" id="72188978#jed2y3_375"><p id="72188978#jed2y3_388"><span class="control" id="72188978#jed2y3_390">No roteador <span class="inline-code" id="72188978#jed2y3_393">ISP</span>:</span> Adicionei rotas para as redes internas da <span class="inline-code" id="72188978#jed2y3_391">Branch</span> e da <span class="inline-code" id="72188978#jed2y3_392">HQ</span>.</p><div class="detached code-block" id="72188978#jed2y3_389"><pre><code class="language-csharp">configure terminal
+ip route 192.168.1.0 255.255.255.0 209.165.201.1
+ip route 192.168.2.0 255.255.255.0 209.165.201.1</code></pre></div></li></ul></li><li class="list-item" id="72188978#jed2y3_278"><p id="72188978#jed2y3_394"><span class="control" id="72188978#jed2y3_396">Verifica&ccedil;&atilde;o da Conectividade:</span></p><ul class="list" id="72188978#jed2y3_395" start="1"><li class="list-item" id="72188978#jed2y3_397"><p id="72188978#jed2y3_400">Para garantir que tudo estava funcionando, usei a ferramenta de <span class="inline-code" id="72188978#jed2y3_402">ping</span> a partir do <span class="inline-code" id="72188978#jed2y3_403">PC1</span>:</p><ul class="list" id="72188978#jed2y3_401" start="1"><li class="list-item" id="72188978#jed2y3_404"><p id="72188978#jed2y3_406"><span class="inline-code" id="72188978#jed2y3_407">ping 192.168.2.10</span> (para o <span class="inline-code" id="72188978#jed2y3_408">PC2</span>)</p></li><li class="list-item" id="72188978#jed2y3_405"><p id="72188978#jed2y3_409"><span class="inline-code" id="72188978#jed2y3_410">ping 209.165.200.226</span> (para o <span class="inline-code" id="72188978#jed2y3_411">Servidor Web</span>)</p></li></ul></li><li class="list-item" id="72188978#jed2y3_398"><p id="72188978#jed2y3_412">Todos os pings foram bem-sucedidos, confirmando que a rede estava totalmente conectada e as rotas est&aacute;ticas, corretamente configuradas.</p></li><li class="list-item" id="72188978#jed2y3_399"><p id="72188978#jed2y3_413">Tamb&eacute;m usei o comando <span class="inline-code" id="72188978#jed2y3_414">show ip route</span> em cada roteador para inspecionar a tabela de roteamento e verificar se as rotas est&aacute;ticas (<span class="inline-code" id="72188978#jed2y3_415">S</span>) e as redes conectadas (<span class="inline-code" id="72188978#jed2y3_416">C</span>) estavam presentes.</p></li></ul></li></ol></section></section><section class="detached"><h2 id="72188978#conclus-o" data-toc="conclus-o#LAB05.md-conclus-o">Conclus&atilde;o</h2><p id="72188978#jed2y3_417">Este laborat&oacute;rio foi um &oacute;timo exerc&iacute;cio para aplicar meu conhecimento de c&aacute;lculo de sub-redes e roteamento est&aacute;tico. Consegui projetar e configurar uma rede com sucesso, o que refor&ccedil;ou minha compreens&atilde;o desses conceitos cruciais de rede.</p></section></article></div></section></div></body></html>

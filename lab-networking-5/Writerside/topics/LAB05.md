@@ -100,7 +100,7 @@ Nesta primeira parte, o foco foi o planejamento. Recebi o espaço de endereço `
 
 **Topologia de Referência:**
 
-![Diagrama de topologia da Parte 1](../images/2%20Diagrama%20de%20topologia.png){alt="Diagrama de topologia da primeira parte da atividade."}
+![Diagrama de topologia da Parte 1](2%20Diagrama%20de%20topologia.png){alt="Diagrama de topologia da primeira parte da atividade."}
 
 **Cálculo da Sub-rede:**
 
@@ -114,7 +114,20 @@ Precisei de 6 bits para os hosts. Como a rede original era /24, a nova máscara 
 
 Com base no cálculo e na topologia, preenchi a tabela de endereçamento.
 
-![Tabela de endereçamento da Parte 1](../images/2%20Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento preenchida para a primeira parte da atividade."}
+![Tabela de endereçamento da Parte 1](2%20Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento preenchida para a primeira parte da atividade."}
+
+| Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
+|---|---|---|---|---|
+| **R1** | Fa0/0 | 172.16.3.1 | 255.255.255.0 | N/C |
+| | S0/0/0 | 172.16.2.1 | 255.255.255.0 | N/C |
+| **R2** | Fa0/0 | 172.16.1.1 | 255.255.255.0 | N/C |
+| | S0/0/0 | 172.16.2.2 | 255.255.255.0 | N/C |
+| | S0/0/1 | 192.168.1.2 | 255.255.255.0 | N/C |
+| **R3** | FA0/0 | 192.168.2.1 | 255.255.255.0 | N/C |
+| | S0/0/1 | 192.168.1.1 | 255.255.255.0 | N/C |
+| **PC1** | NIC | 172.16.3.10 | 255.255.255.0 | 172.16.3.1 |
+| **PC2** | NIC | 172.16.1.10 | 255.255.255.0 | 172.16.1.1 |
+| **PC3** | NIC | 192.168.2.10 | 255.255.255.0 | 192.168.2.1 |
 
 ### Parte 2: Implementação no Cisco Packet Tracer
 
@@ -122,11 +135,24 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
 
 **Topologia a ser Construída:**
 
-![Diagrama de topologia da Parte 2](../images/Diagrama%20de%20topologia.png){alt="Diagrama de topologia a ser construído na segunda parte da atividade."}
+![Diagrama de topologia da Parte 2](Diagrama%20de%20topologia.png){alt="Diagrama de topologia a ser construído na segunda parte da atividade."}
 
 **Tabela de Endereçamento de Referência:**
 
-![Tabela de endereçamento da Parte 2](../images/Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento para a segunda parte da atividade."}
+![Tabela de endereçamento da Parte 2](Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento para a segunda parte da atividade."}
+
+| Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
+|---|---|---|---|---|
+| **Branch** | Fa0/0 | 192.168.1.1 | 255.255.255.0 | N/C |
+| | S0/0/0 | 172.16.1.1 | 255.255.255.0 | N/C |
+| **HQ** | Fa0/0 | 192.168.2.1 | 255.255.255.0 | N/C |
+| | S0/0/0 | 172.16.1.2 | 255.255.255.0 | N/C |
+| | S0/0/1 | 209.165.201.2 | 255.255.255.252 | N/C |
+| **ISP** | Fa0/0 | 209.165.200.225 | 255.255.255.224 | N/C |
+| | S/0/0/1 | 209.165.201.1 | 255.255.255.252 | N/C |
+| **PC1** | NIC | 192.168.1.10 | 255.255.255.0 | 192.168.1.1 |
+| **PC2** | NIC | 192.168.2.10 | 255.255.255.0 | 192.168.2.1 |
+| **Servidor Web** | NIC | 209.165.200.253 | 255.255.255.224 | 209.165.200.225 |
 
 **Passo a Passo da Implementação:**
 
@@ -138,6 +164,9 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
         *   1 Servidor.
     *   Renomeei os roteadores para `Branch`, `HQ` e `ISP` para corresponder ao diagrama.
 
+![DISPOSITIVOS E OS ROTEATORES APENAS RENOMEADOS.png](DISPOSITIVOS E OS ROTEATORES APENAS RENOMEADOS.png)
+
+
 2.  **Conexão dos Dispositivos:**
     *   Utilizei o cabo **Copper Straight-Through** (cabo direto) para conectar:
         *   `PC1` à porta `FastEthernet0/1` do Switch da `Branch`.
@@ -148,7 +177,14 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
     *   Para as conexões WAN entre os roteadores, primeiro adicionei os módulos `HWIC-2T` em cada roteador. Depois, usei o cabo **Serial DCE** para conectar:
         *   `Branch` (porta `Serial0/0/0`) a `HQ` (porta `Serial0/0/0`).
         *   `HQ` (porta `Serial0/0/1`) a `ISP` (porta `Serial0/0/1`).
-    *   *Nota: Configurei o `clock rate 64000` nas interfaces seriais que funcionaram como DCE (`Branch` e `HQ`).*
+
+
+
+
+
+> *Nota: Configurei o `clock rate 64000` nas interfaces seriais que funcionaram como DCE (`Branch` e `HQ`).*
+> {style="note"}
+
 
 3.  **Configuração do Endereçamento IP:**
     *   Acessei a aba `CLI` de cada roteador e as configurações de `Desktop > IP Configuration` dos PCs e do Servidor para atribuir os IPs, máscaras e gateways conforme a tabela de endereçamento.
