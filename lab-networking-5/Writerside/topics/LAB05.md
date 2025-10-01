@@ -175,15 +175,23 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
         *   O Switch da `HQ` (porta `FastEthernet0/2`) à porta `GigabitEthernet0/0` do roteador `HQ`.
         *   O roteador `ISP` (porta `GigabitEthernet0/0`) ao `Servidor Web`.
     *   Para as conexões WAN entre os roteadores, primeiro adicionei os módulos `HWIC-2T` em cada roteador. Depois, usei o cabo **Serial DCE** para conectar:
-        *   `Branch` (porta `Serial0/0/0`) a `HQ` (porta `Serial0/0/0`).
-        *   `HQ` (porta `Serial0/0/1`) a `ISP` (porta `Serial0/0/1`).
+        *   `Branch` (porta `Serial0/0/0`) a `HQ` (porta `Serial0/1/0`).
+        *   `HQ` (porta `Serial0/1/1`) a `ISP` (porta `Serial0/0/1`).
 
+    **Passo 2.1: Configuração do `clock rate` (DCE)**
 
+    Um detalhe fundamental na configuração de links seriais é o `clock rate`. Em uma conexão serial, um dos lados deve atuar como DCE (Data Communications Equipment), fornecendo o sinal de sincronismo (clock) para a comunicação. O outro lado atua como DTE (Data Terminal Equipment). No Cisco Packet Tracer, o lado em que conectamos o cabo Serial DCE é o que precisa ter o `clock rate` configurado.
 
+    Na nossa topologia, as interfaces que atuaram como DCE foram:
+    *   `Branch`: interface `Serial0/1/0`
+    *   `HQ`: interface `Serial0/1/1`
+    * ![image_2.png](image_2.png)
 
+    A configuração foi feita da seguinte forma em cada roteador, já dentro do modo de configuração global:
+    *  ![image_3.png](image_3.png)
 
-> *Nota: Configurei o `clock rate 64000` nas interfaces seriais que funcionaram como DCE (`Branch` e `HQ`).*
-> {style="note"}
+> {style="warning"}
+> **Importante:** Se o `clock rate` não for configurado no lado DCE da conexão, o link serial não será ativado e a comunicação entre os roteadores falhará.
 
 
 3.  **Configuração do Endereçamento IP:**
