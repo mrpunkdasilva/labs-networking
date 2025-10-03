@@ -1,4 +1,3 @@
-
 # Laboratório Semana 5: Administração de Rede e Roteamento Estático
 
 Neste laboratório, eu me concentrei em dois conceitos fundamentais da administração de redes: o cálculo de sub-redes IP e a configuração de rotas estáticas. Realizei uma série de cálculos para determinar as máscaras de sub-rede apropriadas para diferentes cenários de rede e configurei uma topologia no Cisco Packet Tracer para estabelecer a comunicação entre diferentes sub-redes usando rotas estáticas.
@@ -100,7 +99,7 @@ Nesta primeira parte, o foco foi o planejamento. Recebi o espaço de endereço `
 
 **Topologia de Referência:**
 
-![Diagrama de topologia da Parte 1](2%20Diagrama%20de%20topologia.png){alt="Diagrama de topologia da primeira parte da atividade."}
+![Diagrama de topologia da Parte 1](2%20Diagrama%20de%20topologia.png){alt="Diagrama de rede da Parte 1, mostrando três roteadores (R1, R2, R3) e três PCs (PC1, PC2, PC3) interconectados. R1 e PC1 estão em uma LAN. R2 e PC2 estão em outra LAN. R3 e PC3 estão em uma terceira LAN. Os roteadores estão conectados entre si por links seriais."}
 
 **Cálculo da Sub-rede:**
 
@@ -114,7 +113,7 @@ Precisei de 6 bits para os hosts. Como a rede original era /24, a nova máscara 
 
 Com base no cálculo e na topologia, preenchi a tabela de endereçamento.
 
-![Tabela de endereçamento da Parte 1](2%20Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento preenchida para a primeira parte da atividade."}
+![Tabela de endereçamento da Parte 1](2%20Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento IP para a Parte 1, listando os dispositivos (R1, R2, R3, PC1, PC2, PC3), suas interfaces, endereços IP, máscaras de sub-rede e gateways padrão."}
 
 | Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
 |---|---|---|---|---|
@@ -135,11 +134,11 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
 
 **Topologia a ser Construída:**
 
-![Diagrama de topologia da Parte 2](Diagrama%20de%20topologia.png){alt="Diagrama de topologia a ser construído na segunda parte da atividade."}
+![Diagrama de topologia da Parte 2](Diagrama%20de%20topologia.png){alt="Diagrama de rede da Parte 2, mostrando uma topologia com um roteador 'Branch', um 'HQ' e um 'ISP'. As redes 'Branch' e 'HQ' têm um PC cada. A rede 'ISP' tem um Servidor Web. As conexões entre LANs e WANs são detalhadas."}
 
 **Tabela de Endereçamento de Referência:**
 
-![Tabela de endereçamento da Parte 2](Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento para a segunda parte da atividade."}
+![Tabela de endereçamento da Parte 2](Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento IP para a Parte 2, detalhando os IPs para os roteadores Branch, HQ, ISP, e para os hosts PC1, PC2 e Servidor Web."}
 
 | Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
 |---|---|---|---|---|
@@ -148,11 +147,11 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
 | **HQ** | Fa0/0 | 192.168.2.1 | 255.255.255.0 | N/C |
 | | S0/0/0 | 172.16.1.2 | 255.255.255.0 | N/C |
 | | S0/0/1 | 209.165.201.2 | 255.255.255.252 | N/C |
-| **ISP** | Fa0/0 | 209.165.200.225 | 255.255.255.224 | N/C |
+| **ISP** | Fa0/0 | 209.165.200.226 | 255.255.255.224 | N/C |
 | | S/0/0/1 | 209.165.201.1 | 255.255.255.252 | N/C |
 | **PC1** | NIC | 192.168.1.10 | 255.255.255.0 | 192.168.1.1 |
 | **PC2** | NIC | 192.168.2.10 | 255.255.255.0 | 192.168.2.1 |
-| **Servidor Web** | NIC | 209.165.200.253 | 255.255.255.224 | 209.165.200.225 |
+| **Servidor Web** | NIC | 209.165.200.253 | 255.255.255.224 | 209.165.200.226 |
 
 **Passo a Passo da Implementação:**
 
@@ -164,7 +163,7 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
         *   1 Servidor.
     *   Renomeei os roteadores para `Branch`, `HQ` e `ISP` para corresponder ao diagrama.
 
-![DISPOSITIVOS E OS ROTEATORES APENAS RENOMEADOS.png](DISPOSITIVOS E OS ROTEATORES APENAS RENOMEADOS.png)
+![Roteadores renomeados no Packet Tracer](DISPOSITIVOS%20E%20OS%20ROTEATORES%20APENAS%20RENOMEADOS.png){alt="Captura de tela do Cisco Packet Tracer mostrando os ícones dos três roteadores, dois switches, dois PCs e um servidor posicionados na área de trabalho, com os roteadores já renomeados para Branch, HQ e ISP."}
 
 
 2.  **Conexão dos Dispositivos:**
@@ -175,37 +174,140 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
         *   O Switch da `HQ` (porta `FastEthernet0/2`) à porta `GigabitEthernet0/0` do roteador `HQ`.
         *   O roteador `ISP` (porta `GigabitEthernet0/0`) ao `Servidor Web`.
     *   Para as conexões WAN entre os roteadores, primeiro adicionei os módulos `HWIC-2T` em cada roteador. Depois, usei o cabo **Serial DCE** para conectar:
-        *   `Branch` (porta `Serial0/0/0`) a `HQ` (porta `Serial0/1/0`).
-        *   `HQ` (porta `Serial0/1/1`) a `ISP` (porta `Serial0/0/1`).
+        *   `Branch` (porta `Serial0/1/0`) a `HQ` (porta `Serial0/1/0`).
+        *   `HQ` (porta `Serial0/1/1`) a `ISP` (porta `Serial0/1/1`).
+> {style="note"}
+> **Observação:** Os números das portas seriais (ex: `Serial0/0/0` vs `Serial0/1/0`) podem variar dependendo do modelo do roteador ou do módulo `HWIC` que você instalou no Packet Tracer. É importante usar o comando `show ip interface brief` para verificar os nomes corretos das portas no seu dispositivo antes de configurá-las. Este tutorial foi ajustado para usar as portas `Serial0/1/x`.
 
-    **Passo 2.1: Configuração do `clock rate` (DCE)**
+**Passo 2.1: Configuração do `clock rate` (DCE)**
 
-    Um detalhe fundamental na configuração de links seriais é o `clock rate`. Em uma conexão serial, um dos lados deve atuar como DCE (Data Communications Equipment), fornecendo o sinal de sincronismo (clock) para a comunicação. O outro lado atua como DTE (Data Terminal Equipment). No Cisco Packet Tracer, o lado em que conectamos o cabo Serial DCE é o que precisa ter o `clock rate` configurado.
+Um detalhe fundamental na configuração de links seriais é o `clock rate`. Em uma conexão serial, um dos lados deve atuar como DCE (Data Communications Equipment), fornecendo o sinal de sincronismo (clock) para a comunicação. O outro lado atua como DTE (Data Terminal Equipment). No Cisco Packet Tracer, o lado em que conectamos o cabo Serial DCE é o que precisa ter o `clock rate` configurado.
 
-    Na nossa topologia, as interfaces que atuaram como DCE foram:
-    *   `Branch`: interface `Serial0/1/0`
-    *   `HQ`: interface `Serial0/1/1`
-    * ![image_2.png](image_2.png)
+Na nossa topologia, as interfaces que atuaram como DCE foram:
+*   `Branch`: interface `Serial0/1/0`
+*   `HQ`: interface `Serial0/1/1`
+* ![Configuração de clock rate](image_2.png){alt="Captura de tela do Packet Tracer indicando a configuração do clock rate em uma interface serial."}
 
-    A configuração foi feita da seguinte forma em cada roteador, já dentro do modo de configuração global:
-    *  ![image_3.png](image_3.png)
+A configuração foi feita da seguinte forma em cada roteador, já dentro do modo de configuração global:
+*  ![Comando clock rate na CLI](image_3.png){alt="Captura de tela da linha de comando (CLI) do Cisco Packet Tracer, mostrando o comando 'clock rate 64000' sendo aplicado a uma interface serial."}
 
 > {style="warning"}
 > **Importante:** Se o `clock rate` não for configurado no lado DCE da conexão, o link serial não será ativado e a comunicação entre os roteadores falhará.
 
 
 3.  **Configuração do Endereçamento IP:**
-    *   Acessei a aba `CLI` de cada roteador e as configurações de `Desktop > IP Configuration` dos PCs e do Servidor para atribuir os IPs, máscaras e gateways conforme a tabela de endereçamento.
-    *   **Exemplo de configuração de uma interface no roteador `Branch`:**
-        ```c#
-        enable
-        configure terminal
-        interface GigabitEthernet0/0
-        ip address 192.168.1.1 255.255.255.0
-        no shutdown
-        exit
-        ```
-    *   Repeti esse processo para todas as interfaces de todos os dispositivos.
+
+    Para que a rede funcione, cada dispositivo precisa de um endereço IP único. Segui a tabela de endereçamento e configurei cada dispositivo, um por um.
+
+    #### **Configurando os PCs e o Servidor:**
+
+    Para os computadores e o servidor, a configuração é feita pela interface gráfica.
+
+    1.  **Para o PC1 (Rede Branch):**
+        *   Cliquei no `PC1` > aba `Desktop` > `IP Configuration`.
+        *   Preenchi os campos da seguinte forma:
+            *   **IP Address:** `192.168.1.10`
+            *   **Subnet Mask:** `255.255.255.0`
+            *   **Default Gateway:** `192.168.1.1`
+        * ![Configuração IP do PC1](image_6.png){alt="Captura de tela da janela de Configuração de IP do PC1 no Packet Tracer, mostrando os campos de endereço IP, máscara e gateway preenchidos."}
+
+    2.  **Para o PC2 (Rede HQ):**
+        *   Cliquei no `PC2` > aba `Desktop` > `IP Configuration`.
+        *   Preenchi os campos da seguinte forma:
+            *   **IP Address:** `192.168.2.10`
+            *   **Subnet Mask:** `255.255.255.0`
+            *   **Default Gateway:** `192.168.2.1`
+        * ![Configuração IP do PC2](image_5.png){alt="Captura de tela da janela de Configuração de IP do PC2 no Packet Tracer, mostrando os campos de endereço IP, máscara e gateway preenchidos."}
+
+    3.  **Para o Servidor Web (Rede ISP):**
+        *   Cliquei no `Servidor Web` > aba `Desktop` > `IP Configuration`.
+        *   Preenchi os campos da seguinte forma:
+            *   **IP Address:** `209.165.200.253`
+            *   **Subnet Mask:** `255.255.255.224`
+            *   **Default Gateway:** `209.165.200.226`
+        *  ![Configuração IP do Servidor Web](image_4.png){alt="Captura de tela da janela de Configuração de IP do Servidor Web no Packet Tracer, mostrando os campos de endereço IP, máscara e gateway preenchidos."}
+
+    #### **Configurando os Roteadores (Branch, HQ e ISP):**
+
+    Nos roteadores, a configuração é feita via linha de comando (CLI).
+
+    1.  **Roteador Branch:**
+        *   Acesse a aba `CLI`.
+        *   Digite os seguintes comandos:
+            ```c#
+            enable
+            configure terminal
+
+            // Configura a interface conectada à rede local (PC1)
+            interface GigabitEthernet0/0
+            ip address 192.168.1.1 255.255.255.0
+            no shutdown
+            exit
+
+            // Configura a interface serial conectada ao HQ
+            interface Serial0/1/0
+            ip address 172.16.1.1 255.255.255.0
+            // Configura o clock rate por ser o lado DCE da conexão
+            clock rate 64000
+            no shutdown
+            exit
+            ```
+        * ![Configuração CLI do Roteador Branch](image_7.png){alt="Captura de tela da CLI do roteador Branch, mostrando os comandos de configuração das interfaces GigabitEthernet e Serial."}
+
+    2.  **Roteador HQ:**
+        *   Acesse a aba `CLI`.
+        *   Digite os seguintes comandos:
+            ```c#
+            enable
+            configure terminal
+
+            // Configura a interface conectada à rede local (PC2)
+            interface GigabitEthernet0/0
+            ip address 192.168.2.1 255.255.255.0
+            no shutdown
+            exit
+
+            // Configura a interface serial conectada ao Branch
+            interface Serial0/1/0
+            ip address 172.16.1.2 255.255.255.0
+            no shutdown
+            exit
+
+            // Configura a interface serial conectada ao ISP
+            interface Serial0/1/1
+            ip address 209.165.201.2 255.255.255.252
+            // Configura o clock rate por ser o lado DCE da conexão
+            clock rate 64000
+            no shutdown
+            exit
+            ```
+        * ![Configuração CLI do Roteador HQ](image_8.png){alt="Captura de tela da CLI do roteador HQ, mostrando os comandos de configuração das interfaces GigabitEthernet e Seriais."}
+
+    3.  **Roteador ISP:**
+        *   Acesse a aba `CLI`.
+        *   Digite os seguintes comandos:
+            ```c#
+            enable
+            configure terminal
+
+            // Configura a interface conectada à rede do Servidor
+            interface GigabitEthernet0/0
+            ip address 209.165.200.226 255.255.255.224
+            no shutdown
+            exit
+
+            // Configura a interface serial conectada ao HQ
+            interface Serial0/1/1
+            ip address 209.165.201.1 255.255.255.252
+            no shutdown
+            exit
+            ``` 
+        *  ![Configuração CLI do Roteador ISP](image_9.png){alt="Captura de tela da CLI do roteador ISP, mostrando os comandos de configuração das interfaces GigabitEthernet e Serial."}
+
+    > {style="info"}
+    > O comando `no shutdown` é crucial para ativar a interface após a configuração. Sem ele, a porta permanece administrativamente desativada.
+
+    Após repetir esses passos para todos os dispositivos, a base do endereçamento da rede estava completa, permitindo que os dispositivos em uma mesma sub-rede se comunicassem. O próximo passo foi configurar as rotas para permitir a comunicação *entre* as diferentes sub-redes.
 
 4.  **Configuração das Rotas Estáticas:**
     *   Para que as redes pudessem "se enxergar", configurei as rotas estáticas.
@@ -214,26 +316,49 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
         configure terminal
         ip route 0.0.0.0 0.0.0.0 172.16.1.2
         ```
+        *  ![Comando de rota estática no Branch](image_10.png){alt="Captura de tela da CLI do roteador Branch, mostrando o comando 'ip route' para a rota padrão."}
     *   **No roteador `HQ`:** Adicionei uma rota para a rede da `Branch` e uma rota padrão para o `ISP`.
         ```c#
         configure terminal
         ip route 192.168.1.0 255.255.255.0 172.16.1.1
-        ip route 0.0.0.0 0.0.0.0 209.165.201.2
+        ip route 0.0.0.0 0.0.0.0 209.165.201.1
         ```
+        * ![Comandos de rota estática no HQ](image_11.png){alt="Captura de tela da CLI do roteador HQ, mostrando os comandos 'ip route' para a rede da Branch e para a rota padrão."}
     *   **No roteador `ISP`:** Adicionei rotas para as redes internas da `Branch` e da `HQ`.
         ```c#
         configure terminal
-        ip route 192.168.1.0 255.255.255.0 209.165.201.1
-        ip route 192.168.2.0 255.255.255.0 209.165.201.1
+        ip route 192.168.1.0 255.255.255.0 209.165.201.2
+        ip route 192.168.2.0 255.255.255.0 209.165.201.2
         ```
+        *  ![Comandos de rota estática no ISP](image_12.png){alt="Captura de tela da CLI do roteador ISP, mostrando os comandos 'ip route' para as redes internas."}
 
 5.  **Verificação da Conectividade:**
-    *   Para garantir que tudo estava funcionando, usei a ferramenta de `ping` a partir do `PC1`:
+    * Para garantir que tudo estava funcionando, usei a ferramenta de `ping` a partir do `PC1`:
         *   `ping 192.168.2.10` (para o `PC2`)
         *   `ping 209.165.200.226` (para o `Servidor Web`)
-    *   Todos os pings foram bem-sucedidos, confirmando que a rede estava totalmente conectada e as rotas estáticas, corretamente configuradas.
-    *   Também usei o comando `show ip route` em cada roteador para inspecionar a tabela de roteamento e verificar se as rotas estáticas (`S`) e as redes conectadas (`C`) estavam presentes.
+* Todos os pings foram bem-sucedidos, confirmando que a rede estava totalmente conectada e as rotas estáticas, corretamente configuradas.
+* ![Resultados de ping do PC1](image_13.png){alt="Captura de tela da linha de comando do PC1, mostrando os resultados bem-sucedidos dos pings para o PC2 e para o Servidor Web."}
+* Também usei o comando `show ip route` em cada roteador para inspecionar a tabela de roteamento e verificar se as rotas estáticas (`S`) e as redes conectadas (`C`) estavam presentes.
+  * ![Saída do comando show ip route no Branch](image_14.png){alt="Captura de tela da CLI do roteador Branch, mostrando a saída do comando 'show ip route' com as rotas conectadas e a rota estática padrão."}
+  * ![Saída do comando show ip route no HQ](image_15.png){alt="Captura de tela da CLI do roteador HQ, mostrando a saída do comando 'show ip route' com as rotas conectadas e as rotas estáticas."}
+  * ![Saída do comando show ip route no ISP](image_17.png){alt="Captura de tela da CLI do roteador ISP, mostrando a saída do comando 'show ip route' com as rotas conectadas e as rotas estáticas para as redes internas."}
+
+
 
 ## Conclusão
 
 Este laboratório foi um ótimo exercício para aplicar meu conhecimento de cálculo de sub-redes e roteamento estático. Consegui projetar e configurar uma rede com sucesso, o que reforçou minha compreensão desses conceitos cruciais de rede.
+
+## Referências
+
+- https://www.subnet-calculator.com/
+- https://www.linkedin.com/pulse/cisco-router-basic-configuration-step-guide-vijay-kumar-gupta--ylmgc/
+- https://www.computernetworkingnotes.com/ccna-study-guide/configure-cisco-router-step-by-step-guide.html
+- https://difusao.tech/blog/desvendando-o-subnetting-um-guia-completo-com-exemplos-praticos/
+- https://conexaoeinspiracao.blogspot.com/2025/03/o-que-e-ipv4-guia-completo-como.html
+- https://www.computernetworkingnotes.com/ccna-study-guide/static-routing-configuration-guide-with-examples.html
+- https://www.vskills.in/certification/tutorial/clock-rates-synchronization-dce-and-dte/
+- https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/interface/command/ir-cr-book/ir-c2.html
+- https://www.ccexpert.us/data-link-2/clock-rates-dce-and-dte.html
+
+
