@@ -93,40 +93,59 @@ Portanto, a opção correta é a **d) 192.168.85.128, broadcast 192.168.85.191**
 
 Nesta atividade, meu objetivo foi projetar e configurar redes com roteamento estático, garantindo a comunicação entre todos os dispositivos. A atividade foi dividida em duas partes.
 
-### Parte 1: Sub-rede e Endereçamento
+### Parte 1: Sub-rede e Endereçamento da Topologia Inicial
 
-Nesta primeira parte, o foco foi o planejamento. Recebi o espaço de endereço `192.168.2.0/24` para criar uma sub-rede que suportasse 60 hosts e, com base na topologia, preencher a tabela de endereçamento.
+Nesta primeira parte, a tarefa foi planejar o endereçamento IP para uma nova rede. Recebi o espaço de endereço `192.168.2.0/24` e o requisito de criar sub-redes capazes de suportar pelo menos 60 hosts cada. O objetivo era usar esse cálculo para preencher a tabela de endereçamento de acordo com a topologia fornecida.
 
 **Topologia de Referência:**
 
-![Diagrama de topologia da Parte 1](2%20Diagrama%20de%20topologia.png){alt="Diagrama de rede da Parte 1, mostrando três roteadores (R1, R2, R3) e três PCs (PC1, PC2, PC3) interconectados. R1 e PC1 estão em uma LAN. R2 e PC2 estão em outra LAN. R3 e PC3 estão em uma terceira LAN. Os roteadores estão conectados entre si por links seriais."}
+![Diagrama de topologia da Parte 1](../images/Diagrama%20de%20topologia.png){alt="Diagrama de rede da Parte 1, mostrando os roteadores HQ, Branch e ISP, com PCs conectados às redes HQ e Branch e um Servidor Web conectado à rede ISP."}
 
-**Cálculo da Sub-rede:**
+**Passo a Passo do Cálculo de Sub-rede:**
 
-Para suportar 60 hosts, usei a fórmula `2^n - 2 >= 60`, onde 'n' é o número de bits para hosts.
-- `2^5 - 2 = 30` (não é suficiente)
-- `2^6 - 2 = 62` (suficiente)
+1.  **Análise do Requisito de Hosts:**
+    *   O requisito principal é suportar um mínimo de 60 hosts por sub-rede.
+    *   Para encontrar o número de bits de host (`n`) necessários, usei a fórmula `2^n - 2 >= número de hosts`.
+    *   Testando os valores:
+        *   `2^5 - 2 = 30` (Não é suficiente)
+        *   `2^6 - 2 = 62` (É suficiente)
+    *   Concluí que são necessários **6 bits** para a porção de host da rede.
 
-Precisei de 6 bits para os hosts. Como a rede original era /24, a nova máscara de sub-rede se tornou /26 (32 - 6 = 26), que corresponde a `255.255.255.192`.
+2.  **Determinação da Nova Máscara de Sub-rede:**
+    *   Um endereço IPv4 tem 32 bits no total. Se 6 bits são para hosts, os bits restantes são para a rede: `32 - 6 = 26`.
+    *   Isso resulta em uma nova máscara de sub-rede de prefixo **`/26`**.
+    *   Convertendo para a notação decimal, a máscara `/26` é **`255.255.255.192`**.
 
-**Tabela de Endereçamento Preenchida:**
+3.  **Identificação das Sub-redes Disponíveis:**
+    *   A máscara `/26` "empresta" 2 bits da máscara `/24` original (`26 - 24 = 2`).
+    *   Com esses 2 bits, podemos criar `2^2 = 4` sub-redes.
+    *   O tamanho do bloco de cada sub-rede é `256 - 192 = 64`.
+    *   As sub-redes resultantes são:
+        1.  `192.168.2.0/26`
+        2.  `192.168.2.64/26`
+        3.  `192.168.2.128/26`
+        4.  `192.168.2.192/26`
 
-Com base no cálculo e na topologia, preenchi a tabela de endereçamento.
+**Atribuição de Endereços e Tabela Final:**
 
-![Tabela de endereçamento da Parte 1](2%20Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento IP para a Parte 1, listando os dispositivos (R1, R2, R3, PC1, PC2, PC3), suas interfaces, endereços IP, máscaras de sub-rede e gateways padrão."}
+Com as sub-redes calculadas, atribuí os endereços aos diferentes segmentos da rede, seguindo a topologia. A primeira sub-rede foi para a LAN da Filial (Branch), a segunda para a LAN da Matriz (HQ) e a terceira para o link WAN entre elas.
 
-| Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
-|---|---|---|---|---|
-| **R1** | Fa0/0 | 172.16.3.1 | 255.255.255.0 | N/C |
-| | S0/0/0 | 172.16.2.1 | 255.255.255.0 | N/C |
-| **R2** | Fa0/0 | 172.16.1.1 | 255.255.255.0 | N/C |
-| | S0/0/0 | 172.16.2.2 | 255.255.255.0 | N/C |
-| | S0/0/1 | 192.168.1.2 | 255.255.255.0 | N/C |
-| **R3** | FA0/0 | 192.168.2.1 | 255.255.255.0 | N/C |
-| | S0/0/1 | 192.168.1.1 | 255.255.255.0 | N/C |
-| **PC1** | NIC | 172.16.3.10 | 255.255.255.0 | 172.16.3.1 |
-| **PC2** | NIC | 172.16.1.10 | 255.255.255.0 | 172.16.1.1 |
-| **PC3** | NIC | 192.168.2.10 | 255.255.255.0 | 192.168.2.1 |
+A tabela de endereçamento foi preenchida da seguinte forma:
+
+![Tabela de endereçamento da Parte 1 preenchida](../images/Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento IP para a Parte 1, mostrando os valores de IP, máscara e gateway para cada dispositivo da topologia."}
+
+| Dispositivo | Interface | Dirección IP | Máscara de subred | Gateway predeterminado |
+| :--- | :--- | :--- | :--- | :--- |
+| **BRANCH** | Fa0/0 | `192.168.2.1` | `255.255.255.192` | N/C |
+| | S0/0/0 | `192.168.2.129` | `255.255.255.192` | N/C |
+| **HQ** | Fa0/0 | `192.168.2.65` | `255.255.255.192` | N/C |
+| | S0/0/0 | `192.168.2.130` | `255.255.255.192` | N/C |
+| | S0/0/1 | 209.165.201.2 | 255.255.255.252 | N/C |
+| **ISP** | Fa0/0 | 209.165.200.225 | 255.255.255.224 | N/C |
+| | S0/0/1 | 209.165.201.1 | 255.255.255.252 | N/C |
+| **PC1** | NIC | `192.168.2.2` | `255.255.255.192` | `192.168.2.1` |
+| **PC2** | NIC | `192.168.2.66` | `255.255.255.192` | `192.168.2.65` |
+| **Servidor Web** | NIC | 209.165.200.253 | 255.255.255.224 | 209.165.200.225 |
 
 ### Parte 2: Implementação no Cisco Packet Tracer
 
@@ -134,24 +153,11 @@ Nesta segunda parte, a tarefa foi construir uma rede mais complexa no Cisco Pack
 
 **Topologia a ser Construída:**
 
-![Diagrama de topologia da Parte 2](Diagrama%20de%20topologia.png){alt="Diagrama de rede da Parte 2, mostrando uma topologia com um roteador 'Branch', um 'HQ' e um 'ISP'. As redes 'Branch' e 'HQ' têm um PC cada. A rede 'ISP' tem um Servidor Web. As conexões entre LANs e WANs são detalhadas."}
+![Diagrama de topologia da Parte 2](2 Diagrama de topologia.png){alt="Diagrama de rede da Parte 2, mostrando uma topologia com um roteador 'Branch', um 'HQ' e um 'ISP'. As redes 'Branch' e 'HQ' têm um PC cada. A rede 'ISP' tem um Servidor Web. As conexões entre LANs e WANs são detalhadas."}
 
 **Tabela de Endereçamento de Referência:**
 
-![Tabela de endereçamento da Parte 2](Tabela%20de%20endereçamento.png){alt="Tabela de endereçamento IP para a Parte 2, detalhando os IPs para os roteadores Branch, HQ, ISP, e para os hosts PC1, PC2 e Servidor Web."}
-
-| Dispositivo | Interface | Endereço IP | Máscara de Sub-rede | Gateway Padrão |
-|---|---|---|---|---|
-| **Branch** | Fa0/0 | 192.168.1.1 | 255.255.255.0 | N/C |
-| | S0/0/0 | 172.16.1.1 | 255.255.255.0 | N/C |
-| **HQ** | Fa0/0 | 192.168.2.1 | 255.255.255.0 | N/C |
-| | S0/0/0 | 172.16.1.2 | 255.255.255.0 | N/C |
-| | S0/0/1 | 209.165.201.2 | 255.255.255.252 | N/C |
-| **ISP** | Fa0/0 | 209.165.200.226 | 255.255.255.224 | N/C |
-| | S/0/0/1 | 209.165.201.1 | 255.255.255.252 | N/C |
-| **PC1** | NIC | 192.168.1.10 | 255.255.255.0 | 192.168.1.1 |
-| **PC2** | NIC | 192.168.2.10 | 255.255.255.0 | 192.168.2.1 |
-| **Servidor Web** | NIC | 209.165.200.253 | 255.255.255.224 | 209.165.200.226 |
+![Tabela de endereçamento da Parte 2](2 Tabela de endereçamento.png){alt="Tabela de endereçamento IP para a Parte 2, detalhando os IPs para os roteadores Branch, HQ, ISP, e para os hosts PC1, PC2 e Servidor Web."}
 
 **Passo a Passo da Implementação:**
 
