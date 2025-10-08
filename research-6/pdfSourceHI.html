@@ -1,0 +1,207 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#684749443">Resolu&ccedil;&atilde;o da Tarefa 6.4: Redes</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="684749443">Resolu&ccedil;&atilde;o da Tarefa 6.4: Redes</h1><p id="684749443#fama0x_3">Este documento apresenta a resolu&ccedil;&atilde;o dos exerc&iacute;cios propostos na tarefa 6.4, detalhando o planejamento e a implementa&ccedil;&atilde;o de um esquema de endere&ccedil;amento IP utilizando VLSM para uma rede IPv4 e a subdivis&atilde;o de um bloco de endere&ccedil;os IPv6.</p><section class="detached"><h2 id="684749443#introdu-o" data-toc="introdu-o#Default-topic.md-introdu-o">Introdu&ccedil;&atilde;o</h2><p id="684749443#fama0x_7">O planejamento cuidadoso do endere&ccedil;amento IP &eacute; um pilar fundamental na arquitetura de redes de computadores. Uma aloca&ccedil;&atilde;o eficiente de endere&ccedil;os garante n&atilde;o apenas a conectividade e o funcionamento adequado dos servi&ccedil;os, mas tamb&eacute;m a escalabilidade e a seguran&ccedil;a da rede. Neste contexto, a t&eacute;cnica de M&aacute;scara de Sub-rede de Tamanho Vari&aacute;vel (VLSM) surge como uma solu&ccedil;&atilde;o poderosa para o aproveitamento m&aacute;ximo do espa&ccedil;o de endere&ccedil;amento IPv4, evitando o desperd&iacute;cio. Paralelamente, a transi&ccedil;&atilde;o para o IPv6 se torna cada vez mais necess&aacute;ria para suportar o crescimento exponencial da internet, e compreender sua estrutura de endere&ccedil;amento e subnetting &eacute; essencial para o profissional de redes.</p></section><section class="detached"><h2 id="684749443#1-projeto-de-rede-com-vlsm-variable-length-subnet-mask" data-toc="1-projeto-de-rede-com-vlsm-variable-length-subnet-mask#Default-topic.md-1-projeto-de-rede-com-vlsm-variable-length-subnet-mask">1. Projeto de Rede com VLSM (Variable Length Subnet Mask)</h2><p id="684749443#fama0x_8">O objetivo deste exerc&iacute;cio &eacute; projetar um plano de endere&ccedil;amento para a rede <span class="inline-code" id="684749443#fama0x_11">162.20.0.0/22</span> que atenda &agrave;s necessidades espec&iacute;ficas de cada departamento da Faculdade de Engenharia. A utiliza&ccedil;&atilde;o de VLSM &eacute; imperativa para otimizar a distribui&ccedil;&atilde;o de endere&ccedil;os, alocando apenas os recursos necess&aacute;rios para cada sub-rede.</p><section class="detached"><h3 id="684749443#metodologia-e-an-lise-de-requisitos" data-toc="metodologia-e-an-lise-de-requisitos#Default-topic.md-metodologia-e-an-lise-de-requisitos">Metodologia e An&aacute;lise de Requisitos</h3><p id="684749443#fama0x_12">O processo de subnetting com VLSM inicia-se com a an&aacute;lise detalhada dos requisitos de cada sub-rede. A abordagem mais eficiente consiste em ordenar as necessidades em ordem decrescente, da sub-rede que demanda mais hosts para a que demanda menos. Isso garante que os maiores blocos cont&iacute;guos de endere&ccedil;os sejam alocados primeiro, simplificando o gerenciamento e evitando a fragmenta&ccedil;&atilde;o do espa&ccedil;o de IP.</p><p id="684749443#fama0x_13">Para cada requisito, o n&uacute;mero de bits de host (<span class="inline-code" id="684749443#fama0x_16">n</span>) &eacute; determinado pela f&oacute;rmula <span class="inline-code" id="684749443#fama0x_17">2^n - 2 &gt;= n&uacute;mero de hosts</span>, onde <span class="inline-code" id="684749443#fama0x_18">-2</span> representa os endere&ccedil;os de rede e de broadcast, que n&atilde;o s&atilde;o utiliz&aacute;veis por dispositivos.</p><p id="684749443#fama0x_14">A tabela abaixo consolida essa an&aacute;lise:</p><div class="table-wrapper detached"><table id="684749443#fama0x_15"><tr class="header-row" id="684749443#fama0x_19"><th id="684749443#fama0x_28"><p>Departamento/Finalidade</p></th><th id="684749443#fama0x_29"><p>Redes</p></th><th id="684749443#fama0x_30"><p>Hosts por Rede</p></th><th id="684749443#fama0x_31"><p>Hosts Necess&aacute;rios + 2</p></th><th id="684749443#fama0x_32"><p>Bits para Hosts</p></th><th id="684749443#fama0x_33"><p>Prefixo de Sub-rede (/n)</p></th><th id="684749443#fama0x_34"><p>Tamanho do Bloco</p></th></tr><tr class="" id="684749443#fama0x_20"><td id="684749443#fama0x_35"><p>Engenharia da Computa&ccedil;&atilde;o</p></td><td id="684749443#fama0x_36"><p>4</p></td><td id="684749443#fama0x_37"><p>100</p></td><td id="684749443#fama0x_38"><p>102</p></td><td id="684749443#fama0x_39"><p>7 (2⁷=128)</p></td><td id="684749443#fama0x_40"><p>/25</p></td><td id="684749443#fama0x_41"><p>128</p></td></tr><tr class="" id="684749443#fama0x_21"><td id="684749443#fama0x_42"><p>Engenharia Civil</p></td><td id="684749443#fama0x_43"><p>3</p></td><td id="684749443#fama0x_44"><p>40</p></td><td id="684749443#fama0x_45"><p>42</p></td><td id="684749443#fama0x_46"><p>6 (2⁶=64)</p></td><td id="684749443#fama0x_47"><p>/26</p></td><td id="684749443#fama0x_48"><p>64</p></td></tr><tr class="" id="684749443#fama0x_22"><td id="684749443#fama0x_49"><p>Engenharia Qu&iacute;mica</p></td><td id="684749443#fama0x_50"><p>2</p></td><td id="684749443#fama0x_51"><p>30</p></td><td id="684749443#fama0x_52"><p>32</p></td><td id="684749443#fama0x_53"><p>5 (2⁵=32)</p></td><td id="684749443#fama0x_54"><p>/27</p></td><td id="684749443#fama0x_55"><p>32</p></td></tr><tr class="" id="684749443#fama0x_23"><td id="684749443#fama0x_56"><p>Engenharia Matem&aacute;tica</p></td><td id="684749443#fama0x_57"><p>2</p></td><td id="684749443#fama0x_58"><p>25</p></td><td id="684749443#fama0x_59"><p>27</p></td><td id="684749443#fama0x_60"><p>5 (2⁵=32)</p></td><td id="684749443#fama0x_61"><p>/27</p></td><td id="684749443#fama0x_62"><p>32</p></td></tr><tr class="" id="684749443#fama0x_24"><td id="684749443#fama0x_63"><p>Engenharia Biol&oacute;gica</p></td><td id="684749443#fama0x_64"><p>1</p></td><td id="684749443#fama0x_65"><p>20</p></td><td id="684749443#fama0x_66"><p>22</p></td><td id="684749443#fama0x_67"><p>5 (2⁵=32)</p></td><td id="684749443#fama0x_68"><p>/27</p></td><td id="684749443#fama0x_69"><p>32</p></td></tr><tr class="" id="684749443#fama0x_25"><td id="684749443#fama0x_70"><p>Engenharia Industrial</p></td><td id="684749443#fama0x_71"><p>3</p></td><td id="684749443#fama0x_72"><p>15</p></td><td id="684749443#fama0x_73"><p>17</p></td><td id="684749443#fama0x_74"><p>4 (2⁴=16)</p></td><td id="684749443#fama0x_75"><p>/28</p></td><td id="684749443#fama0x_76"><p>16</p></td></tr><tr class="" id="684749443#fama0x_26"><td id="684749443#fama0x_77"><p>Coordena&ccedil;&atilde;o da Faculdade</p></td><td id="684749443#fama0x_78"><p>1</p></td><td id="684749443#fama0x_79"><p>10</p></td><td id="684749443#fama0x_80"><p>12</p></td><td id="684749443#fama0x_81"><p>4 (2⁴=16)</p></td><td id="684749443#fama0x_82"><p>/28</p></td><td id="684749443#fama0x_83"><p>16</p></td></tr><tr class="" id="684749443#fama0x_27"><td id="684749443#fama0x_84"><p>Links Ponto-a-Ponto</p></td><td id="684749443#fama0x_85"><p>6</p></td><td id="684749443#fama0x_86"><p>2</p></td><td id="684749443#fama0x_87"><p>4</p></td><td id="684749443#fama0x_88"><p>2 (2&sup2;=4)</p></td><td id="684749443#fama0x_89"><p>/30</p></td><td id="684749443#fama0x_90"><p>4</p></td></tr></table></div></section><section class="detached"><h3 id="684749443#tabela-de-aloca-o-de-sub-redes-vlsm" data-toc="tabela-de-aloca-o-de-sub-redes-vlsm#Default-topic.md-tabela-de-aloca-o-de-sub-redes-vlsm">Tabela de Aloca&ccedil;&atilde;o de Sub-redes (VLSM)</h3><p id="684749443#fama0x_91">Com base na an&aacute;lise, as sub-redes s&atilde;o alocadas sequencialmente a partir do in&iacute;cio do bloco <span class="inline-code" id="684749443#fama0x_94">162.20.0.0/22</span>. A tabela a seguir detalha o plano de endere&ccedil;amento completo.</p><div class="table-wrapper detached"><table id="684749443#fama0x_92"><tr class="header-row" id="684749443#fama0x_95"><th id="684749443#fama0x_118"><p>Departamento</p></th><th id="684749443#fama0x_119"><p>Rede</p></th><th id="684749443#fama0x_120"><p>Endere&ccedil;o de Rede</p></th><th id="684749443#fama0x_121"><p>Prefixo</p></th><th id="684749443#fama0x_122"><p>M&aacute;scara de Sub-rede</p></th><th id="684749443#fama0x_123"><p>Faixa de Hosts</p></th><th id="684749443#fama0x_124"><p>Endere&ccedil;o de Broadcast</p></th></tr><tr class="" id="684749443#fama0x_96"><td id="684749443#fama0x_125"><p>Eng. Computa&ccedil;&atilde;o</p></td><td id="684749443#fama0x_126"><p>1</p></td><td id="684749443#fama0x_127"><p><span class="inline-code" id="684749443#fama0x_132">162.20.0.0</span></p></td><td id="684749443#fama0x_128"><p>/25</p></td><td id="684749443#fama0x_129"><p><span class="inline-code" id="684749443#fama0x_133">255.255.255.128</span></p></td><td id="684749443#fama0x_130"><p><span class="inline-code" id="684749443#fama0x_134">162.20.0.1</span> - <span class="inline-code" id="684749443#fama0x_135">162.20.0.126</span></p></td><td id="684749443#fama0x_131"><p><span class="inline-code" id="684749443#fama0x_136">162.20.0.127</span></p></td></tr><tr class="" id="684749443#fama0x_97"><td id="684749443#fama0x_137"><p>Eng. Computa&ccedil;&atilde;o</p></td><td id="684749443#fama0x_138"><p>2</p></td><td id="684749443#fama0x_139"><p><span class="inline-code" id="684749443#fama0x_144">162.20.0.128</span></p></td><td id="684749443#fama0x_140"><p>/25</p></td><td id="684749443#fama0x_141"><p><span class="inline-code" id="684749443#fama0x_145">255.255.255.128</span></p></td><td id="684749443#fama0x_142"><p><span class="inline-code" id="684749443#fama0x_146">162.20.0.129</span> - <span class="inline-code" id="684749443#fama0x_147">162.20.0.254</span></p></td><td id="684749443#fama0x_143"><p><span class="inline-code" id="684749443#fama0x_148">162.20.0.255</span></p></td></tr><tr class="" id="684749443#fama0x_98"><td id="684749443#fama0x_149"><p>Eng. Computa&ccedil;&atilde;o</p></td><td id="684749443#fama0x_150"><p>3</p></td><td id="684749443#fama0x_151"><p><span class="inline-code" id="684749443#fama0x_156">162.20.1.0</span></p></td><td id="684749443#fama0x_152"><p>/25</p></td><td id="684749443#fama0x_153"><p><span class="inline-code" id="684749443#fama0x_157">255.255.255.128</span></p></td><td id="684749443#fama0x_154"><p><span class="inline-code" id="684749443#fama0x_158">162.20.1.1</span> - <span class="inline-code" id="684749443#fama0x_159">162.20.1.126</span></p></td><td id="684749443#fama0x_155"><p><span class="inline-code" id="684749443#fama0x_160">162.20.1.127</span></p></td></tr><tr class="" id="684749443#fama0x_99"><td id="684749443#fama0x_161"><p>Eng. Computa&ccedil;&atilde;o</p></td><td id="684749443#fama0x_162"><p>4</p></td><td id="684749443#fama0x_163"><p><span class="inline-code" id="684749443#fama0x_168">162.20.1.128</span></p></td><td id="684749443#fama0x_164"><p>/25</p></td><td id="684749443#fama0x_165"><p><span class="inline-code" id="684749443#fama0x_169">255.255.255.128</span></p></td><td id="684749443#fama0x_166"><p><span class="inline-code" id="684749443#fama0x_170">162.20.1.129</span> - <span class="inline-code" id="684749443#fama0x_171">162.20.1.254</span></p></td><td id="684749443#fama0x_167"><p><span class="inline-code" id="684749443#fama0x_172">162.20.1.255</span></p></td></tr><tr class="" id="684749443#fama0x_100"><td id="684749443#fama0x_173"><p>Eng. Civil</p></td><td id="684749443#fama0x_174"><p>1</p></td><td id="684749443#fama0x_175"><p><span class="inline-code" id="684749443#fama0x_180">162.20.2.0</span></p></td><td id="684749443#fama0x_176"><p>/26</p></td><td id="684749443#fama0x_177"><p><span class="inline-code" id="684749443#fama0x_181">255.255.255.192</span></p></td><td id="684749443#fama0x_178"><p><span class="inline-code" id="684749443#fama0x_182">162.20.2.1</span> - <span class="inline-code" id="684749443#fama0x_183">162.20.2.62</span></p></td><td id="684749443#fama0x_179"><p><span class="inline-code" id="684749443#fama0x_184">162.20.2.63</span></p></td></tr><tr class="" id="684749443#fama0x_101"><td id="684749443#fama0x_185"><p>Eng. Civil</p></td><td id="684749443#fama0x_186"><p>2</p></td><td id="684749443#fama0x_187"><p><span class="inline-code" id="684749443#fama0x_192">162.20.2.64</span></p></td><td id="684749443#fama0x_188"><p>/26</p></td><td id="684749443#fama0x_189"><p><span class="inline-code" id="684749443#fama0x_193">255.255.255.192</span></p></td><td id="684749443#fama0x_190"><p><span class="inline-code" id="684749443#fama0x_194">162.20.2.65</span> - <span class="inline-code" id="684749443#fama0x_195">162.20.2.126</span></p></td><td id="684749443#fama0x_191"><p><span class="inline-code" id="684749443#fama0x_196">162.20.2.127</span></p></td></tr><tr class="" id="684749443#fama0x_102"><td id="684749443#fama0x_197"><p>Eng. Civil</p></td><td id="684749443#fama0x_198"><p>3</p></td><td id="684749443#fama0x_199"><p><span class="inline-code" id="684749443#fama0x_204">162.20.2.128</span></p></td><td id="684749443#fama0x_200"><p>/26</p></td><td id="684749443#fama0x_201"><p><span class="inline-code" id="684749443#fama0x_205">255.255.255.192</span></p></td><td id="684749443#fama0x_202"><p><span class="inline-code" id="684749443#fama0x_206">162.20.2.129</span> - <span class="inline-code" id="684749443#fama0x_207">162.20.2.190</span></p></td><td id="684749443#fama0x_203"><p><span class="inline-code" id="684749443#fama0x_208">162.20.2.191</span></p></td></tr><tr class="" id="684749443#fama0x_103"><td id="684749443#fama0x_209"><p>Eng. Qu&iacute;mica</p></td><td id="684749443#fama0x_210"><p>1</p></td><td id="684749443#fama0x_211"><p><span class="inline-code" id="684749443#fama0x_216">162.20.2.192</span></p></td><td id="684749443#fama0x_212"><p>/27</p></td><td id="684749443#fama0x_213"><p><span class="inline-code" id="684749443#fama0x_217">255.255.255.224</span></p></td><td id="684749443#fama0x_214"><p><span class="inline-code" id="684749443#fama0x_218">162.20.2.193</span> - <span class="inline-code" id="684749443#fama0x_219">162.20.2.222</span></p></td><td id="684749443#fama0x_215"><p><span class="inline-code" id="684749443#fama0x_220">162.20.2.223</span></p></td></tr><tr class="" id="684749443#fama0x_104"><td id="684749443#fama0x_221"><p>Eng. Qu&iacute;mica</p></td><td id="684749443#fama0x_222"><p>2</p></td><td id="684749443#fama0x_223"><p><span class="inline-code" id="684749443#fama0x_228">162.20.2.224</span></p></td><td id="684749443#fama0x_224"><p>/27</p></td><td id="684749443#fama0x_225"><p><span class="inline-code" id="684749443#fama0x_229">255.255.255.224</span></p></td><td id="684749443#fama0x_226"><p><span class="inline-code" id="684749443#fama0x_230">162.20.2.225</span> - <span class="inline-code" id="684749443#fama0x_231">162.20.2.254</span></p></td><td id="684749443#fama0x_227"><p><span class="inline-code" id="684749443#fama0x_232">162.20.2.255</span></p></td></tr><tr class="" id="684749443#fama0x_105"><td id="684749443#fama0x_233"><p>Eng. Matem&aacute;tica</p></td><td id="684749443#fama0x_234"><p>1</p></td><td id="684749443#fama0x_235"><p><span class="inline-code" id="684749443#fama0x_240">162.20.3.0</span></p></td><td id="684749443#fama0x_236"><p>/27</p></td><td id="684749443#fama0x_237"><p><span class="inline-code" id="684749443#fama0x_241">255.255.255.224</span></p></td><td id="684749443#fama0x_238"><p><span class="inline-code" id="684749443#fama0x_242">162.20.3.1</span> - <span class="inline-code" id="684749443#fama0x_243">162.20.3.30</span></p></td><td id="684749443#fama0x_239"><p><span class="inline-code" id="684749443#fama0x_244">162.20.3.31</span></p></td></tr><tr class="" id="684749443#fama0x_106"><td id="684749443#fama0x_245"><p>Eng. Matem&aacute;tica</p></td><td id="684749443#fama0x_246"><p>2</p></td><td id="684749443#fama0x_247"><p><span class="inline-code" id="684749443#fama0x_252">162.20.3.32</span></p></td><td id="684749443#fama0x_248"><p>/27</p></td><td id="684749443#fama0x_249"><p><span class="inline-code" id="684749443#fama0x_253">255.255.255.224</span></p></td><td id="684749443#fama0x_250"><p><span class="inline-code" id="684749443#fama0x_254">162.20.3.33</span> - <span class="inline-code" id="684749443#fama0x_255">162.20.3.62</span></p></td><td id="684749443#fama0x_251"><p><span class="inline-code" id="684749443#fama0x_256">162.20.3.63</span></p></td></tr><tr class="" id="684749443#fama0x_107"><td id="684749443#fama0x_257"><p>Eng. Biol&oacute;gica</p></td><td id="684749443#fama0x_258"><p>1</p></td><td id="684749443#fama0x_259"><p><span class="inline-code" id="684749443#fama0x_264">162.20.3.64</span></p></td><td id="684749443#fama0x_260"><p>/27</p></td><td id="684749443#fama0x_261"><p><span class="inline-code" id="684749443#fama0x_265">255.255.255.224</span></p></td><td id="684749443#fama0x_262"><p><span class="inline-code" id="684749443#fama0x_266">162.20.3.65</span> - <span class="inline-code" id="684749443#fama0x_267">162.20.3.94</span></p></td><td id="684749443#fama0x_263"><p><span class="inline-code" id="684749443#fama0x_268">162.20.3.95</span></p></td></tr><tr class="" id="684749443#fama0x_108"><td id="684749443#fama0x_269"><p>Eng. Industrial</p></td><td id="684749443#fama0x_270"><p>1</p></td><td id="684749443#fama0x_271"><p><span class="inline-code" id="684749443#fama0x_276">162.20.3.96</span></p></td><td id="684749443#fama0x_272"><p>/28</p></td><td id="684749443#fama0x_273"><p><span class="inline-code" id="684749443#fama0x_277">255.255.255.240</span></p></td><td id="684749443#fama0x_274"><p><span class="inline-code" id="684749443#fama0x_278">162.20.3.97</span> - <span class="inline-code" id="684749443#fama0x_279">162.20.3.110</span></p></td><td id="684749443#fama0x_275"><p><span class="inline-code" id="684749443#fama0x_280">162.20.3.111</span></p></td></tr><tr class="" id="684749443#fama0x_109"><td id="684749443#fama0x_281"><p>Eng. Industrial</p></td><td id="684749443#fama0x_282"><p>2</p></td><td id="684749443#fama0x_283"><p><span class="inline-code" id="684749443#fama0x_288">162.20.3.112</span></p></td><td id="684749443#fama0x_284"><p>/28</p></td><td id="684749443#fama0x_285"><p><span class="inline-code" id="684749443#fama0x_289">255.255.255.240</span></p></td><td id="684749443#fama0x_286"><p><span class="inline-code" id="684749443#fama0x_290">162.20.3.113</span> - <span class="inline-code" id="684749443#fama0x_291">162.20.3.126</span></p></td><td id="684749443#fama0x_287"><p><span class="inline-code" id="684749443#fama0x_292">162.20.3.127</span></p></td></tr><tr class="" id="684749443#fama0x_110"><td id="684749443#fama0x_293"><p>Eng. Industrial</p></td><td id="684749443#fama0x_294"><p>3</p></td><td id="684749443#fama0x_295"><p><span class="inline-code" id="684749443#fama0x_300">162.20.3.128</span></p></td><td id="684749443#fama0x_296"><p>/28</p></td><td id="684749443#fama0x_297"><p><span class="inline-code" id="684749443#fama0x_301">255.255.255.240</span></p></td><td id="684749443#fama0x_298"><p><span class="inline-code" id="684749443#fama0x_302">162.20.3.129</span> - <span class="inline-code" id="684749443#fama0x_303">162.20.3.142</span></p></td><td id="684749443#fama0x_299"><p><span class="inline-code" id="684749443#fama0x_304">162.20.3.143</span></p></td></tr><tr class="" id="684749443#fama0x_111"><td id="684749443#fama0x_305"><p>Coordena&ccedil;&atilde;o</p></td><td id="684749443#fama0x_306"><p>1</p></td><td id="684749443#fama0x_307"><p><span class="inline-code" id="684749443#fama0x_312">162.20.3.144</span></p></td><td id="684749443#fama0x_308"><p>/28</p></td><td id="684749443#fama0x_309"><p><span class="inline-code" id="684749443#fama0x_313">255.255.255.240</span></p></td><td id="684749443#fama0x_310"><p><span class="inline-code" id="684749443#fama0x_314">162.20.3.145</span> - <span class="inline-code" id="684749443#fama0x_315">162.20.3.158</span></p></td><td id="684749443#fama0x_311"><p><span class="inline-code" id="684749443#fama0x_316">162.20.3.159</span></p></td></tr><tr class="" id="684749443#fama0x_112"><td id="684749443#fama0x_317"><p>Link Roteador</p></td><td id="684749443#fama0x_318"><p>1</p></td><td id="684749443#fama0x_319"><p><span class="inline-code" id="684749443#fama0x_324">162.20.3.160</span></p></td><td id="684749443#fama0x_320"><p>/30</p></td><td id="684749443#fama0x_321"><p><span class="inline-code" id="684749443#fama0x_325">255.255.255.252</span></p></td><td id="684749443#fama0x_322"><p><span class="inline-code" id="684749443#fama0x_326">162.20.3.161</span> - <span class="inline-code" id="684749443#fama0x_327">162.20.3.162</span></p></td><td id="684749443#fama0x_323"><p><span class="inline-code" id="684749443#fama0x_328">162.20.3.163</span></p></td></tr><tr class="" id="684749443#fama0x_113"><td id="684749443#fama0x_329"><p>Link Roteador</p></td><td id="684749443#fama0x_330"><p>2</p></td><td id="684749443#fama0x_331"><p><span class="inline-code" id="684749443#fama0x_336">162.20.3.164</span></p></td><td id="684749443#fama0x_332"><p>/30</p></td><td id="684749443#fama0x_333"><p><span class="inline-code" id="684749443#fama0x_337">255.255.255.252</span></p></td><td id="684749443#fama0x_334"><p><span class="inline-code" id="684749443#fama0x_338">162.20.3.165</span> - <span class="inline-code" id="684749443#fama0x_339">162.20.3.166</span></p></td><td id="684749443#fama0x_335"><p><span class="inline-code" id="684749443#fama0x_340">162.20.3.167</span></p></td></tr><tr class="" id="684749443#fama0x_114"><td id="684749443#fama0x_341"><p>Link Roteador</p></td><td id="684749443#fama0x_342"><p>3</p></td><td id="684749443#fama0x_343"><p><span class="inline-code" id="684749443#fama0x_348">162.20.3.168</span></p></td><td id="684749443#fama0x_344"><p>/30</p></td><td id="684749443#fama0x_345"><p><span class="inline-code" id="684749443#fama0x_349">255.255.255.252</span></p></td><td id="684749443#fama0x_346"><p><span class="inline-code" id="684749443#fama0x_350">162.20.3.169</span> - <span class="inline-code" id="684749443#fama0x_351">162.20.3.170</span></p></td><td id="684749443#fama0x_347"><p><span class="inline-code" id="684749443#fama0x_352">162.20.3.171</span></p></td></tr><tr class="" id="684749443#fama0x_115"><td id="684749443#fama0x_353"><p>Link Roteador</p></td><td id="684749443#fama0x_354"><p>4</p></td><td id="684749443#fama0x_355"><p><span class="inline-code" id="684749443#fama0x_360">162.20.3.172</span></p></td><td id="684749443#fama0x_356"><p>/30</p></td><td id="684749443#fama0x_357"><p><span class="inline-code" id="684749443#fama0x_361">255.255.255.252</span></p></td><td id="684749443#fama0x_358"><p><span class="inline-code" id="684749443#fama0x_362">162.20.3.173</span> - <span class="inline-code" id="684749443#fama0x_363">162.20.3.174</span></p></td><td id="684749443#fama0x_359"><p><span class="inline-code" id="684749443#fama0x_364">162.20.3.175</span></p></td></tr><tr class="" id="684749443#fama0x_116"><td id="684749443#fama0x_365"><p>Link Roteador</p></td><td id="684749443#fama0x_366"><p>5</p></td><td id="684749443#fama0x_367"><p><span class="inline-code" id="684749443#fama0x_372">162.20.3.176</span></p></td><td id="684749443#fama0x_368"><p>/30</p></td><td id="684749443#fama0x_369"><p><span class="inline-code" id="684749443#fama0x_373">255.255.255.252</span></p></td><td id="684749443#fama0x_370"><p><span class="inline-code" id="684749443#fama0x_374">162.20.3.177</span> - <span class="inline-code" id="684749443#fama0x_375">162.20.3.178</span></p></td><td id="684749443#fama0x_371"><p><span class="inline-code" id="684749443#fama0x_376">162.20.3.179</span></p></td></tr><tr class="" id="684749443#fama0x_117"><td id="684749443#fama0x_377"><p>Link Roteador</p></td><td id="684749443#fama0x_378"><p>6</p></td><td id="684749443#fama0x_379"><p><span class="inline-code" id="684749443#fama0x_384">162.20.3.180</span></p></td><td id="684749443#fama0x_380"><p>/30</p></td><td id="684749443#fama0x_381"><p><span class="inline-code" id="684749443#fama0x_385">255.255.255.252</span></p></td><td id="684749443#fama0x_382"><p><span class="inline-code" id="684749443#fama0x_386">162.20.3.181</span> - <span class="inline-code" id="684749443#fama0x_387">162.20.3.182</span></p></td><td id="684749443#fama0x_383"><p><span class="inline-code" id="684749443#fama0x_388">162.20.3.183</span></p></td></tr></table></div><p id="684749443#fama0x_93">Ap&oacute;s a aloca&ccedil;&atilde;o de todas as sub-redes necess&aacute;rias, o pr&oacute;ximo endere&ccedil;o de rede dispon&iacute;vel para futuras aloca&ccedil;&otilde;es ou expans&otilde;es &eacute; <span class="inline-code" id="684749443#fama0x_389">162.20.3.184</span>.</p></section></section><section class="detached"><h2 id="684749443#2-sub-redes-ipv6" data-toc="2-sub-redes-ipv6#Default-topic.md-2-sub-redes-ipv6">2. Sub-redes IPv6</h2><p id="684749443#fama0x_390">O segundo exerc&iacute;cio aborda o endere&ccedil;amento IPv6, um protocolo desenvolvido para suceder o IPv4 e resolver a quest&atilde;o de seu esgotamento. A tarefa consiste em subdividir o bloco de endere&ccedil;os <span class="inline-code" id="684749443#fama0x_393">2001:0022:00AA::/48</span> em sub-redes com prefixo <span class="inline-code" id="684749443#fama0x_394">/64</span>.</p><section class="detached"><h3 id="684749443#processo-de-sub-rede-ipv6" data-toc="processo-de-sub-rede-ipv6#Default-topic.md-processo-de-sub-rede-ipv6">Processo de Sub-rede IPv6</h3><p id="684749443#fama0x_395">O endere&ccedil;o <span class="inline-code" id="684749443#fama0x_398">2001:0022:00AA::/48</span> &eacute; um bloco de endere&ccedil;amento global. A nota&ccedil;&atilde;o <span class="inline-code" id="684749443#fama0x_399">/48</span> indica que os primeiros 48 bits s&atilde;o fixos e designam a rede p&uacute;blica. A pr&aacute;tica padr&atilde;o, definida pela RFC 4291, &eacute; utilizar os 16 bits seguintes (do 48 ao 64) para criar um &quot;ID de Sub-rede&quot;. Isso resulta em sub-redes com prefixo <span class="inline-code" id="684749443#fama0x_400">/64</span>.</p><p id="684749443#fama0x_396">Essa estrutura <span class="inline-code" id="684749443#fama0x_401">/64</span> &eacute; fundamental no IPv6, pois permite o funcionamento de mecanismos como a Autoconfigura&ccedil;&atilde;o de Endere&ccedil;o Stateless (SLAAC), que simplifica enormemente a gest&atilde;o de endere&ccedil;os em redes locais. Com 16 bits para o ID de Sub-rede, temos a capacidade de criar <span class="inline-code" id="684749443#fama0x_402">2^16</span> (65.536) sub-redes distintas a partir do bloco <span class="inline-code" id="684749443#fama0x_403">/48</span> original.</p><p id="684749443#fama0x_397">O processo consiste em incrementar o valor do 4&ordm; hexteto do endere&ccedil;o, que representa o ID de Sub-rede, de <span class="inline-code" id="684749443#fama0x_404">0000</span> at&eacute; <span class="inline-code" id="684749443#fama0x_405">FFFF</span>.</p></section><section class="detached"><h3 id="684749443#as-10-primeiras-sub-redes-64" data-toc="as-10-primeiras-sub-redes-64#Default-topic.md-as-10-primeiras-sub-redes-64">As 10 Primeiras Sub-redes /64</h3><p id="684749443#fama0x_406">A seguir, s&atilde;o listadas as 10 primeiras sub-redes <span class="inline-code" id="684749443#fama0x_408">/64</span> resultantes do processo. Os endere&ccedil;os s&atilde;o apresentados em seu formato can&ocirc;nico e tamb&eacute;m no formato abreviado (com a omiss&atilde;o de zeros &agrave; esquerda e a compress&atilde;o de sequ&ecirc;ncias de zeros com <span class="inline-code" id="684749443#fama0x_409">::</span>), que &eacute; o mais comum na pr&aacute;tica.</p><ol class="list list-decimal" id="684749443#fama0x_407" type="1" start="1"><li class="list-item" id="684749443#fama0x_410"><p id="684749443#fama0x_420"><span class="inline-code" id="684749443#fama0x_421">2001:0022:00AA:0000::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_422">2001:22:aa::/64</span></p></li><li class="list-item" id="684749443#fama0x_411"><p id="684749443#fama0x_423"><span class="inline-code" id="684749443#fama0x_424">2001:0022:00AA:0001::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_425">2001:22:aa:1::/64</span></p></li><li class="list-item" id="684749443#fama0x_412"><p id="684749443#fama0x_426"><span class="inline-code" id="684749443#fama0x_427">2001:0022:00AA:0002::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_428">2001:22:aa:2::/64</span></p></li><li class="list-item" id="684749443#fama0x_413"><p id="684749443#fama0x_429"><span class="inline-code" id="684749443#fama0x_430">2001:0022:00AA:0003::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_431">2001:22:aa:3::/64</span></p></li><li class="list-item" id="684749443#fama0x_414"><p id="684749443#fama0x_432"><span class="inline-code" id="684749443#fama0x_433">2001:0022:00AA:0004::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_434">2001:22:aa:4::/64</span></p></li><li class="list-item" id="684749443#fama0x_415"><p id="684749443#fama0x_435"><span class="inline-code" id="684749443#fama0x_436">2001:0022:00AA:0005::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_437">2001:22:aa:5::/64</span></p></li><li class="list-item" id="684749443#fama0x_416"><p id="684749443#fama0x_438"><span class="inline-code" id="684749443#fama0x_439">2001:0022:00AA:0006::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_440">2001:22:aa:6::/64</span></p></li><li class="list-item" id="684749443#fama0x_417"><p id="684749443#fama0x_441"><span class="inline-code" id="684749443#fama0x_442">2001:0022:00AA:0007::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_443">2001:22:aa:7::/64</span></p></li><li class="list-item" id="684749443#fama0x_418"><p id="684749443#fama0x_444"><span class="inline-code" id="684749443#fama0x_445">2001:0022:00AA:0008::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_446">2001:22:aa:8::/64</span></p></li><li class="list-item" id="684749443#fama0x_419"><p id="684749443#fama0x_447"><span class="inline-code" id="684749443#fama0x_448">2001:0022:00AA:0009::/64</span>-&gt; <span class="inline-code" id="684749443#fama0x_449">2001:22:aa:9::/64</span></p></li></ol></section></section></article></div></section></div></body></html>

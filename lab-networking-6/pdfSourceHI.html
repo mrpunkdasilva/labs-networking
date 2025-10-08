@@ -1,0 +1,300 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#684749443">Lab 6.1: An&aacute;lise e Corre&ccedil;&atilde;o de Design VLSM</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="684749443">Lab 6.1: An&aacute;lise e Corre&ccedil;&atilde;o de Design VLSM</h1><section class="detached"><h2 id="684749443#descri-o-da-atividade" data-toc="descri-o-da-atividade#Default-topic.md-descri-o-da-atividade">Descri&ccedil;&atilde;o da Atividade</h2><p id="684749443#-sox7av_8">Nesta atividade, o endere&ccedil;o de rede <span class="inline-code" id="684749443#-sox7av_10">172.16.128.0/17</span> foi utilizado para fornecer o endere&ccedil;amento IP da rede mostrada no Diagrama de Topologia. O VLSM foi usado para criar sub-redes, mas o plano de endere&ccedil;amento resultante cont&eacute;m v&aacute;rios erros. O objetivo &eacute; diagnosticar os problemas de endere&ccedil;amento, determinar onde os erros est&atilde;o localizados e, em seguida, propor e documentar as atribui&ccedil;&otilde;es de endere&ccedil;amento corretas.</p><div class="container"><figure class="image-container"><img class="center image image-size" id="684749443#-sox7av_9" alt="Diagrama da Topologia de Rede" title="Diagrama da Topologia de Rede" src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-6/Writerside/images/img.png" width="975" height="393"><figcaption class="center-text">Diagrama da Topologia de Rede</figcaption></figure></div></section><section class="detached"><h2 id="684749443#tabela-de-endere-amento-inicial-incorreta" data-toc="tabela-de-endere-amento-inicial-incorreta#Default-topic.md-tabela-de-endere-amento-inicial-incorreta">Tabela de Endere&ccedil;amento Inicial (Incorreta)</h2><p id="684749443#-sox7av_11">A an&aacute;lise a seguir baseia-se na tabela de endere&ccedil;amento fornecida, que cont&eacute;m erros de projeto.</p><div class="table-wrapper detached"><table id="684749443#-sox7av_12"><tr class="header-row" id="684749443#-sox7av_14"><th id="684749443#-sox7av_24"><p>Sub-rede</p></th><th id="684749443#-sox7av_25"><p>N&uacute;mero de endere&ccedil;os IP necess&aacute;rios</p></th><th id="684749443#-sox7av_26"><p>Endere&ccedil;o de rede</p></th></tr><tr class="" id="684749443#-sox7av_15"><td id="684749443#-sox7av_27"><p>LAN1 da HQ</p></td><td id="684749443#-sox7av_28"><p>16.000</p></td><td id="684749443#-sox7av_29"><p>172.16.128.0/19</p></td></tr><tr class="" id="684749443#-sox7av_16"><td id="684749443#-sox7av_30"><p>LAN2 da HQ</p></td><td id="684749443#-sox7av_31"><p>8.000</p></td><td id="684749443#-sox7av_32"><p>172.16.192.0/18</p></td></tr><tr class="" id="684749443#-sox7av_17"><td id="684749443#-sox7av_33"><p>LAN1 da Branch1</p></td><td id="684749443#-sox7av_34"><p>4.000</p></td><td id="684749443#-sox7av_35"><p>172.16.224.0/20</p></td></tr><tr class="" id="684749443#-sox7av_18"><td id="684749443#-sox7av_36"><p>LAN2 da Branch1</p></td><td id="684749443#-sox7av_37"><p>2.000</p></td><td id="684749443#-sox7av_38"><p>172.16.240.0/21</p></td></tr><tr class="" id="684749443#-sox7av_19"><td id="684749443#-sox7av_39"><p>LAN1 da Branch2</p></td><td id="684749443#-sox7av_40"><p>1.000</p></td><td id="684749443#-sox7av_41"><p>172.16.244.0/24</p></td></tr><tr class="" id="684749443#-sox7av_20"><td id="684749443#-sox7av_42"><p>LAN2 da Branch2</p></td><td id="684749443#-sox7av_43"><p>500</p></td><td id="684749443#-sox7av_44"><p>172.16.252.0/23</p></td></tr><tr class="" id="684749443#-sox7av_21"><td id="684749443#-sox7av_45"><p>Link da HQ para a Branch1</p></td><td id="684749443#-sox7av_46"><p>2</p></td><td id="684749443#-sox7av_47"><p>172.16.254.0/28</p></td></tr><tr class="" id="684749443#-sox7av_22"><td id="684749443#-sox7av_48"><p>Link da HQ para a Branch2</p></td><td id="684749443#-sox7av_49"><p>2</p></td><td id="684749443#-sox7av_50"><p>172.16.254.16/30</p></td></tr><tr class="" id="684749443#-sox7av_23"><td id="684749443#-sox7av_51"><p>Link da Branch1 para a Branch2</p></td><td id="684749443#-sox7av_52"><p>2</p></td><td id="684749443#-sox7av_53"><p>172.16.254.48/30</p></td></tr></table></div></section><section class="detached"><h2 id="684749443#diagn-stico-dos-problemas" data-toc="diagn-stico-dos-problemas#Default-topic.md-diagn-stico-dos-problemas">Diagn&oacute;stico dos Problemas</h2><p id="684749443#-sox7av_54">A tabela de endere&ccedil;amento inicial apresenta m&uacute;ltiplos erros cr&iacute;ticos que tornam a rede disfuncional:</p><ol class="list list-decimal" id="684749443#-sox7av_55" type="1" start="1"><li class="list-item" id="684749443#-sox7av_62"><p id="684749443#-sox7av_65"><span class="control" id="684749443#-sox7av_67">Aloca&ccedil;&atilde;o de Tamanho Incorreto:</span></p><ul class="list" id="684749443#-sox7av_66" start="1"><li class="list-item" id="684749443#-sox7av_68"><p id="684749443#-sox7av_72">A sub-rede <span class="control" id="684749443#-sox7av_73">HQ LAN1</span> precisa de 16.000 endere&ccedil;os, mas a m&aacute;scara <span class="inline-code" id="684749443#-sox7av_74">/19</span> s&oacute; fornece 8.192 endere&ccedil;os (2<span id="684749443#-sox7av_75"><sup>(32-19) = 2</sup></span>13 = 8.192). A rede &eacute; pequena demais.</p></li><li class="list-item" id="684749443#-sox7av_69"><p id="684749443#-sox7av_76">A sub-rede <span class="control" id="684749443#-sox7av_77">Branch2 LAN1</span> precisa de 1.000 endere&ccedil;os, mas a m&aacute;scara <span class="inline-code" id="684749443#-sox7av_78">/24</span> s&oacute; fornece 256 endere&ccedil;os (2<span id="684749443#-sox7av_79"><sup>(32-24) = 2</sup></span>8 = 256). A rede &eacute; pequena demais.</p></li><li class="list-item" id="684749443#-sox7av_70"><p id="684749443#-sox7av_80">A sub-rede <span class="control" id="684749443#-sox7av_81">HQ LAN2</span> precisa de 8.000 endere&ccedil;os, mas recebeu um bloco <span class="inline-code" id="684749443#-sox7av_82">/18</span> com 16.384, um desperd&iacute;cio de recursos.</p></li><li class="list-item" id="684749443#-sox7av_71"><p id="684749443#-sox7av_83">O link <span class="control" id="684749443#-sox7av_84">HQ para Branch1</span> recebeu uma m&aacute;scara <span class="inline-code" id="684749443#-sox7av_85">/28</span> (14 hosts) quando uma <span class="inline-code" id="684749443#-sox7av_86">/30</span> (2 hosts) seria suficiente.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_63"><p id="684749443#-sox7av_87"><span class="control" id="684749443#-sox7av_89">Sobreposi&ccedil;&atilde;o de Sub-redes:</span> Este &eacute; o erro mais grave. As sub-redes foram alocadas de tal forma que se sobrep&otilde;em.</p><ul class="list" id="684749443#-sox7av_88" start="1"><li class="list-item" id="684749443#-sox7av_90"><p id="684749443#-sox7av_92">A sub-rede <span class="control" id="684749443#-sox7av_93">HQ LAN2 (<span class="inline-code" id="684749443#-sox7av_96">172.16.192.0/18</span>)</span> tem um intervalo de <span class="inline-code" id="684749443#-sox7av_94">172.16.192.0</span> a <span class="inline-code" id="684749443#-sox7av_95">172.16.255.255</span>.</p></li><li class="list-item" id="684749443#-sox7av_91"><p id="684749443#-sox7av_97">Todas as outras sub-redes (exceto a HQ LAN1) foram alocadas dentro deste intervalo, causando um conflito massivo. Por exemplo, a <span class="control" id="684749443#-sox7av_98">Branch1 LAN1 (<span class="inline-code" id="684749443#-sox7av_99">172.16.224.0/20</span>)</span> est&aacute; contida na rede da HQ LAN2. O roteamento entre elas &eacute; imposs&iacute;vel.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_64"><p id="684749443#-sox7av_100"><span class="control" id="684749443#-sox7av_101">Ordena&ccedil;&atilde;o Incorreta:</span> O princ&iacute;pio fundamental do VLSM &eacute; alocar as sub-redes da maior para a menor. A tabela falha em seguir essa ordem (por exemplo, aloca um <span class="inline-code" id="684749443#-sox7av_102">/19</span> antes de um <span class="inline-code" id="684749443#-sox7av_103">/18</span>), o que leva &agrave; fragmenta&ccedil;&atilde;o do espa&ccedil;o de endere&ccedil;os e torna a aloca&ccedil;&atilde;o correta imposs&iacute;vel.</p></li></ol><section class="detached"><h3 id="684749443#tarefa-1-examine-o-endere-amento-para-lans-hq" data-toc="tarefa-1-examine-o-endere-amento-para-lans-hq#Default-topic.md-tarefa-1-examine-o-endere-amento-para-lans-hq">Tarefa 1: Examine o endere&ccedil;amento para LANs HQ</h3><p id="684749443#-sox7av_105"><span class="control" id="684749443#-sox7av_111">Passo 1: Sub-rede HQ LAN1</span></p><ol class="list list-decimal" id="684749443#-sox7av_106" type="1" start="1"><li class="list-item" id="684749443#-sox7av_112"><p id="684749443#-sox7av_118"><span class="control" id="684749443#-sox7av_120">Quantos endere&ccedil;os IP s&atilde;o necess&aacute;rios?</span></p><ul class="list" id="684749443#-sox7av_119" start="1"><li class="list-item" id="684749443#-sox7av_121"><p id="684749443#-sox7av_122"><span class="control" id="684749443#-sox7av_123">Resposta:</span> 16.000.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_113"><p id="684749443#-sox7av_124"><span class="control" id="684749443#-sox7av_126">Quantos endere&ccedil;os IP est&atilde;o dispon&iacute;veis na sub-rede atualmente atribu&iacute;da (<span class="inline-code" id="684749443#-sox7av_127">172.16.128.0/19</span>)?</span></p><ul class="list" id="684749443#-sox7av_125" start="1"><li class="list-item" id="684749443#-sox7av_128"><p id="684749443#-sox7av_129"><span class="control" id="684749443#-sox7av_130">Resposta:</span> 8.192.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_114"><p id="684749443#-sox7av_131"><span class="control" id="684749443#-sox7av_133">A sub-rede atualmente atribu&iacute;da atender&aacute; aos requisitos de tamanho?</span></p><ul class="list" id="684749443#-sox7av_132" start="1"><li class="list-item" id="684749443#-sox7av_134"><p id="684749443#-sox7av_135"><span class="control" id="684749443#-sox7av_136">Resposta:</span> <span class="control" id="684749443#-sox7av_137">N&atilde;o.</span> A rede &eacute; muito pequena.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_115"><p id="684749443#-sox7av_138"><span class="control" id="684749443#-sox7av_140">Se n&atilde;o, proponha uma nova m&aacute;scara de sub-rede...</span></p><ul class="list" id="684749443#-sox7av_139" start="1"><li class="list-item" id="684749443#-sox7av_141"><p id="684749443#-sox7av_142"><span class="control" id="684749443#-sox7av_143">Resposta:</span> Uma m&aacute;scara <span class="inline-code" id="684749443#-sox7av_144">/18</span> (ou <span class="inline-code" id="684749443#-sox7av_145">255.255.192.0</span>) &eacute; necess&aacute;ria para fornecer 16.384 endere&ccedil;os.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_116"><p id="684749443#-sox7av_146"><span class="control" id="684749443#-sox7av_148">A sub-rede se sobrep&otilde;e a alguma das outras?</span></p><ul class="list" id="684749443#-sox7av_147" start="1"><li class="list-item" id="684749443#-sox7av_149"><p id="684749443#-sox7av_150"><span class="control" id="684749443#-sox7av_151">Resposta:</span> <span class="control" id="684749443#-sox7av_152">N&atilde;o.</span> No entanto, o problema principal &eacute; o tamanho insuficiente.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_117"><p id="684749443#-sox7av_153"><span class="control" id="684749443#-sox7av_155">Se sim, proponha uma nova m&aacute;scara/endere&ccedil;o...</span></p><ul class="list" id="684749443#-sox7av_154" start="1"><li class="list-item" id="684749443#-sox7av_156"><p id="684749443#-sox7av_157"><span class="control" id="684749443#-sox7av_158">Resposta:</span> A primeira sub-rede (a maior) deve ser <span class="inline-code" id="684749443#-sox7av_159">172.16.128.0/18</span>.</p></li></ul></li></ol><p id="684749443#-sox7av_107"><span class="control" id="684749443#-sox7av_160">Passo 2: Sub-rede LAN2 HQ</span></p><ol class="list list-decimal" id="684749443#-sox7av_108" type="1" start="1"><li class="list-item" id="684749443#-sox7av_161"><p id="684749443#-sox7av_167"><span class="control" id="684749443#-sox7av_169">Quantos endere&ccedil;os IP s&atilde;o necess&aacute;rios?</span></p><ul class="list" id="684749443#-sox7av_168" start="1"><li class="list-item" id="684749443#-sox7av_170"><p id="684749443#-sox7av_171"><span class="control" id="684749443#-sox7av_172">Resposta:</span> 8.000.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_162"><p id="684749443#-sox7av_173"><span class="control" id="684749443#-sox7av_175">Quantos endere&ccedil;os IP est&atilde;o dispon&iacute;veis na sub-rede atualmente atribu&iacute;da (<span class="inline-code" id="684749443#-sox7av_176">172.16.192.0/18</span>)?</span></p><ul class="list" id="684749443#-sox7av_174" start="1"><li class="list-item" id="684749443#-sox7av_177"><p id="684749443#-sox7av_178"><span class="control" id="684749443#-sox7av_179">Resposta:</span> 16.384.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_163"><p id="684749443#-sox7av_180"><span class="control" id="684749443#-sox7av_182">A sub-rede atualmente atribu&iacute;da atender&aacute; aos requisitos de tamanho?</span></p><ul class="list" id="684749443#-sox7av_181" start="1"><li class="list-item" id="684749443#-sox7av_183"><p id="684749443#-sox7av_184"><span class="control" id="684749443#-sox7av_185">Resposta:</span> <span class="control" id="684749443#-sox7av_186">Sim</span>, mas &eacute; muito maior que o necess&aacute;rio, desperdi&ccedil;ando endere&ccedil;os.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_164"><p id="684749443#-sox7av_187"><span class="control" id="684749443#-sox7av_189">Se n&atilde;o, proponha uma nova m&aacute;scara de sub-rede...</span></p><ul class="list" id="684749443#-sox7av_188" start="1"><li class="list-item" id="684749443#-sox7av_190"><p id="684749443#-sox7av_191"><span class="control" id="684749443#-sox7av_192">Resposta:</span> Uma m&aacute;scara <span class="inline-code" id="684749443#-sox7av_193">/19</span> (8.192 endere&ccedil;os) seria a ideal.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_165"><p id="684749443#-sox7av_194"><span class="control" id="684749443#-sox7av_196">A sub-rede se sobrep&otilde;e a alguma das outras?</span></p><ul class="list" id="684749443#-sox7av_195" start="1"><li class="list-item" id="684749443#-sox7av_197"><p id="684749443#-sox7av_198"><span class="control" id="684749443#-sox7av_199">Resposta:</span> <span class="control" id="684749443#-sox7av_200">Sim.</span> Esta sub-rede (<span class="inline-code" id="684749443#-sox7av_201">172.16.192.0</span> - <span class="inline-code" id="684749443#-sox7av_202">172.16.255.255</span>) se sobrep&otilde;e a todas as sub-redes das Filiais (Branches) e aos links WAN.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_166"><p id="684749443#-sox7av_203"><span class="control" id="684749443#-sox7av_205">Se sim, proponha uma nova m&aacute;scara/endere&ccedil;o...</span></p><ul class="list" id="684749443#-sox7av_204" start="1"><li class="list-item" id="684749443#-sox7av_206"><p id="684749443#-sox7av_207"><span class="control" id="684749443#-sox7av_208">Resposta:</span> Seguindo um plano VLSM correto, a sub-rede deveria ser <span class="inline-code" id="684749443#-sox7av_209">172.16.192.0/19</span>, alocada ap&oacute;s a sub-rede da HQ LAN1.</p></li></ul></li></ol></section><section class="detached"><h3 id="684749443#tarefa-2-examine-o-endere-amento-para-lans-branch1" data-toc="tarefa-2-examine-o-endere-amento-para-lans-branch1#Default-topic.md-tarefa-2-examine-o-endere-amento-para-lans-branch1">Tarefa 2: Examine o endere&ccedil;amento para LANs Branch1</h3><p id="684749443#-sox7av_211"><span class="control" id="684749443#-sox7av_217">Passo 1: Sub-rede LAN1 da Branch1</span></p><ol class="list list-decimal" id="684749443#-sox7av_212" type="1" start="1"><li class="list-item" id="684749443#-sox7av_218"><p id="684749443#-sox7av_223"><span class="control" id="684749443#-sox7av_225">Quantos endere&ccedil;os IP s&atilde;o necess&aacute;rios?</span></p><ul class="list" id="684749443#-sox7av_224" start="1"><li class="list-item" id="684749443#-sox7av_226"><p id="684749443#-sox7av_227"><span class="control" id="684749443#-sox7av_228">Resposta:</span> 4.000.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_219"><p id="684749443#-sox7av_229"><span class="control" id="684749443#-sox7av_231">Quantos endere&ccedil;os IP est&atilde;o dispon&iacute;veis na sub-rede atualmente atribu&iacute;da (<span class="inline-code" id="684749443#-sox7av_232">172.16.224.0/20</span>)?</span></p><ul class="list" id="684749443#-sox7av_230" start="1"><li class="list-item" id="684749443#-sox7av_233"><p id="684749443#-sox7av_234"><span class="control" id="684749443#-sox7av_235">Resposta:</span> 4.096.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_220"><p id="684749443#-sox7av_236"><span class="control" id="684749443#-sox7av_238">A sub-rede atualmente atribu&iacute;da atender&aacute; ao requisito de tamanho?</span></p><ul class="list" id="684749443#-sox7av_237" start="1"><li class="list-item" id="684749443#-sox7av_239"><p id="684749443#-sox7av_240"><span class="control" id="684749443#-sox7av_241">Resposta:</span> <span class="control" id="684749443#-sox7av_242">Sim.</span></p></li></ul></li><li class="list-item" id="684749443#-sox7av_221"><p id="684749443#-sox7av_243"><span class="control" id="684749443#-sox7av_245">A sub-rede se sobrep&otilde;e a alguma das outras?</span></p><ul class="list" id="684749443#-sox7av_244" start="1"><li class="list-item" id="684749443#-sox7av_246"><p id="684749443#-sox7av_247"><span class="control" id="684749443#-sox7av_248">Resposta:</span> <span class="control" id="684749443#-sox7av_249">Sim.</span> Ela est&aacute; dentro do intervalo da sub-rede HQ LAN2.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_222"><p id="684749443#-sox7av_250"><span class="control" id="684749443#-sox7av_252">Se sim, proponha uma nova m&aacute;scara/endere&ccedil;o...</span></p><ul class="list" id="684749443#-sox7av_251" start="1"><li class="list-item" id="684749443#-sox7av_253"><p id="684749443#-sox7av_254"><span class="control" id="684749443#-sox7av_255">Resposta:</span> A sub-rede correta, seguindo o plano VLSM, seria <span class="inline-code" id="684749443#-sox7av_256">172.16.224.0/20</span>, mas alocada no espa&ccedil;o livre ap&oacute;s as redes da HQ.</p></li></ul></li></ol><p id="684749443#-sox7av_213"><span class="control" id="684749443#-sox7av_257">Passo 2: Sub-rede LAN2 da Branch1</span></p><ol class="list list-decimal" id="684749443#-sox7av_214" type="1" start="1"><li class="list-item" id="684749443#-sox7av_258"><p id="684749443#-sox7av_263"><span class="control" id="684749443#-sox7av_265">Quantos endere&ccedil;os IP s&atilde;o necess&aacute;rios?</span></p><ul class="list" id="684749443#-sox7av_264" start="1"><li class="list-item" id="684749443#-sox7av_266"><p id="684749443#-sox7av_267"><span class="control" id="684749443#-sox7av_268">Resposta:</span> 2.000.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_259"><p id="684749443#-sox7av_269"><span class="control" id="684749443#-sox7av_271">Quantos endere&ccedil;os IP est&atilde;o dispon&iacute;veis na sub-rede atualmente atribu&iacute;da (<span class="inline-code" id="684749443#-sox7av_272">172.16.240.0/21</span>)?</span></p><ul class="list" id="684749443#-sox7av_270" start="1"><li class="list-item" id="684749443#-sox7av_273"><p id="684749443#-sox7av_274"><span class="control" id="684749443#-sox7av_275">Resposta:</span> 2.048.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_260"><p id="684749443#-sox7av_276"><span class="control" id="684749443#-sox7av_278">A sub-rede atualmente atribu&iacute;da atender&aacute; ao requisito de tamanho?</span></p><ul class="list" id="684749443#-sox7av_277" start="1"><li class="list-item" id="684749443#-sox7av_279"><p id="684749443#-sox7av_280"><span class="control" id="684749443#-sox7av_281">Resposta:</span> <span class="control" id="684749443#-sox7av_282">Sim.</span></p></li></ul></li><li class="list-item" id="684749443#-sox7av_261"><p id="684749443#-sox7av_283"><span class="control" id="684749443#-sox7av_285">A sub-rede se sobrep&otilde;e a alguma das outras?</span></p><ul class="list" id="684749443#-sox7av_284" start="1"><li class="list-item" id="684749443#-sox7av_286"><p id="684749443#-sox7av_287"><span class="control" id="684749443#-sox7av_288">Resposta:</span> <span class="control" id="684749443#-sox7av_289">Sim.</span> Ela tamb&eacute;m est&aacute; dentro do intervalo da sub-rede HQ LAN2.</p></li></ul></li><li class="list-item" id="684749443#-sox7av_262"><p id="684749443#-sox7av_290"><span class="control" id="684749443#-sox7av_292">Se sim, proponha um novo endere&ccedil;o de rede...</span></p><ul class="list" id="684749443#-sox7av_291" start="1"><li class="list-item" id="684749443#-sox7av_293"><p id="684749443#-sox7av_294"><span class="control" id="684749443#-sox7av_295">Resposta:</span> A sub-rede correta seria <span class="inline-code" id="684749443#-sox7av_296">172.16.240.0/21</span>, alocada ap&oacute;s a LAN1 da Branch1.</p></li></ul></li></ol></section><section class="detached"><h3 id="684749443#tarefa-3-examine-o-endere-amento-para-lans-branch2-e-links-wan" data-toc="tarefa-3-examine-o-endere-amento-para-lans-branch2-e-links-wan#Default-topic.md-tarefa-3-examine-o-endere-amento-para-lans-branch2-e-links-wan">Tarefa 3: Examine o endere&ccedil;amento para LANs Branch2 e Links WAN</h3><p id="684749443#-sox7av_298">(As tarefas para a Branch2 e os links WAN seguem o mesmo padr&atilde;o de erros: sobreposi&ccedil;&atilde;o com a HQ LAN2 e, em alguns casos, tamanho incorreto.)</p><ul class="list" id="684749443#-sox7av_299" start="1"><li class="list-item" id="684749443#-sox7av_302"><p id="684749443#-sox7av_305"><span class="control" id="684749443#-sox7av_306">Branch2 LAN1:</span> Precisa de 1.000 hosts, mas recebeu uma <span class="inline-code" id="684749443#-sox7av_307">/24</span> (256 hosts). <span class="control" id="684749443#-sox7av_308">Tamanho insuficiente</span> e <span class="control" id="684749443#-sox7av_309">sobreposi&ccedil;&atilde;o</span>.</p></li><li class="list-item" id="684749443#-sox7av_303"><p id="684749443#-sox7av_310"><span class="control" id="684749443#-sox7av_311">Branch2 LAN2:</span> Tamanho <span class="inline-code" id="684749443#-sox7av_312">/23</span> (512 hosts) &eacute; adequado para 500 hosts, mas h&aacute; <span class="control" id="684749443#-sox7av_313">sobreposi&ccedil;&atilde;o</span>.</p></li><li class="list-item" id="684749443#-sox7av_304"><p id="684749443#-sox7av_314"><span class="control" id="684749443#-sox7av_315">Links WAN:</span> Todos os links est&atilde;o em <span class="control" id="684749443#-sox7av_316">sobreposi&ccedil;&atilde;o</span> com a HQ LAN2. O link HQ-Branch1 tamb&eacute;m &eacute; <span class="control" id="684749443#-sox7av_317">ineficiente</span> (<span class="inline-code" id="684749443#-sox7av_318">/28</span> em vez de <span class="inline-code" id="684749443#-sox7av_319">/30</span>).</p></li></ul></section><section class="detached"><h3 id="684749443#tarefa-4-documente-as-informa-es-de-endere-amento-corrigidas" data-toc="tarefa-4-documente-as-informa-es-de-endere-amento-corrigidas#Default-topic.md-tarefa-4-documente-as-informa-es-de-endere-amento-corrigidas">Tarefa 4: Documente as informa&ccedil;&otilde;es de endere&ccedil;amento corrigidas</h3><p id="684749443#-sox7av_321">Para corrigir todos os erros, a aloca&ccedil;&atilde;o deve seguir o m&eacute;todo VLSM, ordenando as redes da maior para a menor necessidade de hosts. Isso resulta na seguinte tabela de endere&ccedil;amento, que &eacute; otimizada, funcional e n&atilde;o possui sobreposi&ccedil;&otilde;es.</p><div class="table-wrapper detached"><table id="684749443#-sox7av_322"><tr class="header-row" id="684749443#-sox7av_325"><th id="684749443#-sox7av_335"><p>Sub-rede</p></th><th id="684749443#-sox7av_336"><p>Hosts Necess&aacute;rios</p></th><th id="684749443#-sox7av_337"><p>Bloco de Endere&ccedil;os</p></th><th id="684749443#-sox7av_338"><p>M&aacute;scara de Rede</p></th><th id="684749443#-sox7av_339"><p>Endere&ccedil;o de Rede</p></th><th id="684749443#-sox7av_340"><p>Intervalo de Hosts</p></th><th id="684749443#-sox7av_341"><p>Endere&ccedil;o de Broadcast</p></th></tr><tr class="" id="684749443#-sox7av_326"><td id="684749443#-sox7av_342"><p><span class="control" id="684749443#-sox7av_349">HQ LAN1</span></p></td><td id="684749443#-sox7av_343"><p>16.000</p></td><td id="684749443#-sox7av_344"><p>16.384 (/18)</p></td><td id="684749443#-sox7av_345"><p>255.255.192.0</p></td><td id="684749443#-sox7av_346"><p><span class="inline-code" id="684749443#-sox7av_350">172.16.128.0</span></p></td><td id="684749443#-sox7av_347"><p><span class="inline-code" id="684749443#-sox7av_351">172.16.128.1</span> - <span class="inline-code" id="684749443#-sox7av_352">172.16.191.254</span></p></td><td id="684749443#-sox7av_348"><p><span class="inline-code" id="684749443#-sox7av_353">172.16.191.255</span></p></td></tr><tr class="" id="684749443#-sox7av_327"><td id="684749443#-sox7av_354"><p><span class="control" id="684749443#-sox7av_361">HQ LAN2</span></p></td><td id="684749443#-sox7av_355"><p>8.000</p></td><td id="684749443#-sox7av_356"><p>8.192 (/19)</p></td><td id="684749443#-sox7av_357"><p>255.255.224.0</p></td><td id="684749443#-sox7av_358"><p><span class="inline-code" id="684749443#-sox7av_362">172.16.192.0</span></p></td><td id="684749443#-sox7av_359"><p><span class="inline-code" id="684749443#-sox7av_363">172.16.192.1</span> - <span class="inline-code" id="684749443#-sox7av_364">172.16.223.254</span></p></td><td id="684749443#-sox7av_360"><p><span class="inline-code" id="684749443#-sox7av_365">172.16.223.255</span></p></td></tr><tr class="" id="684749443#-sox7av_328"><td id="684749443#-sox7av_366"><p><span class="control" id="684749443#-sox7av_373">Branch1 LAN1</span></p></td><td id="684749443#-sox7av_367"><p>4.000</p></td><td id="684749443#-sox7av_368"><p>4.096 (/20)</p></td><td id="684749443#-sox7av_369"><p>255.255.240.0</p></td><td id="684749443#-sox7av_370"><p><span class="inline-code" id="684749443#-sox7av_374">172.16.224.0</span></p></td><td id="684749443#-sox7av_371"><p><span class="inline-code" id="684749443#-sox7av_375">172.16.224.1</span> - <span class="inline-code" id="684749443#-sox7av_376">172.16.239.254</span></p></td><td id="684749443#-sox7av_372"><p><span class="inline-code" id="684749443#-sox7av_377">172.16.239.255</span></p></td></tr><tr class="" id="684749443#-sox7av_329"><td id="684749443#-sox7av_378"><p><span class="control" id="684749443#-sox7av_385">Branch1 LAN2</span></p></td><td id="684749443#-sox7av_379"><p>2.000</p></td><td id="684749443#-sox7av_380"><p>2.048 (/21)</p></td><td id="684749443#-sox7av_381"><p>255.255.248.0</p></td><td id="684749443#-sox7av_382"><p><span class="inline-code" id="684749443#-sox7av_386">172.16.240.0</span></p></td><td id="684749443#-sox7av_383"><p><span class="inline-code" id="684749443#-sox7av_387">172.16.240.1</span> - <span class="inline-code" id="684749443#-sox7av_388">172.16.247.254</span></p></td><td id="684749443#-sox7av_384"><p><span class="inline-code" id="684749443#-sox7av_389">172.16.247.255</span></p></td></tr><tr class="" id="684749443#-sox7av_330"><td id="684749443#-sox7av_390"><p><span class="control" id="684749443#-sox7av_397">Branch2 LAN1</span></p></td><td id="684749443#-sox7av_391"><p>1.000</p></td><td id="684749443#-sox7av_392"><p>1.024 (/22)</p></td><td id="684749443#-sox7av_393"><p>255.255.252.0</p></td><td id="684749443#-sox7av_394"><p><span class="inline-code" id="684749443#-sox7av_398">172.16.248.0</span></p></td><td id="684749443#-sox7av_395"><p><span class="inline-code" id="684749443#-sox7av_399">172.16.248.1</span> - <span class="inline-code" id="684749443#-sox7av_400">172.16.251.254</span></p></td><td id="684749443#-sox7av_396"><p><span class="inline-code" id="684749443#-sox7av_401">172.16.251.255</span></p></td></tr><tr class="" id="684749443#-sox7av_331"><td id="684749443#-sox7av_402"><p><span class="control" id="684749443#-sox7av_409">Branch2 LAN2</span></p></td><td id="684749443#-sox7av_403"><p>500</p></td><td id="684749443#-sox7av_404"><p>512 (/23)</p></td><td id="684749443#-sox7av_405"><p>255.255.254.0</p></td><td id="684749443#-sox7av_406"><p><span class="inline-code" id="684749443#-sox7av_410">172.16.252.0</span></p></td><td id="684749443#-sox7av_407"><p><span class="inline-code" id="684749443#-sox7av_411">172.16.252.1</span> - <span class="inline-code" id="684749443#-sox7av_412">172.16.253.254</span></p></td><td id="684749443#-sox7av_408"><p><span class="inline-code" id="684749443#-sox7av_413">172.16.253.255</span></p></td></tr><tr class="" id="684749443#-sox7av_332"><td id="684749443#-sox7av_414"><p><span class="control" id="684749443#-sox7av_421">Link WAN 1</span></p></td><td id="684749443#-sox7av_415"><p>2</p></td><td id="684749443#-sox7av_416"><p>4 (/30)</p></td><td id="684749443#-sox7av_417"><p>255.255.255.252</p></td><td id="684749443#-sox7av_418"><p><span class="inline-code" id="684749443#-sox7av_422">172.16.254.0</span></p></td><td id="684749443#-sox7av_419"><p><span class="inline-code" id="684749443#-sox7av_423">172.16.254.1</span> - <span class="inline-code" id="684749443#-sox7av_424">172.16.254.2</span></p></td><td id="684749443#-sox7av_420"><p><span class="inline-code" id="684749443#-sox7av_425">172.16.254.3</span></p></td></tr><tr class="" id="684749443#-sox7av_333"><td id="684749443#-sox7av_426"><p><span class="control" id="684749443#-sox7av_433">Link WAN 2</span></p></td><td id="684749443#-sox7av_427"><p>2</p></td><td id="684749443#-sox7av_428"><p>4 (/30)</p></td><td id="684749443#-sox7av_429"><p>255.255.255.252</p></td><td id="684749443#-sox7av_430"><p><span class="inline-code" id="684749443#-sox7av_434">172.16.254.4</span></p></td><td id="684749443#-sox7av_431"><p><span class="inline-code" id="684749443#-sox7av_435">172.16.254.5</span> - <span class="inline-code" id="684749443#-sox7av_436">172.16.254.6</span></p></td><td id="684749443#-sox7av_432"><p><span class="inline-code" id="684749443#-sox7av_437">172.16.254.7</span></p></td></tr><tr class="" id="684749443#-sox7av_334"><td id="684749443#-sox7av_438"><p><span class="control" id="684749443#-sox7av_445">Link WAN 3</span></p></td><td id="684749443#-sox7av_439"><p>2</p></td><td id="684749443#-sox7av_440"><p>4 (/30)</p></td><td id="684749443#-sox7av_441"><p>255.255.255.252</p></td><td id="684749443#-sox7av_442"><p><span class="inline-code" id="684749443#-sox7av_446">172.16.254.8</span></p></td><td id="684749443#-sox7av_443"><p><span class="inline-code" id="684749443#-sox7av_447">172.16.254.9</span> - <span class="inline-code" id="684749443#-sox7av_448">172.16.254.10</span></p></td><td id="684749443#-sox7av_444"><p><span class="inline-code" id="684749443#-sox7av_449">172.16.254.11</span></p></td></tr></table></div></section><section class="detached"><h3 id="684749443#exemplo-de-implementa-o-roteador-hq" data-toc="exemplo-de-implementa-o-roteador-hq#Default-topic.md-exemplo-de-implementa-o-roteador-hq">Exemplo de Implementa&ccedil;&atilde;o (Roteador HQ)</h3><p id="684749443#-sox7av_451">A seguir, um exemplo de como as interfaces do roteador HQ seriam configuradas em um sistema operacional Cisco IOS para aplicar o plano de endere&ccedil;amento corrigido.</p><div class="detached code-block" id="684749443#-sox7av_452"><pre><code class="language-csharp">! Entrando no modo de configuração global
+configure terminal
+
+! Configuração da interface para a HQ LAN1
+interface FastEthernet0/0
+ description Conexao para a LAN1 da Sede (16.000 hosts)
+ ip address 172.16.128.1 255.255.192.0
+ no shutdown
+
+! Configuração da interface para a HQ LAN2
+interface FastEthernet0/1
+ description Conexao para a LAN2 da Sede (8.000 hosts)
+ ip address 172.16.192.1 255.255.224.0
+ no shutdown
+
+! Configuração da interface serial para a Branch1
+interface Serial0/0/0
+ description Link WAN para a Filial 1
+ ip address 172.16.254.1 255.255.255.252
+ no shutdown
+
+! Configuração da interface serial para a Branch2
+interface Serial0/0/1
+ description Link WAN para a Filial 2
+ ip address 172.16.254.5 255.255.255.252
+ no shutdown
+
+end</code></pre></div></section></section><section class="detached"><h2 id="684749443#conclus-o" data-toc="conclus-o#Default-topic.md-conclus-o">Conclus&atilde;o</h2><p id="684749443#-sox7av_455">Este laborat&oacute;rio demonstrou a import&acirc;ncia cr&iacute;tica do planejamento de rede e a aplica&ccedil;&atilde;o correta do VLSM (Variable Length Subnet Masking). Ao diagnosticar o cen&aacute;rio inicial, onde a aloca&ccedil;&atilde;o incorreta de sub-redes resultou em sobreposi&ccedil;&otilde;es e tamanhos inadequados, ficou claro que um plano de endere&ccedil;amento mal executado torna a rede completamente inoperante. Na pr&aacute;tica, isso significaria uma interrup&ccedil;&atilde;o total da comunica&ccedil;&atilde;o entre a sede e as filiais, impedindo opera&ccedil;&otilde;es de neg&oacute;cio e o acesso a recursos cr&iacute;ticos.</p><p id="684749443#-sox7av_456">A solu&ccedil;&atilde;o corrigida, aplicando o m&eacute;todo VLSM de forma ordenada (das maiores para as menores necessidades de hosts), resultou em um esquema de endere&ccedil;amento IP eficiente, sem desperd&iacute;cio de endere&ccedil;os e sem sobreposi&ccedil;&otilde;es. Cada segmento da rede (LAN ou WAN) recebeu um bloco de tamanho apropriado, garantindo a comunica&ccedil;&atilde;o, o roteamento e a escalabilidade futura da topologia.</p></section><section class="detached"><h2 id="684749443#refer-ncias-e-leitura-adicional" data-toc="refer-ncias-e-leitura-adicional#Default-topic.md-refer-ncias-e-leitura-adicional">Refer&ecirc;ncias e Leitura Adicional</h2><ul class="list" id="684749443#-sox7av_458" start="1"><li class="list-item" id="684749443#-sox7av_459"><p id="684749443#-sox7av_464">Cisco: IP Addressing and Subnetting for New Users (<a href="https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html">https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html</a>)</p></li><li class="list-item" id="684749443#-sox7av_460"><p id="684749443#-sox7av_466">GeeksForGeeks: Variable Length Subnet Masking (VLSM) (<a href="https://www.geeksforgeeks.org/computer-networks/virtual-length-subnet-mask-vlsm-in-ip-networking/">https://www.geeksforgeeks.org/computer-networks/virtual-length-subnet-mask-vlsm-in-ip-networking/</a>)</p></li><li class="list-item" id="684749443#-sox7av_461"><p id="684749443#-sox7av_468">Study CCNA: VLSM (<a href="https://study-ccna.com/variable-length-subnet-mask-vlsm/">https://study-ccna.com/variable-length-subnet-mask-vlsm/</a>)</p></li><li class="list-item" id="684749443#-sox7av_462"><p id="684749443#-sox7av_470">Comparitech: VLSM Tutorial (<a href="https://www.comparitech.com/net-admin/variable-length-subnet-mask-vlsm-tutorial/">https://www.comparitech.com/net-admin/variable-length-subnet-mask-vlsm-tutorial/</a>)</p></li><li class="list-item" id="684749443#-sox7av_463"><p id="684749443#-sox7av_472">IP Subnet Calculator (Ferramenta) (<a href="https://calculator.net/ip-subnet-calculator.html">https://calculator.net/ip-subnet-calculator.html</a>)</p></li></ul></section></article></div></section></div></body></html>

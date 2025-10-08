@@ -1,0 +1,258 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .emphasis {
+            color: inherit;
+            font-weight: inherit;
+            font-style: italic;
+        }
+        
+
+        .header-row {
+            background: #e6e6e6;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .table-wrapper {
+            overflow: hidden;
+            box-sizing: border-box;
+            font: inherit;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#684749443">Atividade de An&aacute;lise de Rede</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="684749443">Atividade de An&aacute;lise de Rede</h1><section class="detached"><h2 id="684749443#1-impacto-da-dissemina-o-de-arquivos-grandes" data-toc="1-impacto-da-dissemina-o-de-arquivos-grandes#Default-topic.md-1-impacto-da-dissemina-o-de-arquivos-grandes">1. Impacto da Dissemina&ccedil;&atilde;o de Arquivos Grandes</h2><p id="684749443#maj6dh_8"><span class="control" id="684749443#maj6dh_14">Cen&aacute;rio:</span> Tr&ecirc;s redes, cada uma com 550 hosts, sofrem uma dissemina&ccedil;&atilde;o massiva de pacotes de um filme popular da Netflix.</p><p id="684749443#maj6dh_9"><span class="control" id="684749443#maj6dh_15">An&aacute;lise:</span></p><p id="684749443#maj6dh_10">Uma rede projetada para suportar 550 hosts por sub-rede seria, provavelmente, um &uacute;nico e grande dom&iacute;nio de broadcast (por exemplo, usando uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_16">/22</span>, que permite 1022 hosts). O cen&aacute;rio descrito implica um evento de broadcast ou multicast, onde os mesmos pacotes s&atilde;o enviados para muitos ou todos os hosts simultaneamente.</p><ul class="list" id="684749443#maj6dh_11" start="1"><li class="list-item" id="684749443#maj6dh_17"><p id="684749443#maj6dh_21"><span class="control" id="684749443#maj6dh_22">Congestionamento:</span> A transmiss&atilde;o simult&acirc;nea de pacotes de v&iacute;deo grandes para 1650 hosts (550 hosts x 3 redes) geraria uma quantidade enorme de tr&aacute;fego. Isso saturaria rapidamente os links de rede, incluindo switches, roteadores e, potencialmente, o link de subida para a internet.</p></li><li class="list-item" id="684749443#maj6dh_18"><p id="684749443#maj6dh_23"><span class="control" id="684749443#maj6dh_24">Tempestade de Broadcast (Broadcast Storm):</span> Se a dissemina&ccedil;&atilde;o ocorrer por meio de pacotes de broadcast dentro de cada uma das tr&ecirc;s grandes sub-redes, cada um dos 550 dispositivos em cada sub-rede receberia e processaria esses pacotes. Isso &eacute; conhecido como &quot;tempestade de broadcast&quot;. O volume imenso de tr&aacute;fego de broadcast consumiria uma por&ccedil;&atilde;o significativa da largura de banda dispon&iacute;vel e dos recursos de CPU de todos os dispositivos conectados, independentemente de o dispositivo estar ou n&atilde;o &quot;assistindo&quot; ao filme.</p></li><li class="list-item" id="684749443#maj6dh_19"><p id="684749443#maj6dh_25"><span class="control" id="684749443#maj6dh_26">Degrada&ccedil;&atilde;o de Desempenho:</span> A consequ&ecirc;ncia imediata seria uma degrada&ccedil;&atilde;o severa do desempenho da rede. O tr&aacute;fego leg&iacute;timo sofreria com alta lat&ecirc;ncia, jitter e perda de pacotes. Aplica&ccedil;&otilde;es como VoIP, jogos online e at&eacute; a simples navega&ccedil;&atilde;o na web se tornariam lentas ou inutiliz&aacute;veis.</p></li><li class="list-item" id="684749443#maj6dh_20"><p id="684749443#maj6dh_27"><span class="control" id="684749443#maj6dh_28">Colapso da Rede:</span> No pior cen&aacute;rio, a tempestade de broadcast poderia sobrecarregar os equipamentos de rede, fazendo com que switches e roteadores travassem ou parassem de responder, levando a uma interrup&ccedil;&atilde;o total da rede para os tr&ecirc;s segmentos.</p></li></ul><p id="684749443#maj6dh_12"><span class="control" id="684749443#maj6dh_29">Conclus&atilde;o:</span> A dissemina&ccedil;&atilde;o de arquivos grandes via broadcast em sub-redes extensas &eacute; altamente ineficiente e perigosa. Provavelmente, levaria a um grave congestionamento da rede e poderia at&eacute; causar um colapso completo da rede. Servi&ccedil;os de streaming modernos como a Netflix usam conex&otilde;es unicast (ponto a ponto) e, para eventos ao vivo, empregam estrat&eacute;gias sofisticadas de multicast e redes de distribui&ccedil;&atilde;o de conte&uacute;do (CDN) para evitar tais problemas.</p></section><section class="detached"><h2 id="684749443#2-divis-o-de-sub-redes-para-a-empresa-x" data-toc="2-divis-o-de-sub-redes-para-a-empresa-x#Default-topic.md-2-divis-o-de-sub-redes-para-a-empresa-x">2. Divis&atilde;o de Sub-redes para a Empresa X</h2><p id="684749443#maj6dh_30">Para segmentar eficientemente a rede da Empresa X, usaremos a M&aacute;scara de Sub-rede de Comprimento Vari&aacute;vel (VLSM) com base no n&uacute;mero de hosts necess&aacute;rios para cada departamento. Usaremos o espa&ccedil;o de endere&ccedil;o privado <span class="inline-code" id="684749443#maj6dh_39">192.168.1.0/24</span> como nosso ponto de partida.</p><p id="684749443#maj6dh_31">O organograma &eacute; o seguinte:</p><div class="container"><figure class="image-container"><img class="center image image-size" id="684749443#maj6dh_32" alt="Organograma da Empresa X" title="Organograma da Empresa X" src="/home/mrpunkdasilva/WebstormProjects/lab-redes/research-5/Writerside/images/img.png" width="1415" height="531"><figcaption class="center-text">Organograma da Empresa X</figcaption></figure></div><p id="684749443#maj6dh_33">Os departamentos s&atilde;o ordenados do maior para o menor em n&uacute;mero de hosts necess&aacute;rios para facilitar a aloca&ccedil;&atilde;o.</p><ol class="list list-decimal" id="684749443#maj6dh_34" type="1" start="1"><li class="list-item" id="684749443#maj6dh_40"><p id="684749443#maj6dh_45"><span class="control" id="684749443#maj6dh_46">Departamento Comercial:</span> 24 hosts -&gt; Precisa de 30 IPs utiliz&aacute;veis -&gt; <span class="inline-code" id="684749443#maj6dh_47">2^5 - 2 = 30</span>. Requer uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_48">/27</span>.</p></li><li class="list-item" id="684749443#maj6dh_41"><p id="684749443#maj6dh_49"><span class="control" id="684749443#maj6dh_50">Dire&ccedil;&atilde;o Administrativa:</span> 20 hosts -&gt; Precisa de 30 IPs utiliz&aacute;veis -&gt; <span class="inline-code" id="684749443#maj6dh_51">2^5 - 2 = 30</span>. Requer uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_52">/27</span>.</p></li><li class="list-item" id="684749443#maj6dh_42"><p id="684749443#maj6dh_53"><span class="control" id="684749443#maj6dh_54">Dire&ccedil;&atilde;o de Produ&ccedil;&atilde;o:</span> 12 hosts -&gt; Precisa de 14 IPs utiliz&aacute;veis -&gt; <span class="inline-code" id="684749443#maj6dh_55">2^4 - 2 = 14</span>. Requer uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_56">/28</span>.</p></li><li class="list-item" id="684749443#maj6dh_43"><p id="684749443#maj6dh_57"><span class="control" id="684749443#maj6dh_58">Dire&ccedil;&atilde;o Geral:</span> 4 hosts -&gt; Precisa de 6 IPs utiliz&aacute;veis -&gt; <span class="inline-code" id="684749443#maj6dh_59">2^3 - 2 = 6</span>. Requer uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_60">/29</span>.</p></li><li class="list-item" id="684749443#maj6dh_44"><p id="684749443#maj6dh_61"><span class="control" id="684749443#maj6dh_62">Dire&ccedil;&atilde;o de Qualidade:</span> 2 hosts -&gt; Precisa de 2 IPs utiliz&aacute;veis -&gt; <span class="inline-code" id="684749443#maj6dh_63">2^2 - 2 = 2</span>. Requer uma m&aacute;scara <span class="inline-code" id="684749443#maj6dh_64">/30</span>.</p></li></ol><p id="684749443#maj6dh_35">Aqui est&aacute; a aloca&ccedil;&atilde;o detalhada das sub-redes:</p><div class="table-wrapper detached"><table id="684749443#maj6dh_36"><tr class="header-row" id="684749443#maj6dh_65"><th id="684749443#maj6dh_71"><p>Departamento</p></th><th id="684749443#maj6dh_72"><p>Endere&ccedil;o de Rede</p></th><th id="684749443#maj6dh_73"><p>Intervalo de Hosts Utiliz&aacute;veis</p></th><th id="684749443#maj6dh_74"><p>Endere&ccedil;o de Broadcast</p></th><th id="684749443#maj6dh_75"><p>M&aacute;scara de Sub-rede</p></th></tr><tr class="" id="684749443#maj6dh_66"><td id="684749443#maj6dh_76"><p>Dept. Comercial</p></td><td id="684749443#maj6dh_77"><p><span class="inline-code" id="684749443#maj6dh_81">192.168.1.0/27</span></p></td><td id="684749443#maj6dh_78"><p><span class="inline-code" id="684749443#maj6dh_82">192.168.1.1</span> - <span class="inline-code" id="684749443#maj6dh_83">192.168.1.30</span></p></td><td id="684749443#maj6dh_79"><p><span class="inline-code" id="684749443#maj6dh_84">192.168.1.31</span></p></td><td id="684749443#maj6dh_80"><p><span class="inline-code" id="684749443#maj6dh_85">255.255.255.224</span></p></td></tr><tr class="" id="684749443#maj6dh_67"><td id="684749443#maj6dh_86"><p>Dir. Administrativa</p></td><td id="684749443#maj6dh_87"><p><span class="inline-code" id="684749443#maj6dh_91">192.168.1.32/27</span></p></td><td id="684749443#maj6dh_88"><p><span class="inline-code" id="684749443#maj6dh_92">192.168.1.33</span> - <span class="inline-code" id="684749443#maj6dh_93">192.168.1.62</span></p></td><td id="684749443#maj6dh_89"><p><span class="inline-code" id="684749443#maj6dh_94">192.168.1.63</span></p></td><td id="684749443#maj6dh_90"><p><span class="inline-code" id="684749443#maj6dh_95">255.255.255.224</span></p></td></tr><tr class="" id="684749443#maj6dh_68"><td id="684749443#maj6dh_96"><p>Dir. de Produ&ccedil;&atilde;o</p></td><td id="684749443#maj6dh_97"><p><span class="inline-code" id="684749443#maj6dh_101">192.168.1.64/28</span></p></td><td id="684749443#maj6dh_98"><p><span class="inline-code" id="684749443#maj6dh_102">192.168.1.65</span> - <span class="inline-code" id="684749443#maj6dh_103">192.168.1.78</span></p></td><td id="684749443#maj6dh_99"><p><span class="inline-code" id="684749443#maj6dh_104">192.168.1.79</span></p></td><td id="684749443#maj6dh_100"><p><span class="inline-code" id="684749443#maj6dh_105">255.255.255.240</span></p></td></tr><tr class="" id="684749443#maj6dh_69"><td id="684749443#maj6dh_106"><p>Dir. Geral</p></td><td id="684749443#maj6dh_107"><p><span class="inline-code" id="684749443#maj6dh_111">192.168.1.80/29</span></p></td><td id="684749443#maj6dh_108"><p><span class="inline-code" id="684749443#maj6dh_112">192.168.1.81</span> - <span class="inline-code" id="684749443#maj6dh_113">192.168.1.86</span></p></td><td id="684749443#maj6dh_109"><p><span class="inline-code" id="684749443#maj6dh_114">192.168.1.87</span></p></td><td id="684749443#maj6dh_110"><p><span class="inline-code" id="684749443#maj6dh_115">255.255.255.248</span></p></td></tr><tr class="" id="684749443#maj6dh_70"><td id="684749443#maj6dh_116"><p>Dir. de Qualidade</p></td><td id="684749443#maj6dh_117"><p><span class="inline-code" id="684749443#maj6dh_121">192.168.1.88/30</span></p></td><td id="684749443#maj6dh_118"><p><span class="inline-code" id="684749443#maj6dh_122">192.168.1.89</span> - <span class="inline-code" id="684749443#maj6dh_123">192.168.1.90</span></p></td><td id="684749443#maj6dh_119"><p><span class="inline-code" id="684749443#maj6dh_124">192.168.1.91</span></p></td><td id="684749443#maj6dh_120"><p><span class="inline-code" id="684749443#maj6dh_125">255.255.255.252</span></p></td></tr></table></div><p id="684749443#maj6dh_37"><span class="control" id="684749443#maj6dh_126">Justificativa:</span> Este projeto com VLSM &eacute; altamente eficiente. Ele aloca endere&ccedil;os IP com base nas necessidades espec&iacute;ficas de cada departamento, minimizando o desperd&iacute;cio de endere&ccedil;os. Ao atribuir m&aacute;scaras de tamanhos diferentes, garantimos que cada sub-rede tenha espa&ccedil;o suficiente para seus hosts atuais e algum crescimento futuro, sem reservar um n&uacute;mero excessivo de IPs n&atilde;o utilizados, o que &eacute; um problema comum na divis&atilde;o de sub-redes de tamanho fixo.</p></section><section class="detached"><h2 id="684749443#3-classes-de-endere-os-ip" data-toc="3-classes-de-endere-os-ip#Default-topic.md-3-classes-de-endere-os-ip">3. Classes de Endere&ccedil;os IP</h2><p id="684749443#maj6dh_127">Aqui est&atilde;o os intervalos para as diferentes classes de endere&ccedil;os IP:</p><div class="table-wrapper detached"><table id="684749443#maj6dh_128"><tr class="header-row" id="684749443#maj6dh_131"><th id="684749443#maj6dh_137"><p>Classe</p></th><th id="684749443#maj6dh_138"><p>IP Inicial</p></th><th id="684749443#maj6dh_139"><p>IP Final</p></th><th id="684749443#maj6dh_140"><p>Bits de Rede/Host</p></th><th id="684749443#maj6dh_141"><p>M&aacute;scara Padr&atilde;o</p></th></tr><tr class="" id="684749443#maj6dh_132"><td id="684749443#maj6dh_142"><p><span class="control" id="684749443#maj6dh_147">A</span></p></td><td id="684749443#maj6dh_143"><p><span class="inline-code" id="684749443#maj6dh_148">1.0.0.0</span></p></td><td id="684749443#maj6dh_144"><p><span class="inline-code" id="684749443#maj6dh_149">126.255.255.255</span></p></td><td id="684749443#maj6dh_145"><p>8 Rede / 24 Host</p></td><td id="684749443#maj6dh_146"><p><span class="inline-code" id="684749443#maj6dh_150">/8</span></p></td></tr><tr class="" id="684749443#maj6dh_133"><td id="684749443#maj6dh_151"><p><span class="control" id="684749443#maj6dh_156">B</span></p></td><td id="684749443#maj6dh_152"><p><span class="inline-code" id="684749443#maj6dh_157">128.0.0.0</span></p></td><td id="684749443#maj6dh_153"><p><span class="inline-code" id="684749443#maj6dh_158">191.255.255.255</span></p></td><td id="684749443#maj6dh_154"><p>16 Rede / 16 Host</p></td><td id="684749443#maj6dh_155"><p><span class="inline-code" id="684749443#maj6dh_159">/16</span></p></td></tr><tr class="" id="684749443#maj6dh_134"><td id="684749443#maj6dh_160"><p><span class="control" id="684749443#maj6dh_165">C</span></p></td><td id="684749443#maj6dh_161"><p><span class="inline-code" id="684749443#maj6dh_166">192.0.0.0</span></p></td><td id="684749443#maj6dh_162"><p><span class="inline-code" id="684749443#maj6dh_167">223.255.255.255</span></p></td><td id="684749443#maj6dh_163"><p>24 Rede / 8 Host</p></td><td id="684749443#maj6dh_164"><p><span class="inline-code" id="684749443#maj6dh_168">/24</span></p></td></tr><tr class="" id="684749443#maj6dh_135"><td id="684749443#maj6dh_169"><p><span class="control" id="684749443#maj6dh_174">D</span></p></td><td id="684749443#maj6dh_170"><p><span class="inline-code" id="684749443#maj6dh_175">224.0.0.0</span></p></td><td id="684749443#maj6dh_171"><p><span class="inline-code" id="684749443#maj6dh_176">239.255.255.255</span></p></td><td id="684749443#maj6dh_172"><p>Multicast</p></td><td id="684749443#maj6dh_173"><p>N/A</p></td></tr><tr class="" id="684749443#maj6dh_136"><td id="684749443#maj6dh_177"><p><span class="control" id="684749443#maj6dh_182">E</span></p></td><td id="684749443#maj6dh_178"><p><span class="inline-code" id="684749443#maj6dh_183">240.0.0.0</span></p></td><td id="684749443#maj6dh_179"><p><span class="inline-code" id="684749443#maj6dh_184">255.255.255.255</span></p></td><td id="684749443#maj6dh_180"><p>Experimental</p></td><td id="684749443#maj6dh_181"><p>N/A</p></td></tr></table></div><p id="684749443#maj6dh_129"><span class="emphasis" id="684749443#maj6dh_185">Observa&ccedil;&atilde;o: O intervalo <span class="inline-code" id="684749443#maj6dh_186">127.0.0.0</span> a <span class="inline-code" id="684749443#maj6dh_187">127.255.255.255</span> &eacute; reservado para loopback e fins de diagn&oacute;stico.</span></p></section><section class="detached"><h2 id="684749443#4-criando-16-sub-redes-a-partir-de-222-222-22-0-24" data-toc="4-criando-16-sub-redes-a-partir-de-222-222-22-0-24#Default-topic.md-4-criando-16-sub-redes-a-partir-de-222-222-22-0-24">4. Criando 16 Sub-redes a partir de 222.222.22.0/24</h2><p id="684749443#maj6dh_188"><span class="control" id="684749443#maj6dh_193">Objetivo:</span> Criar 16 sub-redes de igual tamanho a partir da rede <span class="inline-code" id="684749443#maj6dh_194">222.222.22.0/24</span>.</p><ol class="list list-decimal" id="684749443#maj6dh_189" type="1" start="1"><li class="list-item" id="684749443#maj6dh_195"><p id="684749443#maj6dh_199"><span class="control" id="684749443#maj6dh_200">Bits a Emprestar:</span> Para criar 16 sub-redes, precisamos emprestar <span class="inline-code" id="684749443#maj6dh_201">n</span> bits da por&ccedil;&atilde;o de host, onde <span class="inline-code" id="684749443#maj6dh_202">2^n = 16</span>. Portanto, <span class="inline-code" id="684749443#maj6dh_203">n = 4</span> bits.</p></li><li class="list-item" id="684749443#maj6dh_196"><p id="684749443#maj6dh_204"><span class="control" id="684749443#maj6dh_205">Nova M&aacute;scara de Sub-rede:</span> A m&aacute;scara original &eacute; <span class="inline-code" id="684749443#maj6dh_206">/24</span>. Adicionamos os 4 bits emprestados a ela: <span class="inline-code" id="684749443#maj6dh_207">24 + 4 = 28</span>. A nova m&aacute;scara &eacute; <span class="inline-code" id="684749443#maj6dh_208">/28</span>, que corresponde a <span class="inline-code" id="684749443#maj6dh_209">255.255.255.240</span>.</p></li><li class="list-item" id="684749443#maj6dh_197"><p id="684749443#maj6dh_210"><span class="control" id="684749443#maj6dh_211">Hosts por Sub-rede:</span> A m&aacute;scara <span class="inline-code" id="684749443#maj6dh_212">/24</span> original deixava 8 bits para hosts. Ap&oacute;s emprestar 4, temos <span class="inline-code" id="684749443#maj6dh_213">8 - 4 = 4</span> bits restantes para a por&ccedil;&atilde;o de host. O n&uacute;mero de hosts por sub-rede &eacute; <span class="inline-code" id="684749443#maj6dh_214">2^4 - 2 = 16 - 2 = 14</span> hosts utiliz&aacute;veis.</p></li><li class="list-item" id="684749443#maj6dh_198"><p id="684749443#maj6dh_215"><span class="control" id="684749443#maj6dh_216">Incremento da Sub-rede:</span> O &quot;n&uacute;mero m&aacute;gico&quot; ou incremento entre as sub-redes &eacute; <span class="inline-code" id="684749443#maj6dh_217">256 - 240 (o &uacute;ltimo octeto da m&aacute;scara) = 16</span>. Assim, cada nova sub-rede come&ccedil;ar&aacute; 16 endere&ccedil;os ap&oacute;s a anterior.</p></li></ol><p id="684749443#maj6dh_190">Aqui est&atilde;o as 16 sub-redes resultantes:</p><div class="table-wrapper detached"><table id="684749443#maj6dh_191"><tr class="header-row" id="684749443#maj6dh_218"><th id="684749443#maj6dh_235"><p>Sub-rede #</p></th><th id="684749443#maj6dh_236"><p>Endere&ccedil;o de Rede</p></th><th id="684749443#maj6dh_237"><p>Intervalo de Hosts Utiliz&aacute;veis</p></th><th id="684749443#maj6dh_238"><p>Endere&ccedil;o de Broadcast</p></th></tr><tr class="" id="684749443#maj6dh_219"><td id="684749443#maj6dh_239"><p>1</p></td><td id="684749443#maj6dh_240"><p><span class="inline-code" id="684749443#maj6dh_243">222.222.22.0/28</span></p></td><td id="684749443#maj6dh_241"><p><span class="inline-code" id="684749443#maj6dh_244">222.222.22.1</span> - <span class="inline-code" id="684749443#maj6dh_245">222.222.22.14</span></p></td><td id="684749443#maj6dh_242"><p><span class="inline-code" id="684749443#maj6dh_246">222.222.22.15</span></p></td></tr><tr class="" id="684749443#maj6dh_220"><td id="684749443#maj6dh_247"><p>2</p></td><td id="684749443#maj6dh_248"><p><span class="inline-code" id="684749443#maj6dh_251">222.222.22.16/28</span></p></td><td id="684749443#maj6dh_249"><p><span class="inline-code" id="684749443#maj6dh_252">222.222.22.17</span> - <span class="inline-code" id="684749443#maj6dh_253">222.222.22.30</span></p></td><td id="684749443#maj6dh_250"><p><span class="inline-code" id="684749443#maj6dh_254">222.222.22.31</span></p></td></tr><tr class="" id="684749443#maj6dh_221"><td id="684749443#maj6dh_255"><p>3</p></td><td id="684749443#maj6dh_256"><p><span class="inline-code" id="684749443#maj6dh_259">222.222.22.32/28</span></p></td><td id="684749443#maj6dh_257"><p><span class="inline-code" id="684749443#maj6dh_260">222.222.22.33</span> - <span class="inline-code" id="684749443#maj6dh_261">222.222.22.46</span></p></td><td id="684749443#maj6dh_258"><p><span class="inline-code" id="684749443#maj6dh_262">222.222.22.47</span></p></td></tr><tr class="" id="684749443#maj6dh_222"><td id="684749443#maj6dh_263"><p>4</p></td><td id="684749443#maj6dh_264"><p><span class="inline-code" id="684749443#maj6dh_267">222.222.22.48/28</span></p></td><td id="684749443#maj6dh_265"><p><span class="inline-code" id="684749443#maj6dh_268">222.222.22.49</span> - <span class="inline-code" id="684749443#maj6dh_269">222.222.22.62</span></p></td><td id="684749443#maj6dh_266"><p><span class="inline-code" id="684749443#maj6dh_270">222.222.22.63</span></p></td></tr><tr class="" id="684749443#maj6dh_223"><td id="684749443#maj6dh_271"><p>5</p></td><td id="684749443#maj6dh_272"><p><span class="inline-code" id="684749443#maj6dh_275">222.222.22.64/28</span></p></td><td id="684749443#maj6dh_273"><p><span class="inline-code" id="684749443#maj6dh_276">222.222.22.65</span> - <span class="inline-code" id="684749443#maj6dh_277">222.222.22.78</span></p></td><td id="684749443#maj6dh_274"><p><span class="inline-code" id="684749443#maj6dh_278">222.222.22.79</span></p></td></tr><tr class="" id="684749443#maj6dh_224"><td id="684749443#maj6dh_279"><p>6</p></td><td id="684749443#maj6dh_280"><p><span class="inline-code" id="684749443#maj6dh_283">222.222.22.80/28</span></p></td><td id="684749443#maj6dh_281"><p><span class="inline-code" id="684749443#maj6dh_284">222.222.22.81</span> - <span class="inline-code" id="684749443#maj6dh_285">222.222.22.94</span></p></td><td id="684749443#maj6dh_282"><p><span class="inline-code" id="684749443#maj6dh_286">222.222.22.95</span></p></td></tr><tr class="" id="684749443#maj6dh_225"><td id="684749443#maj6dh_287"><p>7</p></td><td id="684749443#maj6dh_288"><p><span class="inline-code" id="684749443#maj6dh_291">222.222.22.96/28</span></p></td><td id="684749443#maj6dh_289"><p><span class="inline-code" id="684749443#maj6dh_292">222.222.22.97</span> - <span class="inline-code" id="684749443#maj6dh_293">222.222.22.110</span></p></td><td id="684749443#maj6dh_290"><p><span class="inline-code" id="684749443#maj6dh_294">222.222.22.111</span></p></td></tr><tr class="" id="684749443#maj6dh_226"><td id="684749443#maj6dh_295"><p>8</p></td><td id="684749443#maj6dh_296"><p><span class="inline-code" id="684749443#maj6dh_299">222.222.22.112/28</span></p></td><td id="684749443#maj6dh_297"><p><span class="inline-code" id="684749443#maj6dh_300">222.222.22.113</span> - <span class="inline-code" id="684749443#maj6dh_301">222.222.22.126</span></p></td><td id="684749443#maj6dh_298"><p><span class="inline-code" id="684749443#maj6dh_302">222.222.22.127</span></p></td></tr><tr class="" id="684749443#maj6dh_227"><td id="684749443#maj6dh_303"><p>9</p></td><td id="684749443#maj6dh_304"><p><span class="inline-code" id="684749443#maj6dh_307">222.222.22.128/28</span></p></td><td id="684749443#maj6dh_305"><p><span class="inline-code" id="684749443#maj6dh_308">222.222.22.129</span> - <span class="inline-code" id="684749443#maj6dh_309">222.222.22.142</span></p></td><td id="684749443#maj6dh_306"><p><span class="inline-code" id="684749443#maj6dh_310">222.222.22.143</span></p></td></tr><tr class="" id="684749443#maj6dh_228"><td id="684749443#maj6dh_311"><p>10</p></td><td id="684749443#maj6dh_312"><p><span class="inline-code" id="684749443#maj6dh_315">222.222.22.144/28</span></p></td><td id="684749443#maj6dh_313"><p><span class="inline-code" id="684749443#maj6dh_316">222.222.22.145</span> - <span class="inline-code" id="684749443#maj6dh_317">222.222.22.158</span></p></td><td id="684749443#maj6dh_314"><p><span class="inline-code" id="684749443#maj6dh_318">222.222.22.159</span></p></td></tr><tr class="" id="684749443#maj6dh_229"><td id="684749443#maj6dh_319"><p>11</p></td><td id="684749443#maj6dh_320"><p><span class="inline-code" id="684749443#maj6dh_323">222.222.22.160/28</span></p></td><td id="684749443#maj6dh_321"><p><span class="inline-code" id="684749443#maj6dh_324">222.222.22.161</span> - <span class="inline-code" id="684749443#maj6dh_325">222.222.22.174</span></p></td><td id="684749443#maj6dh_322"><p><span class="inline-code" id="684749443#maj6dh_326">222.222.22.175</span></p></td></tr><tr class="" id="684749443#maj6dh_230"><td id="684749443#maj6dh_327"><p>12</p></td><td id="684749443#maj6dh_328"><p><span class="inline-code" id="684749443#maj6dh_331">222.222.22.176/28</span></p></td><td id="684749443#maj6dh_329"><p><span class="inline-code" id="684749443#maj6dh_332">222.222.22.177</span> - <span class="inline-code" id="684749443#maj6dh_333">222.222.22.190</span></p></td><td id="684749443#maj6dh_330"><p><span class="inline-code" id="684749443#maj6dh_334">222.222.22.191</span></p></td></tr><tr class="" id="684749443#maj6dh_231"><td id="684749443#maj6dh_335"><p>13</p></td><td id="684749443#maj6dh_336"><p><span class="inline-code" id="684749443#maj6dh_339">222.222.22.192/28</span></p></td><td id="684749443#maj6dh_337"><p><span class="inline-code" id="684749443#maj6dh_340">222.222.22.193</span> - <span class="inline-code" id="684749443#maj6dh_341">222.222.22.206</span></p></td><td id="684749443#maj6dh_338"><p><span class="inline-code" id="684749443#maj6dh_342">222.222.22.207</span></p></td></tr><tr class="" id="684749443#maj6dh_232"><td id="684749443#maj6dh_343"><p>14</p></td><td id="684749443#maj6dh_344"><p><span class="inline-code" id="684749443#maj6dh_347">222.222.22.208/28</span></p></td><td id="684749443#maj6dh_345"><p><span class="inline-code" id="684749443#maj6dh_348">222.222.22.209</span> - <span class="inline-code" id="684749443#maj6dh_349">222.222.22.222</span></p></td><td id="684749443#maj6dh_346"><p><span class="inline-code" id="684749443#maj6dh_350">222.222.22.223</span></p></td></tr><tr class="" id="684749443#maj6dh_233"><td id="684749443#maj6dh_351"><p>15</p></td><td id="684749443#maj6dh_352"><p><span class="inline-code" id="684749443#maj6dh_355">222.222.22.224/28</span></p></td><td id="684749443#maj6dh_353"><p><span class="inline-code" id="684749443#maj6dh_356">222.222.22.225</span> - <span class="inline-code" id="684749443#maj6dh_357">222.222.22.238</span></p></td><td id="684749443#maj6dh_354"><p><span class="inline-code" id="684749443#maj6dh_358">222.222.22.239</span></p></td></tr><tr class="" id="684749443#maj6dh_234"><td id="684749443#maj6dh_359"><p>16</p></td><td id="684749443#maj6dh_360"><p><span class="inline-code" id="684749443#maj6dh_363">222.222.22.240/28</span></p></td><td id="684749443#maj6dh_361"><p><span class="inline-code" id="684749443#maj6dh_364">222.222.22.241</span> - <span class="inline-code" id="684749443#maj6dh_365">222.222.22.254</span></p></td><td id="684749443#maj6dh_362"><p><span class="inline-code" id="684749443#maj6dh_366">222.222.22.255</span></p></td></tr></table></div></section><section class="detached"><h2 id="684749443#refer-ncias-e-ferramentas-teis" data-toc="refer-ncias-e-ferramentas-teis#Default-topic.md-refer-ncias-e-ferramentas-teis">Refer&ecirc;ncias e Ferramentas &Uacute;teis</h2><ul class="list" id="684749443#maj6dh_367" start="1"><li class="list-item" id="684749443#maj6dh_368"><p id="684749443#maj6dh_370">https://www.calculator.net/ip-subnet-calculator.html</p></li><li class="list-item" id="684749443#maj6dh_369"><p id="684749443#maj6dh_371">https://www.youtube.com/watch?v=CKBWCaiZrsw</p></li></ul></section></article></div></section></div></body></html>
