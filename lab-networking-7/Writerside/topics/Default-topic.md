@@ -1,12 +1,5 @@
 # Laboratório da Semana 7
 
-### Topologia da Rede
-
-A topologia para este laboratório consistiu em uma rede local simples, na qual minha máquina virtual (VM) estabeleceu comunicação com a VM de outro participante.
-
-![Diagrama da topologia de rede do laboratório, mostrando duas máquinas virtuais (VMs) conectadas em uma rede local.](https://lms.jala.university/courses/351/files/66489/preview)
-
----
 
 ## Parte 1: Preparação dos Ambientes
 
