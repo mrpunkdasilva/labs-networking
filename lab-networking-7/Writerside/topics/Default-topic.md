@@ -4,7 +4,7 @@
 
 A topologia para este laboratório consistiu em uma rede local simples, na qual minha máquina virtual (VM) estabeleceu comunicação com a VM de outro participante.
 
-![Topologia de rede do laboratório](https://lms.jala.university/courses/351/files/66489/preview)
+![Diagrama da topologia de rede do laboratório, mostrando duas máquinas virtuais (VMs) conectadas em uma rede local.](https://lms.jala.university/courses/351/files/66489/preview)
 
 ---
 
@@ -22,14 +22,14 @@ Para este cenário, a preparação foi dividida entre as duas máquinas virtuais
     > A instalação de ferramentas como o Wireshark, que exigem acesso direto à interface de rede para captura de pacotes, ressalta a importância da gestão de privilégios. Em sistemas operacionais, a capacidade de interceptar tráfego de rede é uma funcionalidade sensível do ponto de vista da segurança, podendo ser utilizada para monitoramento ou detecção de vulnerabilidades.
 
 
-![image.png](image.png)
+![Captura de tela da tela de instalação do Wireshark, destacando a opção de instalação do Npcap.](image.png)
 
 
 ### Na VM Ubuntu (Destino)
 
 Para a máquina que apenas receberá o tráfego, nenhuma instalação de software foi necessária para este laboratório.
 
-> ![Imagem da tela do Ubuntu de login](image_2.png)
+> ![Captura de tela da tela de login do sistema operacional Ubuntu, representando a VM de destino.](image_2.png)
 
 ---
 
@@ -46,14 +46,14 @@ Foi necessário identificar os endereços IP de ambas as máquinas para estabele
 2.  Executei o comando `ip a` para listar as interfaces de rede.
 3.  Na saída, localizei a interface de rede principal (ex: `enp0s3`) e anotei o endereço `inet`, que é o endereço IP da VM Ubuntu. Este endereço foi usado como destino do `ping`.
 
-![image_3.png](image_3.png)
+![Captura de tela do terminal Ubuntu exibindo a saída do comando `ip a`, com o endereço IP da interface de rede principal destacado.](image_3.png)
 
 **Na VM Windows (Remetente):**
 1.  Abri o **Prompt de Comando** (`cmd`).
 2.  Executei o comando `ipconfig /all`.
 3.  Na saída, localizei o "Adaptador Ethernet" e anotei o "Endereço IPv4" e o "Endereço Físico (MAC)", que são o IP e o MAC de origem, respectivamente.
 
-![image_4.png](image_4.png)
+![Captura de tela do Prompt de Comando do Windows exibindo a saída do comando `ipconfig /all`, com o endereço IPv4 e o endereço físico (MAC) do adaptador Ethernet destacados.](image_4.png)
 
 
 ### Passo 2: Captura e Análise (Executado na VM Windows)
@@ -66,12 +66,12 @@ Todo o processo de captura e análise foi centralizado na VM Windows.
 1.  Iniciei o **Wireshark** na VM Windows.
 2.  Selecionei a interface de rede ativa (geralmente "Ethernet") e comecei a captura.
 
-![image_5.png](image_5.png)
+![Captura de tela da interface do Wireshark, mostrando a seleção da interface de rede ativa para iniciar a captura de pacotes.](image_5.png)
 
 
 3.  Apliquei o filtro de exibição `icmp` para isolar o tráfego de interesse.
 
-![image_6.png](image_6.png)
+![Captura de tela da interface do Wireshark com o filtro de exibição `icmp` aplicado na barra de filtros.](image_6.png)
 
 4.  No Prompt de Comando do Windows, executei o comando `ping` utilizando o endereço IP da VM Ubuntu que anotei anteriormente.
 
@@ -79,16 +79,16 @@ Todo o processo de captura e análise foi centralizado na VM Windows.
     ping ENDERECO_IP_DA_VM_UBUNTU
     ```
     
-![image_7.png](image_7.png)
+![Captura de tela do Prompt de Comando do Windows exibindo a execução do comando `ping` para o endereço IP da VM Ubuntu.](image_7.png)
 
 5.  Observei os pacotes `Echo (ping) request` e `Echo (ping) reply` surgirem no Wireshark, confirmando a comunicação. Após a conclusão, interrompi a captura.
 
-![image_8.png](image_8.png)
+![Captura de tela da interface do Wireshark mostrando os pacotes `Echo (ping) request` e `Echo (ping) reply` após a execução do comando ping.](image_8.png)
 
 
 6.  Para a análise, selecionei um pacote `Echo (ping) request` e, no painel de detalhes, expandi as camadas **`Ethernet II`** (para ver os endereços MAC) e **`Internet Protocol Version 4`** (para confirmar os endereços IP), demonstrando o encapsulamento.
 
-![image_9.png](image_9.png)
+![Captura de tela da interface do Wireshark, detalhando as camadas Ethernet II e Internet Protocol Version 4 de um pacote ICMP selecionado.](image_9.png)
 
 A análise detalhada do pacote `12775` (um `Echo (ping) reply`) revelou os seguintes endereços nas respectivas camadas:
 
@@ -101,6 +101,15 @@ A análise detalhada do pacote `12775` (um `Echo (ping) reply`) revelou os segui
 
 Esta tabela resume os endereços de Camada 2 (MAC) e Camada 3 (IP) que foram identificados no pacote capturado, cumprindo o objetivo principal da análise do laboratório.
 
+7.  **Análise da Camada ICMP**: Com o mesmo pacote selecionado, expanda a camada `Internet Control Message Protocol`. Observe os seguintes campos, conforme ilustrado na imagem abaixo:
+
+    *   **Type (Tipo)**: Indica o tipo da mensagem ICMP. No exemplo, "Echo (ping) request (8)" significa que é uma requisição de ping.
+    *   **Code (Código)**: Um subtipo da mensagem. Para "Echo request", o código é geralmente 0.
+    *   **Checksum**: Um valor para verificar a integridade do pacote.
+    *   **Identifier (Identificador)**: Usado para ajudar a corresponder requisições e respostas de ping.
+    *   **Sequence Number (Número de Sequência)**: Indica a ordem dos pacotes de ping enviados.
+
+    ![Captura de tela da interface do Wireshark, detalhando a camada Internet Control Message Protocol (ICMP) de um pacote de requisição de ping.](image_10.png)
+
 > **Nota de Segurança: Implicações do Protocolo ICMP**
 > Embora o ICMP seja essencial para diagnósticos de rede, ele também possui implicações de segurança. O comando `ping` pode ser utilizado para reconhecimento de rede (identificar hosts ativos), ataques de negação de serviço (DoS) através de inundações de ping, ou até mesmo para tunelamento de dados (ICMP Tunneling) em cenários mais avançados. A análise de pacotes ICMP no Wireshark permite identificar padrões que podem indicar tais atividades maliciosas, reforçando a necessidade de políticas de firewall adequadas para controlar o tráfego ICMP.
-> 
