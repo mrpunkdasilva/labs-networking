@@ -1,8 +1,4 @@
-# Laboratório da Semana 7 
-
-## Introdução: O Objetivo
-
-O objetivo deste laboratório foi utilizar a ferramenta **Wireshark** para capturar e analisar o tráfego de rede gerado pelo comando `ping`. Com isso, observei na prática como os endereços de **Camada 3 (IP)** e **Camada 2 (MAC)** são utilizados para entregar um pacote de um ponto a outro em uma rede local.
+# Laboratório da Semana 7
 
 ### Topologia da Rede
 
@@ -21,6 +17,9 @@ Para este cenário, a preparação foi dividida entre as duas máquinas virtuais
 1.  **Download:** Utilizando um navegador na VM Windows, acessei o site oficial do Wireshark em `wireshark.org` e realizei o download do instalador para Windows (64-bit).
 
 2.  **Instalação:** Executei o arquivo `.exe` baixado. Durante o processo de instalação (next, next e next até chegar na tela abaixo), foi crucial garantir que o componente **Npcap** estivesse selecionado, pois é o driver que permite a captura de pacotes no Windows. Segui os passos do instalador, mantendo as opções padrão, até a conclusão.
+
+    > **Nota de Segurança: Permissões de Captura**
+    > A instalação de ferramentas como o Wireshark, que exigem acesso direto à interface de rede para captura de pacotes, ressalta a importância da gestão de privilégios. Em sistemas operacionais, a capacidade de interceptar tráfego de rede é uma funcionalidade sensível do ponto de vista da segurança, podendo ser utilizada para monitoramento ou detecção de vulnerabilidades.
 
 
 ![image.png](image.png)
@@ -51,8 +50,8 @@ Foi necessário identificar os endereços IP de ambas as máquinas para estabele
 
 **Na VM Windows (Remetente):**
 1.  Abri o **Prompt de Comando** (`cmd`).
-2.  Executei o comando `ipconfig`.
-3.  Na saída, localizei o "Adaptador Ethernet" e anotei o "Endereço IPv4", que é o IP de origem.
+2.  Executei o comando `ipconfig /all`.
+3.  Na saída, localizei o "Adaptador Ethernet" e anotei o "Endereço IPv4" e o "Endereço Físico (MAC)", que são o IP e o MAC de origem, respectivamente.
 
 ![image_4.png](image_4.png)
 
@@ -60,6 +59,9 @@ Foi necessário identificar os endereços IP de ambas as máquinas para estabele
 ### Passo 2: Captura e Análise (Executado na VM Windows)
 
 Todo o processo de captura e análise foi centralizado na VM Windows.
+
+> **Nota de Segurança: Implicações do Protocolo ARP**
+> O protocolo ARP, fundamental para a resolução de endereços MAC a partir de IPs em redes locais, também é um vetor para ataques. Técnicas como 'ARP Spoofing' ou 'ARP Poisoning' exploram a natureza sem autenticação do ARP para falsificar endereços MAC, desviando o tráfego de rede para um atacante. A compreensão do funcionamento do ARP é, portanto, crucial para a detecção e mitigação de tais ameaças em ambientes de rede.
 
 1.  Iniciei o **Wireshark** na VM Windows.
 2.  Selecionei a interface de rede ativa (geralmente "Ethernet") e comecei a captura.
@@ -99,29 +101,6 @@ A análise detalhada do pacote `12775` (um `Echo (ping) reply`) revelou os segui
 
 Esta tabela resume os endereços de Camada 2 (MAC) e Camada 3 (IP) que foram identificados no pacote capturado, cumprindo o objetivo principal da análise do laboratório.
 
-
-
----
-
-## Solução de Problemas: Falha de Ping no Destino Ubuntu
-
-Caso a VM Windows não receba respostas ao `ping`, o problema mais provável é o firewall na VM Ubuntu de destino. O Ubuntu utiliza o `ufw` (Uncomplicated Firewall), que pode bloquear o tráfego ICMP.
-
-**Procedimento para permitir tráfego ICMP no `ufw`:**
-
-1.  **Verificar o Status do Firewall:** Na VM Ubuntu, abri um terminal e verifiquei o status do `ufw`.
-
-    ```shell
-    sudo ufw status
-    ```
-    Se estiver ativo, ele listará as regras existentes.
-
-2.  **Permitir ICMP:** Para permitir que a VM Ubuntu responda a pings, executei o seguinte comando para adicionar uma regra que libera o tráfego ICMP de entrada.
-
-    ```shell
-    sudo ufw allow proto icmp
-    ```
-
-3.  **Verificar a Nova Regra:** Executei `sudo ufw status` novamente para confirmar que a regra foi adicionada com sucesso.
-
-Após a aplicação desta regra, uma nova tentativa de `ping` a partir da VM Windows deve ser bem-sucedida.
+> **Nota de Segurança: Implicações do Protocolo ICMP**
+> Embora o ICMP seja essencial para diagnósticos de rede, ele também possui implicações de segurança. O comando `ping` pode ser utilizado para reconhecimento de rede (identificar hosts ativos), ataques de negação de serviço (DoS) através de inundações de ping, ou até mesmo para tunelamento de dados (ICMP Tunneling) em cenários mais avançados. A análise de pacotes ICMP no Wireshark permite identificar padrões que podem indicar tais atividades maliciosas, reforçando a necessidade de políticas de firewall adequadas para controlar o tráfego ICMP.
+> 
