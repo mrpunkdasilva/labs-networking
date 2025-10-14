@@ -1,0 +1,330 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .bordered-element-rounded {
+            border: 1px solid #c4c4c4;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .flex {
+            display: flex;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        .prompt {
+            flex-direction: row;
+            letter-spacing: .0015em;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        
+
+        .prompt-content {
+            padding: 15px;
+            overflow: hidden;
+            flex: 1 1 auto;
+        }
+        
+
+        .prompt-content-p p {
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prompt-icon {
+            flex: 0 0 auto;
+            margin-left: 15px;
+            margin-top: 15px;
+            fill: currentcolor;
+            width: 24px;
+            height: 24px;
+        }
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .tip {
+            background-color: rgba(25, 25, 28, .05);
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#684749443">Laborat&oacute;rio da Semana 7</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="684749443">Laborat&oacute;rio da Semana 7</h1><section class="detached"><h2 id="684749443#introdu-o-o-objetivo" data-toc="introdu-o-o-objetivo#Default-topic.md-introdu-o-o-objetivo">Introdu&ccedil;&atilde;o: O Objetivo</h2><p id="684749443#-1gj1on_7">O objetivo deste laborat&oacute;rio &eacute; usar o <span class="control" id="684749443#-1gj1on_9">Wireshark</span> para capturar e analisar o tr&aacute;fego de rede gerado pelo comando <span class="inline-code" id="684749443#-1gj1on_10">ping</span>. Ao fazer isso, vamos observar na pr&aacute;tica como os endere&ccedil;os de <span class="control" id="684749443#-1gj1on_11">Camada 3 (IP)</span> e <span class="control" id="684749443#-1gj1on_12">Camada 2 (MAC)</span> s&atilde;o usados para entregar um pacote de um ponto a outro em uma rede local.</p><section class="detached"><h3 id="684749443#topologia-da-rede" data-toc="topologia-da-rede#Default-topic.md-topologia-da-rede">Topologia da Rede</h3><p id="684749443#-1gj1on_13">A topologia para este laborat&oacute;rio &eacute; uma rede local simples, onde sua m&aacute;quina virtual (VM) se comunica com a VM de um colega.</p><div class="container"><figure class="image-container"><img class="center image image-size" id="684749443#-1gj1on_14" alt="Topologia de rede do laborat&amp;oacute;rio" title="Topologia de rede do laborat&amp;oacute;rio" src="https://lms.jala.university/courses/351/files/66489/preview"><figcaption class="center-text">Topologia de rede do laborat&oacute;rio</figcaption></figure></div></section></section><section class="detached"><h2 id="684749443#parte-1-prepara-o-do-ambiente" data-toc="parte-1-prepara-o-do-ambiente#Default-topic.md-parte-1-prepara-o-do-ambiente">Parte 1: Prepara&ccedil;&atilde;o do Ambiente</h2><p id="684749443#-1gj1on_16">Antes de come&ccedil;ar a capturar, precisamos garantir que nossa principal ferramenta esteja pronta.</p><section class="detached"><h3 id="684749443#passo-1-baixar-e-instalar-o-wireshark" data-toc="passo-1-baixar-e-instalar-o-wireshark#Default-topic.md-passo-1-baixar-e-instalar-o-wireshark">Passo 1: Baixar e Instalar o Wireshark</h3><ol class="list list-decimal" id="684749443#-1gj1on_18" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_20"><p id="684749443#-1gj1on_22"><span class="control" id="684749443#-1gj1on_24">Download:</span> Fui ao site oficial do Wireshark em <span class="inline-code" id="684749443#-1gj1on_25">wireshark.org</span>. Na se&ccedil;&atilde;o de downloads, escolhi a vers&atilde;o correta para o meu sistema operacional (por exemplo, Windows 64-bit).</p></li><li class="list-item" id="684749443#-1gj1on_21"><p id="684749443#-1gj1on_26"><span class="control" id="684749443#-1gj1on_30">Instala&ccedil;&atilde;o:</span> Executei o arquivo que baixei. Durante a instala&ccedil;&atilde;o, prestei aten&ccedil;&atilde;o especial a um componente chamado <span class="control" id="684749443#-1gj1on_31">Npcap</span>.</p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="684749443#-1gj1on_32"><span class="control" id="684749443#-1gj1on_33">Nota Conceitual: Npcap vs. WinPcap</span> O enunciado do laborat&oacute;rio pode mencionar o <span class="inline-code" id="684749443#-1gj1on_34">WinPcap</span>, que era o driver de captura antigo. O <span class="inline-code" id="684749443#-1gj1on_35">Npcap</span> &eacute; seu sucessor moderno, mais seguro e eficiente, e &eacute; o que o Wireshark usa hoje. Tive o cuidado de garantir que a caixa de sele&ccedil;&atilde;o para instalar o Npcap estivesse marcada.</p></div>
+</blockquote>
+<p id="684749443#-1gj1on_28">Ao avan&ccedil;ar no instalador, vi a tela de componentes. Al&eacute;m do Npcap, deixei os outros componentes padr&atilde;o marcados (como &quot;Wireshark&quot;, &quot;TShark&quot;, etc.). Continuei clicando em &quot;Next&quot;, aceitei o contrato de licen&ccedil;a e, por fim, cliquei em &quot;Install&quot; e depois &quot;Finish&quot; para concluir o processo.</p></li></ol></section></section><section class="detached"><h2 id="684749443#parte-2-captura-e-an-lise-de-dados" data-toc="parte-2-captura-e-an-lise-de-dados#Default-topic.md-parte-2-captura-e-an-lise-de-dados">Parte 2: Captura e An&aacute;lise de Dados</h2><p id="684749443#-1gj1on_36">Agora que o Wireshark est&aacute; pronto, vamos para a parte pr&aacute;tica.</p><section class="detached"><h3 id="684749443#passo-2-descobrindo-seus-endere-os" data-toc="passo-2-descobrindo-seus-endere-os#Default-topic.md-passo-2-descobrindo-seus-endere-os">Passo 2: Descobrindo Seus Endere&ccedil;os</h3><p id="684749443#-1gj1on_40">Para entender o tr&aacute;fego, eu precisei primeiro conhecer os endere&ccedil;os da minha pr&oacute;pria m&aacute;quina.</p><ol class="list list-decimal" id="684749443#-1gj1on_41" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_42"><p id="684749443#-1gj1on_46">Abri o <span class="control" id="684749443#-1gj1on_47">Prompt de Comando</span> (<span class="inline-code" id="684749443#-1gj1on_48">cmd</span> no menu Iniciar).</p></li><li class="list-item" id="684749443#-1gj1on_43"><p id="684749443#-1gj1on_49">Digitei o comando <span class="inline-code" id="684749443#-1gj1on_51">ipconfig /all</span> e pressionei Enter. Este comando listou todas as configura&ccedil;&otilde;es de rede do meu computador.</p><div class="detached code-block" id="684749443#-1gj1on_50"><pre><code class="language-bash">ipconfig /all</code></pre></div></li><li class="list-item" id="684749443#-1gj1on_44"><p id="684749443#-1gj1on_52">Na longa lista que apareceu, rolei para cima at&eacute; encontrar a se&ccedil;&atilde;o do meu &quot;Adaptador de Ethernet&quot;. Ignorei adaptadores virtuais (como os de VPN ou VirtualBox), a menos que fosse o caso do meu laborat&oacute;rio. Dentro da se&ccedil;&atilde;o correta, anotei as duas informa&ccedil;&otilde;es cruciais:</p><ul class="list" id="684749443#-1gj1on_53" start="1"><li class="list-item" id="684749443#-1gj1on_55"><p id="684749443#-1gj1on_57"><span class="control" id="684749443#-1gj1on_58">Endere&ccedil;o IPv4</span>: Este &eacute; o meu endere&ccedil;o l&oacute;gico na rede (ex: <span class="inline-code" id="684749443#-1gj1on_59">192.168.1.12</span>).</p></li><li class="list-item" id="684749443#-1gj1on_56"><p id="684749443#-1gj1on_60"><span class="control" id="684749443#-1gj1on_61">Endere&ccedil;o F&iacute;sico</span>: Este &eacute; o meu endere&ccedil;o MAC, o identificador &uacute;nico da minha placa de rede (ex: <span class="inline-code" id="684749443#-1gj1on_62">0A-1B-2C-3D-4E-5F</span>).</p></li></ul></li><li class="list-item" id="684749443#-1gj1on_45"><p id="684749443#-1gj1on_63">Agora, troquei meu endere&ccedil;o IP com um colega. Eu precisava do IP dele para o pr&oacute;ximo passo.</p></li></ol></section><section class="detached"><h3 id="684749443#passo-3-capturando-o-tr-fego-ao-vivo" data-toc="passo-3-capturando-o-tr-fego-ao-vivo#Default-topic.md-passo-3-capturando-o-tr-fego-ao-vivo">Passo 3: Capturando o Tr&aacute;fego ao Vivo</h3><p id="684749443#-1gj1on_64">&Eacute; hora de agir como um verdadeiro &quot;sniffer de pacotes&quot;.</p><ol class="list list-decimal" id="684749443#-1gj1on_65" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_66"><p id="684749443#-1gj1on_71">Abri o <span class="control" id="684749443#-1gj1on_73">Wireshark</span>. Vi uma lista de interfaces de rede.</p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="684749443#-1gj1on_74"><span class="control" id="684749443#-1gj1on_75">Dica de Mestre: Qual interface escolher?</span> Se eu tivesse v&aacute;rias interfaces (Ethernet, Wi-Fi, etc.) e n&atilde;o tivesse certeza de qual usar, eu procuraria por aquela que mostra um gr&aacute;fico de atividade de rede (uma linha que sobe e desce). Essa &eacute; a minha conex&atilde;o ativa.</p></div>
+</blockquote>
+</li><li class="list-item" id="684749443#-1gj1on_67"><p id="684749443#-1gj1on_76">Dei um duplo clique na minha interface de rede ativa para iniciar a captura. A tela se encheu de pacotes. Foi importante eu entender a interface do Wireshark, que &eacute; dividida em tr&ecirc;s pain&eacute;is principais:</p><ol class="list list-decimal" id="684749443#-1gj1on_77" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_79"><p id="684749443#-1gj1on_82"><span class="control" id="684749443#-1gj1on_83">Lista de Pacotes (Painel Superior):</span> Uma lista de todos os pacotes capturados. Cada linha &eacute; um pacote.</p></li><li class="list-item" id="684749443#-1gj1on_80"><p id="684749443#-1gj1on_84"><span class="control" id="684749443#-1gj1on_85">Detalhes do Pacote (Painel do Meio):</span> Mostra o pacote selecionado, dividido em suas camadas de protocolo (Ethernet, IP, TCP, etc.).</p></li><li class="list-item" id="684749443#-1gj1on_81"><p id="684749443#-1gj1on_86"><span class="control" id="684749443#-1gj1on_87">Bytes do Pacote (Painel Inferior):</span> Exibe os dados brutos do pacote selecionado em formato hexadecimal.</p></li></ol></li><li class="list-item" id="684749443#-1gj1on_68"><p id="684749443#-1gj1on_88">Para reduzir o ru&iacute;do, fui at&eacute; a barra de <span class="control" id="684749443#-1gj1on_90">filtro de exibi&ccedil;&atilde;o</span> na parte superior, digitei <span class="inline-code" id="684749443#-1gj1on_91">icmp</span> e pressionei Enter. Agora, apenas o tr&aacute;fego de ping seria mostrado.</p></li><li class="list-item" id="684749443#-1gj1on_69"><p id="684749443#-1gj1on_92">Voltei ao Prompt de Comando и executei o comando <span class="inline-code" id="684749443#-1gj1on_94">ping</span> para o endere&ccedil;o IP do meu colega.</p><div class="detached code-block" id="684749443#-1gj1on_93"><pre><code class="language-bash">ping ENDERECO_IP_DO_COLEGA</code></pre></div></li><li class="list-item" id="684749443#-1gj1on_70"><p id="684749443#-1gj1on_95">Enquanto o ping era executado, observei a sa&iacute;da no meu terminal. Vi respostas como &quot;Resposta de 192.168.1.20: bytes=32 tempo&lt;1ms TTL=128&quot;. Isso confirmou que a comunica&ccedil;&atilde;o estava funcionando. Ao mesmo tempo, no Wireshark, os pacotes <span class="inline-code" id="684749443#-1gj1on_96">Echo (ping) request</span> e <span class="inline-code" id="684749443#-1gj1on_97">Echo (ping) reply</span> apareceram. Ap&oacute;s 4 respostas, o ping parou automaticamente. Voltei ao Wireshark e cliquei no bot&atilde;o vermelho <span class="control" id="684749443#-1gj1on_98">Parar Captura</span>.</p></li></ol></section><section class="detached"><h3 id="684749443#passo-4-analisando-o-pacote" data-toc="passo-4-analisando-o-pacote#Default-topic.md-passo-4-analisando-o-pacote">Passo 4: Analisando o Pacote</h3><p id="684749443#-1gj1on_99">Vamos dissecar o que eu capturei.</p><blockquote class="prompt flex bordered-element-rounded tip detached">
+  <svg xmlns="http://www.w3.org/2000/svg" class="prompt-icon">
+    <path d="M12.946 3.552L21.52 18.4c.424.735.33 1.6-.519 1.6H3.855c-.85 0-1.817-.865-1.392-1.6l8.573-14.848a1.103 1.103 0 0 1 1.91 0zm.545 12.948a1.5 1.5 0 1 0-1.5 1.5 1.5 1.5 0 0 0 1.5-1.5zM13 8h-2v5h2z"></path>
+  </svg>
+  <div class="prompt-content prompt-content-p"><p id="684749443#-1gj1on_103"><span class="control" id="684749443#-1gj1on_104">Nota Conceitual: A M&aacute;gica do Protocolo ARP</span> Antes de olhar o pacote ICMP, eu precisava pensar nisto: meu PC s&oacute; conhecia o endere&ccedil;o IP do meu colega. Como ele descobriu o endere&ccedil;o MAC para entregar o pacote? A resposta &eacute; o <span class="control" id="684749443#-1gj1on_105">ARP (Address Resolution Protocol)</span>. Meu PC primeiro &quot;gritou&quot; na rede (um broadcast ARP): &quot;Quem tem o IP <span class="inline-code" id="684749443#-1gj1on_106">192.168.1.20</span>? Me diga seu MAC!&quot;. O PC do meu colega respondeu: &quot;Sou eu! Meu MAC &eacute; <span class="inline-code" id="684749443#-1gj1on_107">[MAC do colega]</span> &quot;. S&oacute; ent&atilde;o o pacote ping foi enviado. Se eu removesse o filtro <span class="inline-code" id="684749443#-1gj1on_108">icmp</span>, veria esses pacotes ARP no in&iacute;cio da captura!</p></div>
+</blockquote>
+<ol class="list list-decimal" id="684749443#-1gj1on_101" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_109"><p id="684749443#-1gj1on_112">Na lista de pacotes do Wireshark, cliquei na primeira linha <span class="inline-code" id="684749443#-1gj1on_113">Echo (ping) request</span>.</p></li><li class="list-item" id="684749443#-1gj1on_110"><p id="684749443#-1gj1on_114">No painel de detalhes (no meio), vi o pacote dividido em camadas, mostrando o encapsulamento em a&ccedil;&atilde;o. Expandi as seguintes camadas:</p><ul class="list" id="684749443#-1gj1on_115" start="1"><li class="list-item" id="684749443#-1gj1on_116"><p id="684749443#-1gj1on_119"><span class="control" id="684749443#-1gj1on_120"><span class="inline-code" id="684749443#-1gj1on_121">Ethernet II</span></span>: A camada mais externa. Aqui encontrei os endere&ccedil;os MAC de origem e destino.</p></li><li class="list-item" id="684749443#-1gj1on_117"><p id="684749443#-1gj1on_122"><span class="control" id="684749443#-1gj1on_123"><span class="inline-code" id="684749443#-1gj1on_124">Internet Protocol Version 4</span></span>: Dentro da camada Ethernet, encontrei a camada IP. A expandi para ver os endere&ccedil;os IP de origem e destino que eu j&aacute; conhecia.</p></li><li class="list-item" id="684749443#-1gj1on_118"><p id="684749443#-1gj1on_125"><span class="control" id="684749443#-1gj1on_126"><span class="inline-code" id="684749443#-1gj1on_127">Internet Control Message Protocol</span></span>: Dentro da camada IP, estava o protocolo ICMP em si. Aqui eu pude ver o tipo de mensagem (ex: &quot;Echo (ping) request&quot;).</p></li></ul></li><li class="list-item" id="684749443#-1gj1on_111"><p id="684749443#-1gj1on_128">Dentro dela, encontrei o que procurava:</p><ul class="list" id="684749443#-1gj1on_129" start="1"><li class="list-item" id="684749443#-1gj1on_132"><p id="684749443#-1gj1on_134"><span class="control" id="684749443#-1gj1on_135"><span class="inline-code" id="684749443#-1gj1on_136">Destination</span></span>: O endere&ccedil;o MAC do meu colega.</p></li><li class="list-item" id="684749443#-1gj1on_133"><p id="684749443#-1gj1on_137"><span class="control" id="684749443#-1gj1on_138"><span class="inline-code" id="684749443#-1gj1on_139">Source</span></span>: O meu pr&oacute;prio endere&ccedil;o MAC.</p></li></ul><p id="684749443#-1gj1on_130">Isso me mostrou como o pacote IP (com endere&ccedil;os IP) &eacute; colocado dentro de um quadro Ethernet (com endere&ccedil;os MAC) para ser entregue na rede local.</p></li></ol></section></section><section class="detached"><h2 id="684749443#solu-o-de-problemas-o-que-fazer-se-o-ping-falhar" data-toc="solu-o-de-problemas-o-que-fazer-se-o-ping-falhar#Default-topic.md-solu-o-de-problemas-o-que-fazer-se-o-ping-falhar">Solu&ccedil;&atilde;o de Problemas: O que fazer se o Ping Falhar?</h2><p id="684749443#-1gj1on_140">Um problema comum que eu poderia encontrar &eacute; o <span class="inline-code" id="684749443#-1gj1on_144">ping</span> n&atilde;o funcionar, mostrando &quot;Host de destino inacess&iacute;vel&quot; ou &quot;Tempo esgotado&quot;. Quase sempre, a culpa seria do <span class="control" id="684749443#-1gj1on_145">Firewall do Windows</span> na m&aacute;quina de destino, que bloqueia solicita&ccedil;&otilde;es de ping por padr&atilde;o.</p><p id="684749443#-1gj1on_141"><span class="control" id="684749443#-1gj1on_146">Como permitir o Ping (ICMP) no Firewall do Windows:</span></p><ol class="list list-decimal" id="684749443#-1gj1on_142" type="1" start="1"><li class="list-item" id="684749443#-1gj1on_147"><p id="684749443#-1gj1on_157">Na m&aacute;quina que <span class="control" id="684749443#-1gj1on_158">n&atilde;o est&aacute; respondendo</span> ao ping, pesquise por &quot;Firewall do Windows com Seguran&ccedil;a Avan&ccedil;ada&quot; no menu Iniciar e abra-o.</p></li><li class="list-item" id="684749443#-1gj1on_148"><p id="684749443#-1gj1on_159">No painel esquerdo, clique em <span class="control" id="684749443#-1gj1on_160">&quot;Regras de Entrada&quot;</span>.</p></li><li class="list-item" id="684749443#-1gj1on_149"><p id="684749443#-1gj1on_161">No painel direito, clique em <span class="control" id="684749443#-1gj1on_162">&quot;Nova Regra...&quot;</span>.</p></li><li class="list-item" id="684749443#-1gj1on_150"><p id="684749443#-1gj1on_163">Selecione <span class="control" id="684749443#-1gj1on_164">&quot;Personalizada&quot;</span> e clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_151"><p id="684749443#-1gj1on_165">Selecione <span class="control" id="684749443#-1gj1on_166">&quot;Todos os programas&quot;</span> e clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_152"><p id="684749443#-1gj1on_167">Na lista &quot;Tipo de protocolo&quot;, escolha <span class="control" id="684749443#-1gj1on_168"><span class="inline-code" id="684749443#-1gj1on_169">ICMPv4</span></span>. Clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_153"><p id="684749443#-1gj1on_170">Deixe as configura&ccedil;&otilde;es de escopo como est&atilde;o (&quot;Qualquer endere&ccedil;o IP&quot;) e clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_154"><p id="684749443#-1gj1on_171">Selecione <span class="control" id="684749443#-1gj1on_172">&quot;Permitir a conex&atilde;o&quot;</span> e clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_155"><p id="684749443#-1gj1on_173">Deixe todos os perfis (Dom&iacute;nio, Particular, P&uacute;blico) marcados e clique em &quot;Avan&ccedil;ar&quot;.</p></li><li class="list-item" id="684749443#-1gj1on_156"><p id="684749443#-1gj1on_174">D&ecirc; um nome &agrave; regra, como <span class="inline-code" id="684749443#-1gj1on_175">Permitir Ping (ICMP)</span> e clique em &quot;Concluir&quot;.</p></li></ol><p id="684749443#-1gj1on_143">Depois de criar essa regra, tente fazer o <span class="inline-code" id="684749443#-1gj1on_176">ping</span> novamente. Agora deve funcionar!</p></section></article></div></section></div></body></html>
