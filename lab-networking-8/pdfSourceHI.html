@@ -1,0 +1,261 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-csharp.min.js"></script><style>
+        .article {
+            position: relative;
+            padding-bottom: 24px;
+        }
+        
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+
+        .center-text {
+            text-align: center;
+        }
+        
+
+        .code-block {
+            overflow: hidden;
+            position: relative;
+            padding: 0;
+            border-radius: 8px;
+            font-variant-ligatures: none;
+            background-color: rgba(25, 25, 28, .05);
+            word-break: break-all;
+        }
+        
+
+        .container {
+            max-width: 100%;
+            overflow: hidden;
+            page-break-inside: avoid;
+            display: block;
+        }
+        
+
+        .control {
+            color: #19191c;
+            font-size: 16px;
+            font-weight: 670;
+        }
+        
+
+        .detached {
+            margin-block-start: 0;
+            margin-block-end: 0;
+            margin-bottom: 8px;
+        }
+        
+
+        .image {
+            max-width: 100%;
+            max-height: 90vh;
+            height: auto;
+        }
+        
+
+        .image-container {
+            max-width: 100vw;
+        }
+        
+
+        .image-size {
+            height: auto;
+        }
+        
+
+        .inline-code {
+            border-radius: 4px;
+            display: inline;
+            padding: 2px 1px;
+            font-family: JetBrains Sans,monospace;
+            background: #e6e6e6;
+        }
+        
+
+        .list {
+            list-style-type: disc;
+            padding-left: 0;
+            margin-left: 15px;
+        }
+        
+
+        .list-decimal {
+            list-style-type: decimal;
+        }
+        
+
+        .list-item {
+            margin-top: 6px;
+            margin-bottom: 6px;
+            margin-left: 4px;
+        }
+        
+
+        .main-title {
+            padding-bottom: 24px;
+            margin-top: 0;
+            font-size: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+
+        .prism {
+            page-break-inside: avoid;
+        }
+        
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+abap+abnf+actionscript+ada+agda+al+antlr4+apacheconf+apex+apl+applescript+aql+arduino+arff+armasm+arturo+asciidoc+aspnet+asm6502+asmatmel+autohotkey+autoit+avisynth+avro-idl+awk+bash+basic+batch+bbcode+bbj+bicep+birb+bison+bnf+bqn+brainfuck+brightscript+bro+bsl+c+csharp+cpp+cfscript+chaiscript+cil+cilkc+cilkcpp+clojure+cmake+cobol+coffeescript+concurnas+csp+cooklang+coq+crystal+css-extras+csv+cue+cypher+d+dart+dataweave+dax+dhall+diff+django+dns-zone-file+docker+dot+ebnf+editorconfig+eiffel+ejs+elixir+elm+etlua+erb+erlang+excel-formula+fsharp+factor+false+firestore-security-rules+flow+fortran+ftl+gml+gap+gcode+gdscript+gedcom+gettext+gherkin+git+glsl+gn+linker-script+go+go-module+gradle+graphql+groovy+haml+handlebars+haskell+haxe+hcl+hlsl+hoon+http+hpkp+hsts+ichigojam+icon+icu-message-format+idris+ignore+inform7+ini+io+j+java+javadoc+javadoclike+javastacktrace+jexl+jolie+jq+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+julia+keepalived+keyman+kotlin+kumir+kusto+latex+latte+less+lilypond+liquid+lisp+livescript+llvm+log+lolcode+lua+magma+makefile+markdown+markup-templating+mata+matlab+maxscript+mel+mermaid+metafont+mizar+mongodb+monkey+moonscript+n1ql+n4js+nand2tetris-hdl+naniscript+nasm+neon+nevod+nginx+nim+nix+nsis+objectivec+ocaml+odin+opencl+openqasm+oz+parigp+parser+pascal+pascaligo+psl+pcaxis+peoplecode+perl+php+phpdoc+php-extras+plant-uml+plsql+powerquery+powershell+processing+prolog+promql+properties+protobuf+pug+puppet+pure+purebasic+purescript+python+qsharp+q+qml+qore+r+racket+cshtml+jsx+tsx+reason+regex+rego+renpy+rescript+rest+rip+roboconf+robotframework+ruby+rust+sas+sass+scss+scala+scheme+shell-session+smali+smalltalk+smarty+sml+solidity+solution-file+soy+sparql+splunk-spl+sqf+sql+squirrel+stan+stata+iecst+stylus+supercollider+swift+systemd+t4-templating+t4-cs+t4-vb+tap+tcl+tt2+textile+toml+tremor+turtle+twig+typescript+typoscript+unrealscript+uorazor+uri+v+vala+vbnet+velocity+verilog+vhdl+vim+visual-basic+warpscript+wasm+web-idl+wgsl+wiki+wolfram+wren+xeora+xml-doc+xojo+xquery+yaml+yang+zig&plugins=highlight-keywords */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre-wrap;word-spacing:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:16px;margin:0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+        
+
+        :root {
+            width: 95%;
+            max-width: 95vw;
+            padding: 0 0 0 30px;
+        }
+        
+        body {
+            font-family: JetBrains Sans,serif;
+        }
+        
+        a {
+            overflow-wrap: anywhere;
+            width: 100vw;
+        }
+        
+        
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Light.woff) format("woff");
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-Regular.woff) format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: JetBrains Sans;
+            src: url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff2) format("woff2"), url(https://resources.jetbrains.com/storage/jetbrains-sans/JetBrainsSans-SemiBold.woff) format("woff");
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        
+        code {
+            display: inline;
+            word-break: break-word;
+            font-size: 15px;
+            line-height: inherit;
+            font-variant-ligatures: none;
+            font-family: JetBrains Sans,monospace;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+        }
+        
+        figcaption {
+            margin-top: 5px;
+        }
+        
+        h2 {
+            padding-top: 16px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        h4 {
+            padding-top: 4px;
+            padding-bottom: 8px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+        
+        p {
+            padding: 0;
+            border: 0;
+            line-height: 25px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            padding-bottom: 8px;
+        }
+        
+        div {
+            display: block;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            page-break-inside: avoid;
+        }
+        
+        th, td {
+            border: 1px solid #c4c4c4;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        
+        .no-bold {
+            font-weight: normal; 
+        }
+        
+        .entry {
+            display: grid;
+            grid-template-columns: auto max-content;
+            grid-template-areas: "chapter page";
+            align-items: end;
+            gap: 0 .25rem;
+            line-height: 25px;
+        }
+        
+        .toc-link-container{
+            grid-area: chapter;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .toc-link{
+            text-decoration: none;
+            color: black;
+        }
+        
+        .toc-link-container::after {
+            position: absolute;
+            padding-left: .25ch;
+            content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+            ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+            text-align: right;
+        }
+        
+        .page {
+            grid-area: page;
+            width: 30px;
+            text-align: right;
+        }
+        
+
+        .topic {
+            page-break-before: always;
+        }
+        </style><title>pdfSourceHI</title></head><body><div><section class="topic"><div><article class="article"><h1 class="main-title">Table of Contents</h1><div class="entry"><div class="toc-link-container"><a class="toc-link" href="#-377794943">Atividade #1 - An&aacute;lise do Three-Way Handshake (Observabilidade)</a></div><div class="page">2</div></div></article></div></section><section class="topic"><div><article class="article"><h1 class="main-title" id="-377794943">Atividade #1 - An&aacute;lise do Three-Way Handshake (Observabilidade)</h1><p id="-377794943#-rdzzd6_3">Nesta atividade, observamos o processo de estabelecimento de uma conex&atilde;o TCP (Three-Way Handshake) em um ambiente Fedora Linux, analisando tanto o acesso a um servi&ccedil;o HTTP quanto um caso pr&aacute;tico de transfer&ecirc;ncia de arquivos.</p><section class="detached"><h2 id="-377794943#ferramentas-utilizadas" data-toc="ferramentas-utilizadas#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-ferramentas-utilizadas">Ferramentas Utilizadas</h2><ul class="list" id="-377794943#-rdzzd6_8" start="1"><li class="list-item" id="-377794943#-rdzzd6_9"><p id="-377794943#-rdzzd6_12"><span class="control" id="-377794943#-rdzzd6_13">curl / wget</span>: Para gerar tr&aacute;fego de rede e realizar transfer&ecirc;ncia de arquivos.</p></li><li class="list-item" id="-377794943#-rdzzd6_10"><p id="-377794943#-rdzzd6_14"><span class="control" id="-377794943#-rdzzd6_15">Wireshark</span>: Para captura e an&aacute;lise visual dos pacotes.</p></li><li class="list-item" id="-377794943#-rdzzd6_11"><p id="-377794943#-rdzzd6_16"><span class="control" id="-377794943#-rdzzd6_17">Shell (Bash)</span>: Ambiente de execu&ccedil;&atilde;o dos comandos no Fedora.</p></li></ul></section><section class="detached"><h2 id="-377794943#passo-a-passo-da-execu-o" data-toc="passo-a-passo-da-execu-o#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-passo-a-passo-da-execu-o">Passo a Passo da Execu&ccedil;&atilde;o</h2><section class="detached"><h3 id="-377794943#1-prepara-o-da-captura" data-toc="1-prepara-o-da-captura#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-1-prepara-o-da-captura">1. Prepara&ccedil;&atilde;o da Captura</h3><p id="-377794943#-rdzzd6_21">Iniciamos o Wireshark e selecionamos a interface ativa (<span class="inline-code" id="-377794943#-rdzzd6_24">wlo1</span>). Aplicamos o filtro inicial para capturar o tr&aacute;fego TCP nas portas de interesse.</p><ul class="list" id="-377794943#-rdzzd6_22" start="1"><li class="list-item" id="-377794943#-rdzzd6_25"><p id="-377794943#-rdzzd6_26"><span class="control" id="-377794943#-rdzzd6_27">Filtro:</span> <span class="inline-code" id="-377794943#-rdzzd6_28">tcp.port == 443 or tcp.port == 80</span></p></li></ul><div class="container"><figure class="image-container"><img class="center image image-size" id="-377794943#-rdzzd6_23" alt="image_5.png" title="image_5.png" src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-8/Writerside/images/image_5.png" width="1920" height="1080"><figcaption class="center-text">image_5.png</figcaption></figure></div></section><section class="detached"><h3 id="-377794943#2-caso-pr-tico-transfer-ncia-de-arquivos" data-toc="2-caso-pr-tico-transfer-ncia-de-arquivos#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-2-caso-pr-tico-transfer-ncia-de-arquivos">2. Caso Pr&aacute;tico: Transfer&ecirc;ncia de Arquivos</h3><p id="-377794943#-rdzzd6_29">Para testar a conex&atilde;o em um cen&aacute;rio real de transfer&ecirc;ncia de dados, utilizamos o comando <span class="inline-code" id="-377794943#-rdzzd6_32">wget</span> para baixar um arquivo de teste de um servidor p&uacute;blico.</p><div class="detached code-block" id="-377794943#-rdzzd6_30"><pre><code class="language-csharp">wget https://proof.ovh.net/files/1Mb.dat</code></pre></div><div class="container"><figure class="image-container"><img class="center image image-size" id="-377794943#-rdzzd6_31" alt="image_6.png" title="image_6.png" src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-8/Writerside/images/image_6.png" width="1836" height="188"><figcaption class="center-text">image_6.png</figcaption></figure></div></section><section class="detached"><h3 id="-377794943#3-filtragem-e-an-lise-avan-ada" data-toc="3-filtragem-e-an-lise-avan-ada#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-3-filtragem-e-an-lise-avan-ada">3. Filtragem e An&aacute;lise Avan&ccedil;ada</h3><p id="-377794943#-rdzzd6_33">Para isolar precisamente apenas os pacotes de controle que formam o &quot;aperto de m&atilde;o&quot;, aplicamos um filtro l&oacute;gico avan&ccedil;ado no Wireshark.</p><ul class="list" id="-377794943#-rdzzd6_34" start="1"><li class="list-item" id="-377794943#-rdzzd6_38"><p id="-377794943#-rdzzd6_39"><span class="control" id="-377794943#-rdzzd6_40">Filtro Utilizado:</span> <span class="inline-code" id="-377794943#-rdzzd6_41">tcp.flags.syn == 1 or (tcp.seq == 1 and tcp.ack == 1 and tcp.len == 0)</span></p></li></ul><p id="-377794943#-rdzzd6_35"><span class="control" id="-377794943#-rdzzd6_42">Explica&ccedil;&atilde;o do Filtro:</span></p><ul class="list" id="-377794943#-rdzzd6_36" start="1"><li class="list-item" id="-377794943#-rdzzd6_43"><p id="-377794943#-rdzzd6_45"><span class="inline-code" id="-377794943#-rdzzd6_46">tcp.flags.syn == 1</span>: Captura pacotes com a flag <span class="control" id="-377794943#-rdzzd6_47">SYN</span> ativa, o que abrange a primeira fase (SYN) e a segunda fase (SYN-ACK) do handshake.</p></li><li class="list-item" id="-377794943#-rdzzd6_44"><p id="-377794943#-rdzzd6_48"><span class="inline-code" id="-377794943#-rdzzd6_49">tcp.seq == 1 and tcp.ack == 1 and tcp.len == 0</span>: Identifica o terceiro pacote (<span class="control" id="-377794943#-rdzzd6_50">ACK</span>) da negocia&ccedil;&atilde;o, que possui n&uacute;mero de sequ&ecirc;ncia 1, confirma&ccedil;&atilde;o 1 e n&atilde;o transporta dados de carga (payload).</p></li></ul><div class="container"><figure class="image-container"><img class="center image image-size" id="-377794943#-rdzzd6_37" alt="image_7.png" title="image_7.png" src="/home/mrpunkdasilva/WebstormProjects/lab-redes/lab-networking-8/Writerside/images/image_7.png" width="1920" height="1080"><figcaption class="center-text">image_7.png</figcaption></figure></div></section></section><section class="detached"><h2 id="-377794943#an-lise-das-tr-s-fases-syn-syn-ack-ack" data-toc="an-lise-das-tr-s-fases-syn-syn-ack-ack#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-an-lise-das-tr-s-fases-syn-syn-ack-ack">An&aacute;lise das Tr&ecirc;s Fases (SYN, SYN-ACK, ACK)</h2><p id="-377794943#-rdzzd6_51">Atrav&eacute;s da inspe&ccedil;&atilde;o detalhada do cabe&ccedil;alho TCP (como visto na imagem acima para o pacote No. 1501), identificamos as fases conforme exigido:</p><ol class="list list-decimal" id="-377794943#-rdzzd6_52" type="1" start="1"><li class="list-item" id="-377794943#-rdzzd6_53"><p id="-377794943#-rdzzd6_56"><span class="control" id="-377794943#-rdzzd6_57">SYN (Synchronize):</span> O pacote inicial enviado pelo cliente (<span class="inline-code" id="-377794943#-rdzzd6_58">Flags: 0x002 (SYN)</span>). Na captura, observamos o campo <span class="control" id="-377794943#-rdzzd6_59">Flags</span> destacando o bit SYN como ativo, propondo a abertura da conex&atilde;o.</p></li><li class="list-item" id="-377794943#-rdzzd6_54"><p id="-377794943#-rdzzd6_60"><span class="control" id="-377794943#-rdzzd6_61">SYN-ACK (Synchronize-Acknowledge):</span> O servidor responde confirmando o recebimento (<span class="inline-code" id="-377794943#-rdzzd6_62">Acknowledgment Number: 1</span>) e enviando seu pr&oacute;prio bit SYN ativado.</p></li><li class="list-item" id="-377794943#-rdzzd6_55"><p id="-377794943#-rdzzd6_63"><span class="control" id="-377794943#-rdzzd6_64">ACK (Acknowledge):</span> O pacote final enviado pelo computador local. Este pacote completa a negocia&ccedil;&atilde;o, movendo o estado da conex&atilde;o para <span class="control" id="-377794943#-rdzzd6_65">ESTABLISHED</span>.</p></li></ol></section><section class="detached"><h2 id="-377794943#conclus-o" data-toc="conclus-o#Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.md-conclus-o">Conclus&atilde;o</h2><p id="-377794943#-rdzzd6_66">O teste pr&aacute;tico e a posterior filtragem avan&ccedil;ada no Wireshark permitiram comprovar a robustez do protocolo TCP. A capacidade de isolar bits espec&iacute;ficos do cabe&ccedil;alho (Flags) demonstra como o sistema garante que a transfer&ecirc;ncia de arquivos (como o download de 1MB realizado) s&oacute; comece ap&oacute;s uma negocia&ccedil;&atilde;o de tr&ecirc;s vias bem-sucedida e confi&aacute;vel.</p></section></article></div></section></div></body></html>
