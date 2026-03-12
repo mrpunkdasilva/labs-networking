@@ -114,6 +114,19 @@ if __name__ == "__main__":
    python atividade-2/client.py
    ```
 
+## Captura e Análise de Tráfego (Wireshark)
+
+Para validar a comunicação, o tráfego foi capturado na interface de loopback (`lo`) filtrando pela porta 5000.
+
+![Captura do Wireshark](../images/img_1.png)
+
+**Observações da Captura:**
+
+1.  **Three-Way Handshake:** No frame 494 ao 496, é possível observar o estabelecimento da conexão TCP com as flags `[SYN]`, `[SYN, ACK]` e `[ACK]`, confirmando a natureza confiável do protocolo TCP.
+2.  **Requisição POST:** No frame 487, vemos o cliente enviando o comando para alterar o status do dispositivo via `POST /control`, carregando o payload JSON: `{"client_id": 1223, "type": "speed", "value": 20}`.
+3.  **Requisição GET:** No frame 497, o cliente solicita o status atual do dispositivo para confirmar a alteração.
+4.  **Resposta HTTP 200 OK:** No frame 501 (selecionado na imagem), o servidor responde com o status 200 OK e o corpo da mensagem contendo o JSON: `{"power": "OFF", "speed": 20, "temperature": 25}`, confirmando o sucesso da operação.
+
 ## Perguntas de Reflexão do Laboratório
 
 1. **Quais camadas do modelo OSI intervêm quando um comando HTTP é enviado?**
