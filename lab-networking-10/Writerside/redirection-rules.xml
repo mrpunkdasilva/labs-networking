@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rules SYSTEM "https://resources.jetbrains.com/writerside/1.0/redirection-rules.dtd">
+<rules>
+    <!-- format is as follows
+    <rule id="<unique id>">
+        <accepts>page.html</accepts>
+    </rule>
+    -->
+    <rule id="36731861">
+        <description>Created after removal of "Criação de Máquinas Virtuais" from Help Instance</description>
+        <accepts>Criacao-Maquinas-Virtuais.html</accepts>
+    </rule>
+    <rule id="33fadd10">
+        <description>Created after removal of "Atividade #1.1 - PREPARAÇÃO DE AMBIENTES" from Help Instance
+        </description>
+        <accepts>Atividade-1-1-Preparacao-Ambientes.html</accepts>
+    </rule>
+    <rule id="2b77574d">
+        <description>Created after removal of "Criação de Máquinas Virtuais" from Help Instance</description>
+        <accepts>Criacao-Maquinas-Virtuais.html</accepts>
+    </rule>
+    <rule id="38f0873a">
+        <description>
+            <![CDATA[Created after removal of "<Atividade-1-1-Preparacao-Ambientes.md>" from Help Instance]]></description>
+        <accepts>Atividade-1-1-Preparacao-Ambientes.html</accepts>
+    </rule>
+    <rule id="137e08d6">
+        <description>Created after removal of "Atividade 1.2 - Conectividade e SSH" from Help Instance</description>
+        <accepts>Atividade-1-2-Conectividade-e-SSH.html</accepts>
+    </rule>
+    <rule id="e46f2f2">
+        <description>Created after removal of "Atividade #1 - Análise do Three-Way Handshake (Observabilidade)" from
+            Help Instance
+        </description>
+        <accepts>Atividade-1-Análise-do-Three-Way-Handshake-Observabilidade.html</accepts>
+    </rule>
+    <rule id="315d3d3c">
+        <description>Created after removal of "Atividade #2 - Comunicação Cliente–Servidor usando Docker" from Help
+            Instance
+        </description>
+        <accepts>Atividade-2-Comunicação-Cliente–Servidor-usando-Docker.html</accepts>
+    </rule>
+    <rule id="7854062a">
+        <description>Created after removal of "Atividade" from Help Instance</description>
+        <accepts>Atividade-1.html</accepts>
+    </rule>
+</rules>
