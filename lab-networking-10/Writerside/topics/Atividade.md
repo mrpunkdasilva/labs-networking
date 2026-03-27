@@ -1,6 +1,7 @@
 # Relatório de Laboratório
 
-Este relatório detalha a implementação de um sistema de chat multiusuário confiável utilizando sockets TCP. O objetivo foi estabelecer um canal de comunicação robusto entre um servidor central e múltiplos clientes, garantindo a integridade dos dados e a concorrência.
+> Link para o gitlab: [https://gitlab.com/jala-university1/cohort-4/PT.CO.CSNT-245.GA.T1.26.M2/SB/gustavo-henrique-de-jesus-da-silva/lab-week-3](https://gitlab.com/jala-university1/cohort-4/PT.CO.CSNT-245.GA.T1.26.M2/SB/gustavo-henrique-de-jesus-da-silva/lab-week-3)
+
 
 ## Passo 1 – Design da Arquitetura
 
@@ -15,6 +16,38 @@ O sistema segue uma arquitetura clássica **Cliente-Servidor Centralizada**.
 2.  **Envio de Mensagens:** Uma vez conectado, o cliente envolve a entrada do usuário em uma estrutura JSON, calcula um hash de segurança e o envia como um fluxo de bytes.
 3.  **Recebimento de Mensagens:** O servidor analisa o fluxo, valida o remetente e decide o roteamento (Broadcast para todos ou Privado para um usuário específico).
 4.  **Desconexão:** Quando um cliente fecha a aplicação, o servidor detecta o término do socket e remove o usuário do registro ativo para liberar recursos.
+
+```mermaid
+sequenceDiagram
+    participant C1 as Cliente 1
+    participant S as Servidor TCP
+    participant C2 as Cliente 2
+
+    Note over C1, S: Conexão (Handshake TCP)
+    C1->>S: Solicita Conexão
+    S-->>C1: Conexão Estabelecida
+
+    Note over C1: Usuário digita mensagem
+    C1->>C1: Gera JSON (sender, msg, hash SHA-256)
+    
+    C1->>S: Envia Fluxo de Bytes (JSON)
+    
+    Note over S: Validação e Roteamento
+    S->>S: Recalcula Hash e Compara
+    alt Hash Válido
+        S->>C2: Reencaminha Mensagem (Broadcast/Privado)
+        Note over C2: Recebimento e Integridade
+        C2->>C2: Recalcula Hash e Valida
+        C2-->>C2: Exibe Mensagem no Console
+    else Hash Inválido
+        S-->>S: Rejeita Pacote Corrompido
+    end
+
+    Note over C1, S: Desconexão
+    C1->>S: Fecha Socket (Evento 'end')
+    S->>S: Remove C1 da lista de ativos
+```
+
 
 ## Passo 2 – Implementação do Servidor
 
